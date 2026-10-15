@@ -15,3 +15,4 @@ jobs:
       - run: uv run python -m ruff format --check .
       - run: uv run python -m pytest -q
       - run: uv run python -m grounding_verifier.cli validate-data
+      - run: uv run python -m grounding_verifier.cli gold-review --check

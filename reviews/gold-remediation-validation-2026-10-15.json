@@ -1,0 +1,48 @@
+{
+  "baseline": "6f331b7982db8751c9c90389463ba82526793c61",
+  "correct_author_baseline": "31ba19278a78417af93e2d91ec945d3dc52f77dd",
+  "data": {
+    "dev": {
+      "cases": 8,
+      "categories": {
+        "supported": 2,
+        "distortion": 2,
+        "extrinsic": 2,
+        "multi_passage": 2
+      },
+      "hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+      "labels": {
+        "SUPPORTED": 8,
+        "CONTRADICTED": 2,
+        "UNSUPPORTED": 2
+      }
+    },
+    "test": {
+      "cases": 20,
+      "categories": {
+        "supported": 5,
+        "distortion": 5,
+        "extrinsic": 5,
+        "multi_passage": 5
+      },
+      "hash": "68d7f4554a71fa9944185a4808782af33887b4125265a72fbc006b3a76c426fa",
+      "labels": {
+        "SUPPORTED": 19,
+        "CONTRADICTED": 7,
+        "UNSUPPORTED": 6
+      }
+    }
+  },
+  "invariants": {
+    "case_inputs_and_metadata_preserved": true,
+    "previous_verdicts_preserved": true,
+    "only_test_05_claim_granularity_changed": true,
+    "baseline_trees_identical": true
+  },
+  "offline_tests": {
+    "passed": 46,
+    "warnings": 1
+  },
+  "human_gold_approval": "pending",
+  "new_model_calls": 0
+}

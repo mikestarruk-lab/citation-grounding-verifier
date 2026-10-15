@@ -2,7 +2,14 @@
 
 Date: 2026-10-15. Internal delivery deadline: 2026-10-21, 18:00 Europe/London.
 
-Status: planned, not implemented. This document records the response to
+Status update: the three required repairs are implemented and pass offline
+engineering checks; human gold approval is still pending. See
+[implementation history](../docs/change-history.zh-CN.md) and the generated
+[complete review](gold-dataset-review.md). The user deleted Canvas; the Markdown
+generator and its CI drift check supersede the Canvas implementation proposed
+below. Do not restore Canvas. The remaining text preserves the original plan.
+
+Original planning status: planned, not implemented. This document records the response to
 [the gold audit](gold-dataset-audit-2026-10-15.md). The audit's recorded SHA-256
 values still match both JSONL files and the Canvas file as of this planning pass.
 No data, scoring behavior, model prompts, approval status, or freeze status was

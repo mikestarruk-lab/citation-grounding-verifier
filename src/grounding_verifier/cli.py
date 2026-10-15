@@ -13,6 +13,7 @@ from .baseline import LexicalVerifier
 from .dataset import dataset_hash, digest, load_cases, require_frozen_test, validate_splits
 from .domain import VerifyError
 from .evaluation import output_hash, review_template, score
+from .gold_review import render_gold_review
 from .llm import MODEL, AnthropicProvider, LLMVerifier, execute
 from .prompts import MINIMAL, REFINED
 
@@ -111,6 +112,10 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     validate = commands.add_parser("validate-data")
     validate.add_argument("--data", type=Path, default=Path("data"))
+    gold_review = commands.add_parser("gold-review")
+    gold_review.add_argument("--data", type=Path, default=Path("data"))
+    gold_review.add_argument("--out", type=Path, default=Path("reviews/gold-dataset-review.md"))
+    gold_review.add_argument("--check", action="store_true")
     run = commands.add_parser("run")
     run.add_argument("--method", choices=["lexical", "minimal", "optimized"], required=True)
     run.add_argument("--mode", choices=["e2e", "gold"], default="e2e")
@@ -132,6 +137,16 @@ def main():
     try:
         if args.command == "validate-data":
             print(json.dumps(validate_splits(args.data), indent=2))
+        elif args.command == "gold-review":
+            content = render_gold_review(args.data)
+            if args.check:
+                if not args.out.exists() or args.out.read_text(encoding="utf-8") != content:
+                    raise ValueError("gold review is stale; regenerate it with gold-review")
+                print("Gold review matches the complete dataset and approval manifest.")
+            else:
+                args.out.parent.mkdir(parents=True, exist_ok=True)
+                args.out.write_text(content, encoding="utf-8", newline="\n")
+                print(f"Generated {args.out}")
         elif args.command == "run":
             asyncio.run(run_benchmark(args))
         else:

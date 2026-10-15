@@ -32,6 +32,8 @@ pythonpath = ["src"]
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+# Preserve the historical executed audit, including its original cell formatting.
+extend-exclude = ["reviews/gold-dataset-audit-2026-10-15.ipynb"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
