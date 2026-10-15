@@ -1,0 +1,111 @@
+{
+  "scope": [
+    "data/dev.jsonl",
+    "data/test.jsonl",
+    "reviews/gold-dataset-review.canvas.tsx"
+  ],
+  "input_sha256": {
+    "data/dev.jsonl": "ec9c3a3901098a3ad629362b2bab44a5c01c3f5a93981af21aab64838d06d029",
+    "data/test.jsonl": "d9a6d43301af6dd8cdb48b4906f0cb024a883af9a4e2b712dee7f9b58d3505fc",
+    "reviews/gold-dataset-review.canvas.tsx": "64f4f404dfdf6fdb76fd260940e1ec054e8793a33f5f71403d41d9aae5a9e176"
+  },
+  "inputs_unchanged": true,
+  "schema_and_splits": {
+    "dev": {
+      "cases": 8,
+      "categories": {
+        "supported": 2,
+        "distortion": 2,
+        "extrinsic": 2,
+        "multi_passage": 2
+      },
+      "hash": "529a0ef6c38b97a5dc69b439dc61eabada95b0dcbb8522ad40afd0728f915946",
+      "labels": {
+        "SUPPORTED": 8,
+        "CONTRADICTED": 2,
+        "UNSUPPORTED": 2
+      }
+    },
+    "test": {
+      "cases": 20,
+      "categories": {
+        "supported": 5,
+        "distortion": 5,
+        "extrinsic": 5,
+        "multi_passage": 5
+      },
+      "hash": "2d5bda8da68ab550df3dc6bd72639a95f9afeff8568f06d085c568ae48402523",
+      "labels": {
+        "SUPPORTED": 18,
+        "CONTRADICTED": 7,
+        "UNSUPPORTED": 6
+      }
+    }
+  },
+  "canvas_case_count": 28,
+  "canvas_matching_claim_count": 43,
+  "claim_count": 43,
+  "claim_labels": {
+    "SUPPORTED": 26,
+    "CONTRADICTED": 9,
+    "UNSUPPORTED": 8
+  },
+  "citation_count": 43,
+  "valid_verbatim_citations": 43,
+  "whole_passage_citations": 43,
+  "reasoning_templates": {
+    "The cited specification entails this assertion, including its conditions.": 26,
+    "The supplied specification directly rules out this assertion.": 9,
+    "The supplied specification does not establish this assertion.": 8
+  },
+  "annotation_reason_templates": {
+    "Compare the subject, polarity, quantity, and conditions against the supplied specification.": 27,
+    "Absence of evidence or a missing necessary condition; do not infer from external knowledge.": 8,
+    "Joint evidence is necessary; check each link and preserve all conditions.": 8
+  },
+  "duplicate_contexts": {},
+  "duplicate_answers": {},
+  "passage_count_per_case": {
+    "1": 21,
+    "2": 7
+  },
+  "passage_character_range": [
+    31,
+    137
+  ],
+  "manifest_status": {
+    "version": 1,
+    "dev": {
+      "review_status": "draft",
+      "reviewed_by": null
+    },
+    "test": {
+      "review_status": "draft",
+      "reviewed_by": null,
+      "frozen": false,
+      "dataset_hash": null
+    },
+    "note": "Human gold review is pending. Do not claim this dataset is independently validated."
+  },
+  "test05_synthetic_scoring_demo": {
+    "kind": "synthetic reproduction; not measured model performance",
+    "original_grouping": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "atomicity": 1.0
+    },
+    "finer_correct_split": {
+      "f1": 0.8,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "atomicity": 1.0
+    }
+  },
+  "limits": [
+    "Semantic entailment and claim completeness were reviewed manually, not proved by assertions.",
+    "No external product facts, paid model calls, or browser rendering were used.",
+    "Exact duplicate checks do not prove absence of semantic/template overlap between splits.",
+    "No human approval or freeze status was changed."
+  ]
+}

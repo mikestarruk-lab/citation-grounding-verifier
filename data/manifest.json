@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "dev": {"review_status": "draft", "reviewed_by": null},
+  "test": {"review_status": "draft", "reviewed_by": null, "frozen": false, "dataset_hash": null},
+  "note": "Human gold review is pending. Do not claim this dataset is independently validated."
+}
