@@ -8,7 +8,7 @@
 
 你已确认 `mikestarruk-lab` 就是个人账户。后续仓库目标固定为 `mikestarruk-lab/citation-grounding-verifier`，提交邮箱使用该账户的 GitHub noreply 地址。为按要求重建仓库，准备了相同文件树的新基线 `31ba19278a78417af93e2d91ec945d3dc52f77dd`，标签 `baseline-before-gold-fixes`，作者为 `mikestarruk-lab`。文件内容没有因更换作者而变化。
 
-旧版本保存在本地已验证的 `.cache/before-repository-rebuild.bundle`；仓库元数据另外备份。重建前仓库没有 issue、PR 或 release。你完成最终确认后，旧仓库已删除，同账户下的同名公开仓库已于 16:59 UTC 重建（新仓库 ID：1421063632）。先上传了修改前基线及标签，再准备上传整改提交 `ef34189`，不使用跨账户 fork 或改写旧远端分支。
+旧版本保存在本地已验证的 `.cache/before-repository-rebuild.bundle`；仓库元数据另外备份。重建前仓库没有 issue、PR 或 release。你完成最终确认后，旧仓库已删除，同账户下的同名公开仓库已于 16:59 UTC 重建（新仓库 ID：1421063632，旧 ID：1421038746）。先上传了修改前基线及标签，随后上传整改提交 `ef34189` 与仓库重建记录 `469ad7b`，均已进入 main；未使用跨账户 fork 或改写旧远端分支。
 
 ## 1. test-05：把可独立判断的事实分开
 
