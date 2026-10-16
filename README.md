@@ -5,7 +5,8 @@ answer and classify them using only the supplied passages. The contract is in
 [assignment.md](assignment.md).
 
 **Work in progress.** The service, lexical baseline, LLM paths and evaluation tools
-are implemented. Gold annotations remain drafts; final semantic reviews,
+are implemented. Development gold is owner-approved; test gold remains draft.
+Final semantic reviews,
 optimization comparisons and final benchmark results are pending. The optimized
 path is a candidate, not a demonstrated improvement.
 
@@ -74,6 +75,11 @@ hash-bound frozen manifest. Final test execution also waits for method freeze.
 Paid runs share the local $20 budget ledger; retain it across experiments.
 
 ## Project records
+
+- [Development v2 output review](reviews/dev-v2-output-review.md): pending
+  alignment/evidence review, with method names hidden as A/B. Review it before
+  opening the [method-labelled experiment records](experiments/2026-10-16-dev-v2/README.md).
+- [Owner approval of development gold](reviews/dev-gold-approval-2026-10-16.md).
 
 - [Gold audit](reviews/gold-dataset-audit-2026-10-15.md) and
   [remediation plan](reviews/gold-audit-remediation-plan-2026-10-15.md).

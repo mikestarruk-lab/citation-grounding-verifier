@@ -1,0 +1,48 @@
+{
+  "mode": "gold",
+  "method": "lexical",
+  "cases": 8,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 8,
+  "p50_seconds": 0.00014910000027157366,
+  "p95_seconds": 0.0004102399914700071,
+  "first_client_call_seconds": [],
+  "warm_call_p50_seconds": null,
+  "pending_reviews": [],
+  "counts": {
+    "cases": 8,
+    "gold_facts": 12,
+    "calls": 0,
+    "repaired_requests": 0,
+    "first_valid_quotes": 6,
+    "first_quotes": 6,
+    "final_valid_quotes": 6,
+    "final_quotes": 6,
+    "successes": 8
+  },
+  "semantic_status": "automatic_fixed_claim_diagnostic",
+  "per_label_f1": {
+    "SUPPORTED": 0.8571428571428571,
+    "CONTRADICTED": 0.0,
+    "UNSUPPORTED": 0.5
+  },
+  "macro_f1": 0.4523809523809524,
+  "confusion": {
+    "SUPPORTED": {
+      "SUPPORTED": 6,
+      "UNSUPPORTED": 2
+    },
+    "CONTRADICTED": {
+      "UNSUPPORTED": 2
+    },
+    "UNSUPPORTED": {
+      "UNSUPPORTED": 2
+    }
+  },
+  "gold_review_status": "approved"
+}
