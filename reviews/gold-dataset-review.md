@@ -6,7 +6,7 @@ Review each fact's meaning, qualifiers, verdict, explanation and complete eviden
 
 | Split | Cases | Gold facts | S / C / U | Review status |
 |---|---:|---:|---|---|
-| dev | 8 | 12 | 8 / 2 / 2 | draft |
+| dev | 8 | 12 | 8 / 2 / 2 | approved |
 | test | 20 | 32 | 19 / 7 / 6 | draft |
 
 ## Source versions
@@ -20,8 +20,11 @@ Review each fact's meaning, qualifiers, verdict, explanation and complete eviden
 {
   "version": 1,
   "dev": {
-    "review_status": "draft",
-    "reviewed_by": null
+    "review_status": "approved",
+    "reviewed_by": "Michael (mikestarruk-lab)",
+    "reviewed_on": "2026-10-16",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "approval_record": "reviews/dev-gold-approval-2026-10-16.md"
   },
   "test": {
     "review_status": "draft",
@@ -29,7 +32,7 @@ Review each fact's meaning, qualifiers, verdict, explanation and complete eviden
     "frozen": false,
     "dataset_hash": null
   },
-  "note": "Human gold review is pending. Do not claim this dataset is independently validated."
+  "note": "Dev gold approved by the project owner in chat; test gold and model-output reviews remain pending. This is not independent external validation."
 }
 ```
 
