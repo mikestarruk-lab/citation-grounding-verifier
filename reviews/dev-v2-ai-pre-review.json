@@ -1,0 +1,325 @@
+{
+  "assessment_type": "ai_pre_review_not_human_approval",
+  "reviewed_on": "2026-10-16",
+  "ai_reviewer": "Codex",
+  "independence": "Not an independent blind review: the assistant previously saw method outputs and results.",
+  "human_review_status": "pending",
+  "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+  "scope": "16 development e2e outputs; no test outputs or new model calls",
+  "policy_sensitivity": {
+    "self_contained_quotes": "All necessary referents and scope must be recoverable from quoted spans.",
+    "local_coreference_allowed": "The indexed paragraph may resolve a referent/scope, but may not supply an unquoted assertion or independent premise."
+  },
+  "methods_by_review_label": {
+    "A": {
+      "run_path": "experiments/2026-10-16-dev-v2/lexical-dev-v2.json",
+      "run_digest": "88fd6e0a351d753372f00d815c5734b5e7bc9a7c60bcaf1b3f4606cd7c4706a7",
+      "review_packet_digest": "7ebd0959fadee5fe85573a7493208bd3af578ff92d184bb6fe14b5c755347c53",
+      "legal_citations": 4,
+      "total_citations": 4,
+      "provisional_scores_not_official": {
+        "self_contained_quotes": {
+          "precision": 0.5833333333333334,
+          "recall": 0.5833333333333334,
+          "f1": 0.5833333333333334,
+          "coverage": 1.0,
+          "false_support_rate": 0.0,
+          "false_rejection_rate": 0.375,
+          "evidence_sufficiency": 0.4,
+          "atomicity": 0.9090909090909091,
+          "confusion": {
+            "SUPPORTED": {
+              "UNSUPPORTED": 3,
+              "SUPPORTED": 5
+            },
+            "CONTRADICTED": {
+              "UNSUPPORTED": 2
+            },
+            "UNSUPPORTED": {
+              "UNSUPPORTED": 2
+            }
+          },
+          "counts": {
+            "cases": 8,
+            "gold_facts": 12,
+            "calls": 0,
+            "repaired_requests": 0,
+            "first_valid_quotes": 4,
+            "first_quotes": 4,
+            "final_valid_quotes": 4,
+            "final_quotes": 4,
+            "successes": 8,
+            "atomic_predictions": 10,
+            "predictions": 11,
+            "predicted_units": 12,
+            "covered": 12,
+            "fp": 5,
+            "false_support": 0,
+            "false_rejection": 3,
+            "fn": 5,
+            "evidence_units": 5,
+            "sufficient_evidence": 2,
+            "tp": 7
+          }
+        },
+        "local_coreference_allowed": {
+          "precision": 0.5833333333333334,
+          "recall": 0.5833333333333334,
+          "f1": 0.5833333333333334,
+          "coverage": 1.0,
+          "false_support_rate": 0.0,
+          "false_rejection_rate": 0.375,
+          "evidence_sufficiency": 0.6,
+          "atomicity": 0.9090909090909091,
+          "confusion": {
+            "SUPPORTED": {
+              "UNSUPPORTED": 3,
+              "SUPPORTED": 5
+            },
+            "CONTRADICTED": {
+              "UNSUPPORTED": 2
+            },
+            "UNSUPPORTED": {
+              "UNSUPPORTED": 2
+            }
+          },
+          "counts": {
+            "cases": 8,
+            "gold_facts": 12,
+            "calls": 0,
+            "repaired_requests": 0,
+            "first_valid_quotes": 4,
+            "first_quotes": 4,
+            "final_valid_quotes": 4,
+            "final_quotes": 4,
+            "successes": 8,
+            "atomic_predictions": 10,
+            "predictions": 11,
+            "predicted_units": 12,
+            "covered": 12,
+            "fp": 5,
+            "false_support": 0,
+            "false_rejection": 3,
+            "fn": 5,
+            "evidence_units": 5,
+            "sufficient_evidence": 3,
+            "tp": 7
+          }
+        }
+      }
+    },
+    "B": {
+      "run_path": "experiments/2026-10-16-dev-v2/minimal-dev-v2.json",
+      "run_digest": "e8a391f18d86e7db17a347a5a951add1559f05b856c447d85e3c9296efddf8b1",
+      "review_packet_digest": "69ec2355e757e9de80e7875949ffa45ab6dc2065921adb7db33ab91261a4fb95",
+      "legal_citations": 12,
+      "total_citations": 12,
+      "provisional_scores_not_official": {
+        "self_contained_quotes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "coverage": 1.0,
+          "false_support_rate": 0.0,
+          "false_rejection_rate": 0.0,
+          "evidence_sufficiency": 0.7,
+          "atomicity": 1.0,
+          "confusion": {
+            "SUPPORTED": {
+              "SUPPORTED": 8
+            },
+            "CONTRADICTED": {
+              "CONTRADICTED": 2
+            },
+            "UNSUPPORTED": {
+              "UNSUPPORTED": 2
+            }
+          },
+          "counts": {
+            "cases": 8,
+            "gold_facts": 12,
+            "calls": 8,
+            "repaired_requests": 0,
+            "input_tokens": 6710,
+            "output_tokens": 1506,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "first_valid_quotes": 12,
+            "first_quotes": 12,
+            "final_valid_quotes": 12,
+            "final_quotes": 12,
+            "successes": 8,
+            "atomic_predictions": 12,
+            "predictions": 12,
+            "predicted_units": 12,
+            "evidence_units": 10,
+            "sufficient_evidence": 7,
+            "covered": 12,
+            "tp": 12,
+            "false_support": 0,
+            "false_rejection": 0,
+            "fn": 0
+          }
+        },
+        "local_coreference_allowed": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "coverage": 1.0,
+          "false_support_rate": 0.0,
+          "false_rejection_rate": 0.0,
+          "evidence_sufficiency": 1.0,
+          "atomicity": 1.0,
+          "confusion": {
+            "SUPPORTED": {
+              "SUPPORTED": 8
+            },
+            "CONTRADICTED": {
+              "CONTRADICTED": 2
+            },
+            "UNSUPPORTED": {
+              "UNSUPPORTED": 2
+            }
+          },
+          "counts": {
+            "cases": 8,
+            "gold_facts": 12,
+            "calls": 8,
+            "repaired_requests": 0,
+            "input_tokens": 6710,
+            "output_tokens": 1506,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 0,
+            "first_valid_quotes": 12,
+            "first_quotes": 12,
+            "final_valid_quotes": 12,
+            "final_quotes": 12,
+            "successes": 8,
+            "atomic_predictions": 12,
+            "predictions": 12,
+            "predicted_units": 12,
+            "evidence_units": 10,
+            "sufficient_evidence": 10,
+            "covered": 12,
+            "tp": 12,
+            "false_support": 0,
+            "false_rejection": 0,
+            "fn": 0
+          }
+        }
+      }
+    }
+  },
+  "offline_threshold_counterfactual_not_selected": [
+    {
+      "threshold": 0.65,
+      "case_id": "dev-03",
+      "claim": {
+        "claim_text": "TaskDock permits five active workers.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+        "citations": []
+      }
+    },
+    {
+      "threshold": 0.65,
+      "case_id": "dev-04",
+      "claim": {
+        "claim_text": "CedarCache persists entries across restarts.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+        "citations": []
+      }
+    },
+    {
+      "threshold": 0.65,
+      "case_id": "dev-08",
+      "claim": {
+        "claim_text": "The recovery worker runs in region West.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+        "citations": []
+      }
+    },
+    {
+      "threshold": 0.6,
+      "case_id": "dev-03",
+      "claim": {
+        "claim_text": "TaskDock permits five active workers.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+        "citations": []
+      }
+    },
+    {
+      "threshold": 0.6,
+      "case_id": "dev-04",
+      "claim": {
+        "claim_text": "CedarCache persists entries across restarts.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+        "citations": []
+      }
+    },
+    {
+      "threshold": 0.6,
+      "case_id": "dev-08",
+      "claim": {
+        "claim_text": "The recovery worker runs in region West.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "The recovery worker runs on host Maple."
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.55,
+      "case_id": "dev-03",
+      "claim": {
+        "claim_text": "TaskDock permits five active workers.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "TaskDock permits at most four active workers."
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.55,
+      "case_id": "dev-04",
+      "claim": {
+        "claim_text": "CedarCache persists entries across restarts.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "CedarCache does not persist entries across restarts."
+          }
+        ]
+      }
+    },
+    {
+      "threshold": 0.55,
+      "case_id": "dev-08",
+      "claim": {
+        "claim_text": "The recovery worker runs in region West.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "The recovery worker runs on host Maple."
+          }
+        ]
+      }
+    }
+  ]
+}
