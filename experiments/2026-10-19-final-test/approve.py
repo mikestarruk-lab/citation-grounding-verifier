@@ -9,7 +9,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from ai_align import HERE, METHODS, U
+from ai_align import METHODS, U
 
 REVIEWER = "Michael (mikestarruk-lab)"
 ALIGNMENT = Path("reviews/test-final/ai-alignment-2026-10-19.json")

@@ -34,8 +34,8 @@ standard scorer (`*-test.reviewed.summary.json`).
 | optimized (lean-v1) | **1.000** | 1.000 / 1.000 | 0 | 0 | **24/26 (92%)** | 100% |
 
 Minimal's two false positives are source premises it restated as claims the
-answer never made (test-16, test-20). Its evidence gaps are in multi-passage
-cases where it quotes only one passage. Lean misses two premises (test-01
+answer never made (test-16, test-20). Five of its six evidence gaps are in
+multi-passage cases where it quotes only one passage; the sixth is test-01. Lean misses two premises (test-01
 threshold, test-17 role). Evidence for five extra or mislabelled S/C units
 was filled mechanically after the owner's confirmation because the scorer
 requires it; see `approve.py`. Review followed AI feedback and is not
@@ -44,8 +44,8 @@ independent blind annotation.
 ## End-to-end run details
 
 Extraction, labels and citations from the generated answers. Citation legality
-is 100% for every method, enforced in code. The semantic F1 was reviewed as above; the original pending packets are kept in
-`reviews/test-final/` (`*-test-pending.json`, cases in shuffled order).
+is 100% for every method, enforced in code. The original pending packets
+are kept in `reviews/test-final/` (`*-test-pending.json`, cases in shuffled order).
 
 | Method | Predictions (gold: 32) | p50 / p95 s | Cost USD |
 |---|---:|---|---:|
@@ -53,7 +53,7 @@ is 100% for every method, enforced in code. The semantic F1 was reviewed as abov
 | minimal | 34 | 1.748 / 2.292 | 0.0039965 |
 | optimized (lean-v1) | 32 | 2.500 / 3.546 | 0.0051055 |
 
-AI preview only, not a score: lean's 32 predictions are 27 exact gold texts
+Before review, a quick look showed lean's 32 predictions are 27 exact gold texts
 plus 5 plain paraphrases. Minimal's 34 include two source premises restated as
 claims that the answer never made (test-16 bronze policy, test-20 routing),
 which the scoring rules count as extra units. Lexical splits sentences instead of
