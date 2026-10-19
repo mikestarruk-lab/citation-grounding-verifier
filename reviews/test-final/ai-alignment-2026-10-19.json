@@ -1,0 +1,1514 @@
+{
+  "status": "ai_proposed_owner_pending",
+  "rule": "rev2",
+  "methods": {
+    "optimized": {
+      "f1": 1.0,
+      "tp": 32,
+      "fp": 0,
+      "fn": 0,
+      "extra_units": 0,
+      "false_support": 0,
+      "false_rejection": 0,
+      "evidence": "24/26",
+      "errors": [],
+      "cases": [
+        {
+          "case_id": "test-01",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "UploadPort accepts an 8 MiB file.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "UploadPort rejects larger files.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "Quote 'Larger files are rejected.' omits the 8 MiB threshold that gives 'larger' its comparison value; gold keeps both sentences for this reason. Insufficient.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-02",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Sessions expire after 15 inactive minutes.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Activity resets the inactivity timer.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-03",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "With compact mode enabled, IrisStore compresses newly written segments.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "With compact mode enabled, IrisStore leaves existing segments unchanged.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "Unconditional source sentence entails the scoped claim.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-04",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "BirchQueue processes high-priority messages before normal-priority messages.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "BirchQueue uses arrival order within a priority.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-05",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "GET /status returns HTTP 200.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "GET /status returns a JSON body.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g3",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 2,
+              "prediction": "GET /status does not require authentication.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "'This endpoint' resolves to GET /status (entity reference). Sufficient.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-06",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "MeadowLog retains audit records for exactly 31 days.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-07",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "PineDB accepts writes in read-only mode.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-08",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Deleting a RiverLink project deletes its exported files.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-09",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "SableRep acknowledges a write as soon as one replica confirms receipt.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-10",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "MossVault enables automatic backups by default.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Operators can enable automatic backups in MossVault.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "'them' resolves to automatic backups (entity reference). Sufficient.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-11",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "FlintIndex indexes document titles.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "FlintIndex uses a B-tree internally.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-12",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "MetricHarbor uses port 9090 for its metrics endpoint.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-13",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "ClockFern stores timestamps in UTC.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "ClockFern synchronizes clocks using NTP.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-14",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "SpruceRunner schedules its containers using Kubernetes.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-15",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "QuartzCLI includes export commands.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "QuartzCLI is distributed under the Apache 2.0 license.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-16",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Archived objects in the Acorn project are retained for 90 days.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "Both chain links quoted.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-17",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Lina can view logs.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "Role and permission quoted.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Lina can delete logs.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "Only 'cannot delete logs' is quoted: Lina's sole role and the absence of user-specific permissions are independently necessary and missing.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-18",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Service Finch encrypts writes.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-19",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "The shared request pool has five available slots.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "Total, exact count and exclusive states all quoted.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-20",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Production accepts protocol V1.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "Exclusive routing and V1 rejection quoted.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Production accepts protocol V2.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "Fragment 'accepts protocol V2' resolves to Release Azure within the same sentence; routing quoted. Sufficient.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        }
+      ]
+    },
+    "minimal": {
+      "f1": 0.9697,
+      "tp": 32,
+      "fp": 2,
+      "fn": 0,
+      "extra_units": 2,
+      "false_support": 0,
+      "false_rejection": 0,
+      "evidence": "20/26",
+      "errors": [],
+      "cases": [
+        {
+          "case_id": "test-01",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "UploadPort accepts files up to and including 8 MiB.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "Restates the source rule instead of the answer's wording; it entails that an 8 MiB file is accepted, so it is matched to g1.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "UploadPort rejects files larger than 8 MiB.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "Quote 'Larger files are rejected.' omits the 8 MiB threshold that gives 'larger' its comparison value; gold keeps both sentences for this reason. Insufficient.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-02",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Sessions expire after 15 minutes of inactivity.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Activity resets the inactivity timer.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-03",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "With compact mode enabled, IrisStore compresses newly written segments.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "IrisStore leaves existing segments unchanged with compact mode enabled.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-04",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "BirchQueue processes high-priority messages before normal-priority messages.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "BirchQueue uses arrival order for messages within a priority.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-05",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "GET /status returns HTTP 200.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "GET /status returns a JSON body.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g3",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 2,
+              "prediction": "GET /status does not require authentication.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "'This endpoint' resolves to GET /status (entity reference). Sufficient.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-06",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "MeadowLog retains audit records for exactly 31 days.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-07",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "PineDB accepts writes in read-only mode.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-08",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Deleting a RiverLink project deletes its exported files.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-09",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "SableRep acknowledges a write as soon as one replica confirms receipt.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-10",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "MossVault enables automatic backups by default.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Operators can enable automatic backups.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "'them' resolves to automatic backups (entity reference). Sufficient.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-11",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "FlintIndex indexes document titles.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "FlintIndex uses a B-tree internally.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-12",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "MetricHarbor uses port 9090 for its metrics endpoint.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-13",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "ClockFern stores timestamps in UTC.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "ClockFern synchronizes clocks using NTP.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-14",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "SpruceRunner schedules its containers using Kubernetes.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-15",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "QuartzCLI includes export commands.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "QuartzCLI is distributed under the Apache 2.0 license.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-16",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "The Acorn project uses the bronze retention policy.",
+              "verdict": "SUPPORTED",
+              "gold_id": null,
+              "outcome": "extra",
+              "evidence_sufficient": null,
+              "note": "Source premise restated as a claim; the answer never asserts it. Extra unit.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Archived objects in the Acorn project are retained for 90 days.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "Both chain links quoted.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-17",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Lina can view logs.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "Only the auditor permission is quoted; Lina's role is missing.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Lina can delete logs.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "Only 'cannot delete logs' is quoted; Lina's role is missing.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-18",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Service Finch encrypts writes.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-19",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "The shared request pool has five available slots.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "The exclusive two-state premise is not quoted; gold requires it for 12 - 7.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-20",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Production traffic is routed to release Azure.",
+              "verdict": "SUPPORTED",
+              "gold_id": null,
+              "outcome": "extra",
+              "evidence_sufficient": null,
+              "note": "Routing premise restated as a claim (and 'exclusively' dropped); the answer never asserts it. Extra unit.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Production accepts protocol V1.",
+              "verdict": "CONTRADICTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "Only passage 1 quoted; the exclusive routing premise is missing.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 2,
+              "prediction": "Production accepts protocol V2.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "Only passage 1 quoted; the routing premise is missing.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        }
+      ]
+    },
+    "lexical": {
+      "f1": 0.4,
+      "tp": 13,
+      "fp": 20,
+      "fn": 19,
+      "extra_units": 1,
+      "false_support": 3,
+      "false_rejection": 12,
+      "evidence": "3/7",
+      "errors": [
+        "test-01/g1: UNSUPPORTED vs gold SUPPORTED",
+        "test-01/g2: UNSUPPORTED vs gold SUPPORTED",
+        "test-02/g1: UNSUPPORTED vs gold SUPPORTED",
+        "test-03/g1: UNSUPPORTED vs gold SUPPORTED",
+        "test-03/g2: UNSUPPORTED vs gold SUPPORTED",
+        "test-04/g1: UNSUPPORTED vs gold SUPPORTED",
+        "test-04/g2: UNSUPPORTED vs gold SUPPORTED",
+        "test-06/g1: UNSUPPORTED vs gold CONTRADICTED",
+        "test-07/g1: SUPPORTED vs gold CONTRADICTED",
+        "test-08/g1: SUPPORTED vs gold CONTRADICTED",
+        "test-09/g1: UNSUPPORTED vs gold CONTRADICTED",
+        "test-10/g1: UNSUPPORTED vs gold CONTRADICTED",
+        "test-10/g2: UNSUPPORTED vs gold SUPPORTED",
+        "test-11/g1: UNSUPPORTED vs gold SUPPORTED",
+        "test-13/g1: UNSUPPORTED vs gold SUPPORTED",
+        "test-15/g1: UNSUPPORTED vs gold SUPPORTED",
+        "test-17/g1: UNSUPPORTED vs gold SUPPORTED",
+        "test-17/g2: UNSUPPORTED vs gold CONTRADICTED",
+        "test-20/g1: SUPPORTED vs gold CONTRADICTED"
+      ],
+      "cases": [
+        {
+          "case_id": "test-01",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "UploadPort accepts an 8 MiB file and rejects larger files.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "Compound sentence split.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 0,
+              "prediction": "UploadPort accepts an 8 MiB file and rejects larger files.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-02",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Sessions expire after 15 inactive minutes.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Activity resets the inactivity timer.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-03",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "With compact mode enabled, IrisStore compresses newly written segments but leaves existing segments unchanged.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "Compound sentence split.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 0,
+              "prediction": "With compact mode enabled, IrisStore compresses newly written segments but leaves existing segments unchanged.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-04",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "BirchQueue processes high-priority messages before normal-priority messages and uses arrival order within a priority.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "Compound sentence split.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 0,
+              "prediction": "BirchQueue processes high-priority messages before normal-priority messages and uses arrival order within a priority.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-05",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "GET /status returns HTTP 200 and a JSON body without requiring authentication.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "Compound sentence split into three units.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 0,
+              "prediction": "GET /status returns HTTP 200 and a JSON body without requiring authentication.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g3",
+              "outcome": "correct",
+              "evidence_sufficient": true,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 0,
+              "prediction": "GET /status returns HTTP 200 and a JSON body without requiring authentication.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "The authentication sentence is not quoted.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-06",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "MeadowLog retains audit records for exactly 31 days.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs CONTRADICTED",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-07",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "PineDB accepts writes in read-only mode.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: SUPPORTED vs CONTRADICTED",
+              "evidence_sufficient": null,
+              "note": "False support.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-08",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Deleting a RiverLink project deletes its exported files.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: SUPPORTED vs CONTRADICTED",
+              "evidence_sufficient": null,
+              "note": "False support.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-09",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "SableRep acknowledges a write as soon as one replica confirms receipt.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs CONTRADICTED",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-10",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "MossVault enables automatic backups by default, and operators can enable them.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs CONTRADICTED",
+              "evidence_sufficient": null,
+              "note": "Compound sentence split.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 0,
+              "prediction": "MossVault enables automatic backups by default, and operators can enable them.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-11",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "FlintIndex indexes document titles and uses a B-tree internally.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "Compound sentence split.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 0,
+              "prediction": "FlintIndex indexes document titles and uses a B-tree internally.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-12",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "MetricHarbor uses port 9090 for its metrics endpoint.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-13",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "ClockFern stores timestamps in UTC and synchronizes clocks using NTP.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "Compound sentence split.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 0,
+              "prediction": "ClockFern stores timestamps in UTC and synchronizes clocks using NTP.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-14",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "SpruceRunner schedules its containers using Kubernetes.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-15",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "QuartzCLI includes export commands and is distributed under the Apache 2.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "Sentence splitter broke 'Apache 2.0' at the period.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 0,
+              "prediction": "QuartzCLI includes export commands and is distributed under the Apache 2.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "'Apache 2' read as the Apache 2.0 license claim.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "0 license.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": null,
+              "outcome": "extra",
+              "evidence_sufficient": null,
+              "note": "'0 license.' is a splitting artifact with no claim. Extra unit.",
+              "needs_owner_attention": true,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-16",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Archived objects in the Acorn project are retained for 90 days.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "Only passage 1 quoted; Acorn's policy is missing.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-17",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Lina can view logs.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: UNSUPPORTED vs SUPPORTED",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 1,
+              "prediction": "Lina can delete logs.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g2",
+              "outcome": "wrong label: UNSUPPORTED vs CONTRADICTED",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-18",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Service Finch encrypts writes.",
+              "verdict": "UNSUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": null,
+              "note": "",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-19",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "The shared request pool has five available slots.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "Only the total is quoted; the occupied count is missing.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        },
+        {
+          "case_id": "test-20",
+          "units": [
+            {
+              "prediction_index": 0,
+              "prediction": "Production accepts protocol V1 and protocol V2.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g1",
+              "outcome": "wrong label: SUPPORTED vs CONTRADICTED",
+              "evidence_sufficient": null,
+              "note": "Compound sentence split; V1 is a false support.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            },
+            {
+              "prediction_index": 0,
+              "prediction": "Production accepts protocol V1 and protocol V2.",
+              "verdict": "SUPPORTED",
+              "gold_id": "g2",
+              "outcome": "correct",
+              "evidence_sufficient": false,
+              "note": "Only passage 1 quoted; routing premise missing.",
+              "needs_owner_attention": false,
+              "owner_decision": null
+            }
+          ],
+          "missing_gold_ids": []
+        }
+      ]
+    }
+  }
+}

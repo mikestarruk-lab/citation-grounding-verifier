@@ -457,3 +457,11 @@ lexical 宏 F1 0.368，minimal 与 lean 都是 1.0，说明短案例在单纯判
 lean 的 32 条预测都能直接对上 gold；minimal 有 34 条，多出两条把原文前提当成答案事实；
 lexical 在 12 条完全同文的预测中错了 6 条，含两次误支持。详见
 [test 运行说明](../experiments/2026-10-19-final-test/README.md)。
+
+### test 端到端 AI 对齐稿
+
+按你的要求，用挑战集 rev2 口径对三套方法的 test 端到端输出逐条对齐，决定写在
+`experiments/2026-10-19-final-test/ai_align.py`，结果在 `reviews/test-final/ai-alignment-2026-10-19.json`，
+另有供你审阅的结构化文档。AI 预估：lean F1 1.000（证据 24/26）、minimal 0.970（多出两条原文前提，
+证据 20/26）、lexical 0.400（3 次误支持、12 次误拒绝）。9 个会影响分数或口径的单元已单独列出待你确认。
+全部仍是 ai_proposed，没有写成 approved，评分器不产生正式 F1。
