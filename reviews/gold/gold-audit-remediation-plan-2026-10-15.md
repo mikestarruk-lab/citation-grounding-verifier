@@ -4,8 +4,8 @@ Date: 2026-10-15. Internal delivery deadline: 2026-10-21, 18:00 Europe/London.
 
 Status update: the three required repairs are implemented and pass offline
 engineering checks; human gold approval is still pending. See
-[implementation history](../docs/change-history.zh-CN.md) and the generated
-[complete review](gold-dataset-review.md). The user deleted Canvas; the Markdown
+[implementation history](../../docs/change-history.zh-CN.md) and the generated
+[complete review](../gold-dataset-review.md). The user deleted Canvas; the Markdown
 generator and its CI drift check supersede the Canvas implementation proposed
 below. Do not restore Canvas. The remaining text preserves the original plan.
 

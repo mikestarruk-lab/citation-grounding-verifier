@@ -69,20 +69,20 @@ metrics are reported separately. Fixed-gold-fact diagnostics (`--mode gold`)
 isolate verification quality and do not replace end-to-end evaluation.
 
 Scoring checks canonical data and output hashes. Old v1 runs and
-`reviews/dev-lexical-pending.json` are historical pre-remediation artifacts and
+`reviews/archive/dev-lexical-pending.json` are historical pre-remediation artifacts and
 cannot be replayed against the revised gold. Test runs require a human-approved,
 hash-bound frozen manifest. Final test execution also waits for method freeze.
 Paid runs share the local $20 budget ledger; retain it across experiments.
 
 ## Project records
 
-- [Development v2 output review](reviews/dev-v2-output-review.md): pending
+- [Development v2 output review](reviews/dev-v2/dev-v2-output-review.md): pending
   alignment/evidence review, with method names hidden as A/B. Review it before
   opening the [method-labelled experiment records](experiments/2026-10-16-dev-v2/README.md).
 - [Owner approval of development gold](reviews/dev-gold-approval-2026-10-16.md).
 
-- [Gold audit](reviews/gold-dataset-audit-2026-10-15.md) and
-  [remediation plan](reviews/gold-audit-remediation-plan-2026-10-15.md).
+- [Gold audit](reviews/gold/gold-dataset-audit-2026-10-15.md) and
+  [remediation plan](reviews/gold/gold-audit-remediation-plan-2026-10-15.md).
 - [Design rationale, Chinese](docs/design-rationale.zh-CN.md).
 - [Implementation decisions and change history, Chinese](docs/change-history.zh-CN.md).
 

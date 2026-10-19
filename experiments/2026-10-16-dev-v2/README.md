@@ -35,7 +35,7 @@ not a provider invoice. Do not reset the ledger when reproducing experiments.
 
 ## Human review and replay
 
-Review [the A/B packet](../../reviews/dev-v2-output-review.md) before inspecting
+Review [the A/B packet](../../reviews/dev-v2/dev-v2-output-review.md) before inspecting
 the method-labelled files here. A/B hides names, but output style and accessible
 experiment metadata can reveal the method; this is limited blinding. The
 reviewer-only assignment map is kept in the ignored local cache. Neither A/B

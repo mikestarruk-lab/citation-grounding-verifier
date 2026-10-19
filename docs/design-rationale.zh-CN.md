@@ -339,7 +339,7 @@ TP：与某个唯一 gold 事实语义等价，且 verdict 正确。FP：多余�
 
 ## 10. Audit 为什么改变了下一步优先级
 
-详见 [gold audit](../reviews/gold-dataset-audit-2026-10-15.md)。它发现的主要问题是标注和审阅流程，而不是有证据必须翻转某个现有 verdict。
+详见 [gold audit](../reviews/gold/gold-dataset-audit-2026-10-15.md)。它发现的主要问题是标注和审阅流程，而不是有证据必须翻转某个现有 verdict。
 
 | 问题 | 解决思路 | 优势 | 代价与仍这样选的理由 |
 |---|---|---|---|
