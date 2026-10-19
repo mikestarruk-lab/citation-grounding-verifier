@@ -14,8 +14,8 @@ from anthropic import (
 from filelock import Timeout as LockTimeout
 
 from .budget import Budget
-from .domain import VerificationReport, VerifyError, VerifyRequest, validate_report
-from .prompts import FIXED, MINIMAL, REFINED
+from .domain import Citation, VerificationReport, VerifyError, VerifyRequest, validate_report
+from .prompts import FIXED, LEAN, MINIMAL, REFINED, REFINED_V2
 
 MODEL = "claude-haiku-5-5"
 MAX_OUTPUT = 8192
@@ -156,12 +156,40 @@ class AnthropicProvider:
                 attempt["latency_seconds"] = time.perf_counter() - started
 
 
+def expand_cited_passages(report: VerificationReport, passages: list[str]) -> VerificationReport:
+    """Expand only already-valid citations; never use expansion to hide a bad quote/index."""
+    validate_report(report, passages)
+    expanded = report.model_copy(deep=True)
+    for claim in expanded.claims:
+        indices = dict.fromkeys(citation.index for citation in claim.citations)
+        claim.citations = [Citation(index=i, quote=passages[i]) for i in indices]
+    return validate_report(expanded, passages)
+
+
 class LLMVerifier:
-    def __init__(self, provider, optimized: bool = False):
+    def __init__(
+        self,
+        provider,
+        optimized: bool = False,
+        *,
+        prompt_variant: str | None = None,
+        citation_policy: str = "span",
+    ):
         self.provider = provider
         self.optimized = optimized
         self.name = "optimized" if optimized else "minimal"
-        self.prompt = REFINED if optimized else MINIMAL
+        variants = {"refined-v1": REFINED, "refined-v2": REFINED_V2, "lean-v1": LEAN}
+        if not optimized and prompt_variant is not None:
+            raise ValueError("minimal baseline does not accept prompt variants")
+        if optimized and prompt_variant is not None and prompt_variant not in variants:
+            raise ValueError("unknown optimized prompt variant")
+        self.prompt_variant = (prompt_variant or "refined-v1") if optimized else "minimal"
+        self.prompt = variants[self.prompt_variant] if optimized else MINIMAL
+        if citation_policy not in {"span", "passage"}:
+            raise ValueError("unknown citation policy")
+        if not optimized and citation_policy != "span":
+            raise ValueError("minimal baseline does not accept citation expansion")
+        self.citation_policy = citation_policy
 
     async def verify(self, request: VerifyRequest, trace: dict):
         if not request.generated_answer.strip():
@@ -189,6 +217,16 @@ class LLMVerifier:
                 ):
                     raise ValueError("fixed claims were omitted, reordered, added or rewritten")
                 validate_report(report, passages)
+                if self.citation_policy == "passage":
+                    before = sum(len(c.quote) for claim in report.claims for c in claim.citations)
+                    report = expand_cited_passages(report, passages)
+                    trace["citation_expansion"] = {
+                        "policy": "full_already_cited_passages",
+                        "original_quote_characters": before,
+                        "final_quote_characters": sum(
+                            len(c.quote) for claim in report.claims for c in claim.citations
+                        ),
+                    }
                 return report
             except (ValueError, TypeError) as exc:
                 trace.setdefault("validation_errors", []).append(str(exc))

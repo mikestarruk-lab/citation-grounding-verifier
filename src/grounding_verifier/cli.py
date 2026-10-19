@@ -15,7 +15,6 @@ from .domain import VerifyError
 from .evaluation import output_hash, review_template, score
 from .gold_review import render_gold_review
 from .llm import MODEL, AnthropicProvider, LLMVerifier, execute
-from .prompts import MINIMAL, REFINED
 
 
 def write_json(path: Path, value):
@@ -33,6 +32,11 @@ def read_json(path):
 async def run_benchmark(args):
     if args.out.exists():
         raise ValueError("output already exists; select a new run path")
+    if args.method != "optimized" and (
+        getattr(args, "prompt_variant", "refined-v1") != "refined-v1"
+        or getattr(args, "citation_policy", "span") != "span"
+    ):
+        raise ValueError("prompt variants and citation expansion apply only to optimized")
     cases = load_cases(args.data / f"{args.split}.jsonl")
     if args.split == "test":
         require_frozen_test(args.data, cases)
@@ -45,7 +49,12 @@ async def run_benchmark(args):
         verifier = LexicalVerifier(args.threshold)
     else:
         provider = AnthropicProvider()
-        verifier = LLMVerifier(provider, optimized=args.method == "optimized")
+        verifier = LLMVerifier(
+            provider,
+            optimized=args.method == "optimized",
+            prompt_variant=args.prompt_variant if args.method == "optimized" else None,
+            citation_policy=getattr(args, "citation_policy", "span"),
+        )
     try:
         git = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True)
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
@@ -60,7 +69,9 @@ async def run_benchmark(args):
             "model": MODEL if provider else None,
             "effort": "medium" if provider else None,
             "threshold": args.threshold if args.method == "lexical" else None,
-            "prompt": (REFINED if args.method == "optimized" else MINIMAL) if provider else None,
+            "prompt": verifier.prompt if provider else None,
+            "prompt_variant": verifier.prompt_variant if provider else None,
+            "citation_policy": verifier.citation_policy if provider else None,
             "experiment_note": args.experiment_note,
             "git_commit": git.stdout.strip() if git.returncode == 0 else None,
             "working_tree_dirty": bool(status.stdout),
@@ -123,6 +134,10 @@ def main():
     run.add_argument("--data", type=Path, default=Path("data"))
     run.add_argument("--threshold", type=float, default=0.65)
     run.add_argument("--experiment-note")
+    run.add_argument(
+        "--prompt-variant", choices=["refined-v1", "refined-v2", "lean-v1"], default="refined-v1"
+    )
+    run.add_argument("--citation-policy", choices=["span", "passage"], default="span")
     run.add_argument("--out", type=Path, required=True)
     review = commands.add_parser("review-template")
     review.add_argument("--run", type=Path, required=True)
