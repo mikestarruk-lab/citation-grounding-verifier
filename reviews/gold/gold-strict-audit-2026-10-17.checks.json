@@ -1,0 +1,89 @@
+{
+  "scope": "Current working tree; AI audit, not human approval",
+  "splits": {
+    "dev": {
+      "cases": 8,
+      "categories": {
+        "supported": 2,
+        "distortion": 2,
+        "extrinsic": 2,
+        "multi_passage": 2
+      },
+      "hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+      "labels": {
+        "SUPPORTED": 8,
+        "CONTRADICTED": 2,
+        "UNSUPPORTED": 2
+      }
+    },
+    "test": {
+      "cases": 20,
+      "categories": {
+        "supported": 5,
+        "distortion": 5,
+        "extrinsic": 5,
+        "multi_passage": 5
+      },
+      "hash": "68d7f4554a71fa9944185a4808782af33887b4125265a72fbc006b3a76c426fa",
+      "labels": {
+        "SUPPORTED": 19,
+        "CONTRADICTED": 7,
+        "UNSUPPORTED": 6
+      }
+    }
+  },
+  "sha256": {
+    "data\\dev.jsonl": "7cbd5804ab547f8528384de4d5180c50904ef6e3d6027c8ba2a2ee0cf5ebb577",
+    "data\\test.jsonl": "cbf87c2b1cda691a1988c0224d95aa823ee6cb0675f3ec66322d88161eaeda59",
+    "data\\manifest.json": "29bf567a1ba83e6c13f7abc02f74112a06a7a132ad009b783c9fd47521f88009"
+  },
+  "generated_review_current": true,
+  "dev_approval_hash_matches": true,
+  "profiles": {
+    "dev": {
+      "facts": 12,
+      "passage_counts": {
+        "1": 6,
+        "2": 2
+      },
+      "source_words_min_median_max": [
+        7,
+        11.5,
+        15
+      ],
+      "citation_objects": 12,
+      "valid_verbatim_citations": 12,
+      "whole_passage_citations": 12,
+      "blank_annotation_reasons": 0,
+      "duplicate_normalized_inputs": 0,
+      "claims_with_multiple_cited_passages": 2
+    },
+    "test": {
+      "facts": 32,
+      "passage_counts": {
+        "1": 15,
+        "2": 5
+      },
+      "source_words_min_median_max": [
+        5,
+        13.5,
+        22
+      ],
+      "citation_objects": 32,
+      "valid_verbatim_citations": 32,
+      "whole_passage_citations": 30,
+      "blank_annotation_reasons": 0,
+      "duplicate_normalized_inputs": 0,
+      "claims_with_multiple_cited_passages": 6
+    }
+  },
+  "cross_split_exact_source_overlap": [],
+  "freeze_gate_probes_synthetic_only": {
+    "current_draft": "REJECTED",
+    "draft_with_reviewer_frozen_and_matching_hash": "ACCEPTED",
+    "rejected_with_reviewer_frozen_and_matching_hash": "ACCEPTED",
+    "string_false_frozen": "ACCEPTED",
+    "whitespace_reviewer": "ACCEPTED"
+  },
+  "blank_annotation_reason_probe": "ACCEPTED"
+}
