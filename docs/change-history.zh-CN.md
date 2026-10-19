@@ -399,3 +399,20 @@ available.`，消除“至少七个”和“同一槽位两种状态”的读法
 两处标签不变。test 哈希由 `19b9766741e3843a8deaea65dd7bef7bacc997eaf841dd7dd3afee338dbeb8e6`
 变为 `cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a`，审阅页已重新生成，
 68 项 pytest、Ruff、validate-data 与审阅页同步检查通过。test 仍为 draft、未冻结。
+
+## 2026-10-19：test gold 批准并冻结
+
+你在对话中写下“批准 test gold，哈希 cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a。
+剩下两个决定事项保持原样。”，并要求冻结。批准范围是 test-01 至 test-20 的 20 个案例、
+32 条事实（S 19、C 7、U 6）；test-05 的编号顺序保持不变，也不新增 test 案例，
+短案例区分度有限这一点留到评测报告中说明。
+
+新增 [批准记录](../reviews/test-gold-approval-2026-10-19.md)，原样记下批准语句、审阅时的
+提交 `16d5718`、批准前按你要求做的五处修改和仍然有效的边界。manifest 中 test 改为
+approved、frozen=true，审核人和哈希写入，并链接批准记录；审阅页已重新生成。按今天收紧
+后的门禁，真实 test 现在可以通过 `require_frozen_test`；原先断言“test 未冻结会被拒绝”的
+测试改为断言冻结数据能通过、任何改动都会被拒绝。
+
+从现在起 test 数据冻结：不再修改 test，也不根据 test 结果调方法、提示词或阈值。
+最终 test 运行仍等优化方法选定（MIC-109）。这是你在 AI 审阅意见之后的批准，
+不是独立外部验证；test 输出的对齐和证据审核另需审阅。

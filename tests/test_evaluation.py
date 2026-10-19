@@ -164,8 +164,13 @@ def test_dataset_structure_and_freeze_gate():
     assert counts["dev"]["cases"] == 8 and counts["test"]["cases"] == 20
     from grounding_verifier.dataset import load_cases
 
+    # Test gold was approved and frozen on 2026-10-19; any edit must break the gate.
+    cases = load_cases(Path("data/test.jsonl"))
+    require_frozen_test(Path("data"), cases)
+    edited = copy.deepcopy(cases)
+    edited[0].generated_answer += " Edited after freeze."
     with pytest.raises(ValueError, match="human gold review"):
-        require_frozen_test(Path("data"), load_cases(Path("data/test.jsonl")))
+        require_frozen_test(Path("data"), edited)
 
 
 APPROVED_TEST = {"review_status": "approved", "reviewed_by": "Owner", "frozen": True}

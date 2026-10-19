@@ -7,7 +7,7 @@ Review each fact's meaning, qualifiers, verdict, explanation and complete eviden
 | Split | Cases | Gold facts | S / C / U | Review status |
 |---|---:|---:|---|---|
 | dev | 8 | 12 | 8 / 2 / 2 | approved |
-| test | 20 | 32 | 19 / 7 / 6 | draft |
+| test | 20 | 32 | 19 / 7 / 6 | approved |
 
 ## Source versions
 
@@ -27,12 +27,14 @@ Review each fact's meaning, qualifiers, verdict, explanation and complete eviden
     "approval_record": "reviews/dev-gold-approval-2026-10-16.md"
   },
   "test": {
-    "review_status": "draft",
-    "reviewed_by": null,
-    "frozen": false,
-    "dataset_hash": null
+    "review_status": "approved",
+    "reviewed_by": "Michael (mikestarruk-lab)",
+    "reviewed_on": "2026-10-19",
+    "frozen": true,
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "approval_record": "reviews/test-gold-approval-2026-10-19.md"
   },
-  "note": "Dev gold and v2 development outputs are owner-reviewed; see reviews/dev-v2/dev-v2-human-review-import-2026-10-17.json. Test gold remains pending. Owner review followed AI feedback and is not independent external validation."
+  "note": "Dev gold and v2 development outputs are owner-reviewed; see reviews/dev-v2/dev-v2-human-review-import-2026-10-17.json. Test gold was owner-approved and frozen on 2026-10-19; see reviews/test-gold-approval-2026-10-19.md. Owner review followed AI feedback and is not independent external validation."
 }
 ```
 

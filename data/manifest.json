@@ -7,6 +7,13 @@
     "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
     "approval_record": "reviews/dev-gold-approval-2026-10-16.md"
   },
-  "test": {"review_status": "draft", "reviewed_by": null, "frozen": false, "dataset_hash": null},
-  "note": "Dev gold and v2 development outputs are owner-reviewed; see reviews/dev-v2/dev-v2-human-review-import-2026-10-17.json. Test gold remains pending. Owner review followed AI feedback and is not independent external validation."
+  "test": {
+    "review_status": "approved",
+    "reviewed_by": "Michael (mikestarruk-lab)",
+    "reviewed_on": "2026-10-19",
+    "frozen": true,
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "approval_record": "reviews/test-gold-approval-2026-10-19.md"
+  },
+  "note": "Dev gold and v2 development outputs are owner-reviewed; see reviews/dev-v2/dev-v2-human-review-import-2026-10-17.json. Test gold was owner-approved and frozen on 2026-10-19; see reviews/test-gold-approval-2026-10-19.md. Owner review followed AI feedback and is not independent external validation."
 }
