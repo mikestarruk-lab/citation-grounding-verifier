@@ -1,0 +1,42 @@
+{
+  "mode": "e2e",
+  "method": "optimized",
+  "cases": 5,
+  "success_rate": 0.8,
+  "repair_rate": 0.2,
+  "confirmed_cost_usd": 0.0034459,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 0.9166666666666666,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 5,
+  "p50_seconds": 4.380963400006294,
+  "p95_seconds": 8.491348700027446,
+  "first_client_call_seconds": [
+    5.113351400010288
+  ],
+  "warm_call_p50_seconds": 4.378603200020734,
+  "pending_reviews": [
+    "challenge-02",
+    "challenge-03",
+    "challenge-04",
+    "challenge-05"
+  ],
+  "counts": {
+    "cases": 5,
+    "gold_facts": 12,
+    "calls": 6,
+    "repaired_requests": 1,
+    "input_tokens": 9879,
+    "output_tokens": 4916,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 11,
+    "first_quotes": 12,
+    "final_valid_quotes": 9,
+    "final_quotes": 9,
+    "fn": 4,
+    "successes": 4
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "draft"
+}

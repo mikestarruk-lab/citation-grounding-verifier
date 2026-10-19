@@ -1,0 +1,82 @@
+{
+  "dev-01 | archivebox creates hourly snapshots": {
+    "units": [
+      "g1"
+    ],
+    "note": "Hourly snapshots and a snapshot every hour are the same frequency claim."
+  },
+  "dev-03 | additional workers remain queued": {
+    "units": [
+      "g2"
+    ],
+    "note": "Same sentence as the answer; the subject resolves to TaskDock workers (entity reference only)."
+  },
+  "dev-05 | cachepebble s files are encrypted with aes 256": {
+    "units": [
+      "g2"
+    ],
+    "note": "Possessive wording of the same encryption claim."
+  },
+  "challenge-05 | for a delivery reported as successful parcelmoth has written status delivered and deleted the pending receipt record in the same transaction": {
+    "units": [
+      "g1",
+      "g2",
+      null
+    ],
+    "note": "rev2 rule: split into the two action facts; the same-transaction relation lacks 'committed', so it is an extra partial-relation unit, not g3."
+  },
+  "challenge-05 | for a delivery reported as successful the transaction in which parcelmoth wrote status delivered and deleted the pending receipt record has committed": {
+    "units": [
+      "g3"
+    ],
+    "note": "Self-contained: both actions, one transaction, committed, and the reported-success scope all appear in this prediction's own text."
+  },
+  "dev-05 | its files are encrypted with aes 256": {
+    "units": [
+      "g2"
+    ],
+    "note": "'Its' resolves to CachePebble (entity reference only)."
+  },
+  "challenge-05 | parcelmoth has written status delivered and deleted the pending receipt record in one transaction": {
+    "units": [
+      null,
+      null,
+      null
+    ],
+    "note": "Drops the reported-success scope that g1/g2 require (gold annotation: not an unconditional guarantee covering pre-commit crashes) and lacks 'committed' for g3. Split like other compounds into two unqualified action units and one partial relation unit; all three are extra. Sensitivity: counting it as one extra unit changes only refined-v1 r2."
+  },
+  "challenge-05 | for a delivery reported as successful the transaction that writes status delivered and deletes the pending receipt record has been committed": {
+    "units": [
+      "g3"
+    ],
+    "note": "Self-contained: both actions, one transaction, committed and reported-success scope."
+  },
+  "challenge-05 | for a delivery reported as successful the transaction that wrote status delivered and deleted the pending receipt record has committed": {
+    "units": [
+      "g3"
+    ],
+    "note": "Self-contained: both actions, one transaction, committed and reported-success scope."
+  },
+  "challenge-05 | for a delivery reported as successful parcelmoth has written status delivered and deleted the pending receipt record in the same committed transaction": {
+    "units": [
+      "g1",
+      "g2",
+      "g3"
+    ],
+    "note": "Qualified compound containing all three gold units, including 'committed'; split with inherited verdict and citations."
+  },
+  "challenge-05 | for a delivery reported as successful parcelmoth has written status delivered and deleted the pending receipt record in one transaction": {
+    "units": [
+      "g1",
+      "g2",
+      null
+    ],
+    "note": "rev2 rule: two action units; the relation lacks 'committed', so it is an extra partial-relation unit."
+  },
+  "challenge-05 | for a delivery reported as successful that transaction was committed": {
+    "units": [
+      null
+    ],
+    "note": "rev2 rule: 'that transaction' cannot import the two actions from the other prediction, so this does not match g3."
+  }
+}

@@ -416,3 +416,22 @@ approved、frozen=true，审核人和哈希写入，并链接批准记录；审�
 从现在起 test 数据冻结：不再修改 test，也不根据 test 结果调方法、提示词或阈值。
 最终 test 运行仍等优化方法选定（MIC-109）。这是你在 AI 审阅意见之后的批准，
 不是独立外部验证；test 输出的对齐和证据审核另需审阅。
+
+## 2026-10-19：优化候选稳定性复跑（MIC-109）
+
+按你的要求，先提交 [预注册计划](../experiments/2026-10-19-stability/PLAN.md)（`588911e`），
+再让 refined-v1、refined-v2（片段引用）和 lean 在已批准的 dev 与挑战 v2 上各跑 3 次，
+共 117 次串行调用，估算 $0.0396647，账本累计 $0.0770948；没有读取或运行已冻结的 test。
+评分沿用 rev2 指代口径，证据按模型原始引文判断；全部是 AI 建议，等你审核。
+
+结果：refined-v1 和 lean 在 dev 三次都是 F1 1.0；refined-v2 第 3 次又把 dev-08 判成 U
+（这个提示词 5 次 dev-08 里错 2 次），同一轮的 challenge-01 两次输出非逐字引文，
+服务返回 502。挑战集平均 F1：refined-v2 0.920、lean 0.906、refined-v1 0.880；
+原始引文的证据充分数：lean 50/55、refined-v2 49/53、refined-v1 44/54。三者都没有误支持。
+
+按预先规则：先排除接口失败和 dev 退化的 refined-v2；refined-v1 与 lean 在 dev 打平，
+由挑战集 F1 决出 lean，证据和成本也支持 lean。推荐 **lean-v1 + 片段引用**：标签不受
+引用扩展影响，片段引用让证据判断如实。lean 与 refined-v1 的挑战集差距很小，也不能
+证明 lean 优于固定的 minimal；报告中应把它写成“最稳定的优化候选”，修复路径是可测的
+工程收益。选定仍需你确认，HTTP 默认配置暂未修改。详见
+[复跑结果](../experiments/2026-10-19-stability/README.md)。

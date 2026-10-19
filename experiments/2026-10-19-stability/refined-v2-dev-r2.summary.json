@@ -1,0 +1,45 @@
+{
+  "mode": "e2e",
+  "method": "optimized",
+  "cases": 8,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0020109000000000004,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 8,
+  "p50_seconds": 2.0785483499930706,
+  "p95_seconds": 2.539525295019848,
+  "first_client_call_seconds": [
+    2.0469915000139736
+  ],
+  "warm_call_p50_seconds": 2.104113799985498,
+  "pending_reviews": [
+    "dev-01",
+    "dev-02",
+    "dev-03",
+    "dev-04",
+    "dev-05",
+    "dev-06",
+    "dev-07",
+    "dev-08"
+  ],
+  "counts": {
+    "cases": 8,
+    "gold_facts": 12,
+    "calls": 8,
+    "repaired_requests": 0,
+    "input_tokens": 11294,
+    "output_tokens": 1763,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 12,
+    "first_quotes": 12,
+    "final_valid_quotes": 12,
+    "final_quotes": 12,
+    "successes": 8
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "approved"
+}
