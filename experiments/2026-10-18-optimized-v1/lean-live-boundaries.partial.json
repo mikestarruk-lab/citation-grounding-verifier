@@ -1,0 +1,236 @@
+{
+  "format_version": 1,
+  "created_at": "2026-10-17T23:42:02.052868+00:00",
+  "kind": "live_engineering_boundary_checks_excluded_from_quality_benchmark",
+  "script_digest": "89fd88ea3e976f51b4972c5319ea1bd0b969bcbb717d13695e4edc4eb41cacd7",
+  "llm_source_digest": "1ad27d51f7038dfcb0618a3e9a162c67b5da07f41687c553dc2c293fc8524368",
+  "minimal_prompt_digest": "cfedee55daec92b111506accbc65053e162643047b118594ca2e0131b0a179df",
+  "optimized_prompt_digest": "d6b6e9b55ec96495ffcd3848066c6a9eee88e60c647568f6a166035fa8bd043e",
+  "records": [
+    {
+      "case_id": "boundary-conflict",
+      "method": "optimized",
+      "expected": "nonempty_all_unsupported",
+      "request": {
+        "context_passages": [
+          "For release 9, PierLedger stores its event log in an immutable file.",
+          "For release 9, PierLedger stores its event log in a mutable file."
+        ],
+        "generated_answer": "For release 9, PierLedger stores its event log in an immutable file."
+      },
+      "reason": "The project's declared boundary policy treats unresolved same-condition source conflict as UNSUPPORTED with no citations. The assignment itself does not specify conflict precedence. Not part of main quality scores.",
+      "trace": {
+        "attempts": [
+          {
+            "reservation": "a0706e19cee3481191d7192f774c6d76",
+            "first_request_in_client": true,
+            "status": "received",
+            "cost_usd": 0.000243,
+            "reserved_usd": 0.52048,
+            "usage": {
+              "cache_creation": {
+                "ephemeral_1h_input_tokens": 0,
+                "ephemeral_5m_input_tokens": 0
+              },
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 0,
+              "inference_geo": "global",
+              "input_tokens": 985,
+              "output_tokens": 289,
+              "output_tokens_details": {
+                "thinking_tokens": 121
+              },
+              "server_tool_use": null,
+              "service_tier": "standard",
+              "speed": "standard"
+            },
+            "stop_reason": "end_turn",
+            "raw_text": "{\"claims\":[{\"claim_text\":\"For release 9, PierLedger stores its event log in an immutable file.\",\"verdict\":\"UNSUPPORTED\",\"reasoning\":\"Two equally applicable passages irreconcilably conflict on this point. Passage 0 states the event log is stored in an immutable file for release 9, while passage 1 states it is stored in a mutable file for release 9. Because the sources cannot both be true and neither is more authoritative, the claim cannot be verified.\",\"citations\":[]}]}",
+            "response_id": "msg_011Cg8hGETKiwx5q7Qv5F28y",
+            "model": "claude-haiku-5-5",
+            "latency_seconds": 2.5590191000082996
+          }
+        ],
+        "first_output": {
+          "claims": [
+            {
+              "claim_text": "For release 9, PierLedger stores its event log in an immutable file.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "Two equally applicable passages irreconcilably conflict on this point. Passage 0 states the event log is stored in an immutable file for release 9, while passage 1 states it is stored in a mutable file for release 9. Because the sources cannot both be true and neither is more authoritative, the claim cannot be verified.",
+              "citations": []
+            }
+          ]
+        },
+        "citation_expansion": {
+          "policy": "full_already_cited_passages",
+          "original_quote_characters": 0,
+          "final_quote_characters": 0
+        },
+        "latency_seconds": 2.5619360000127926
+      },
+      "status": "ok",
+      "output": {
+        "claims": [
+          {
+            "claim_text": "For release 9, PierLedger stores its event log in an immutable file.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "Two equally applicable passages irreconcilably conflict on this point. Passage 0 states the event log is stored in an immutable file for release 9, while passage 1 states it is stored in a mutable file for release 9. Because the sources cannot both be true and neither is more authoritative, the claim cannot be verified.",
+            "citations": []
+          }
+        ]
+      },
+      "boundary_passed": true,
+      "output_hash": "39a412aa2f341a1330eb303881294b4c6f2ad17a2b77e12a0e30715eb3b038ed"
+    },
+    {
+      "case_id": "boundary-empty-context",
+      "method": "optimized",
+      "expected": "nonempty_all_unsupported",
+      "request": {
+        "context_passages": [],
+        "generated_answer": "FernRelay retries requests after a reset and deletes logs after one hour."
+      },
+      "reason": "Facts with no context cannot be verified. This automatic boundary check tests labels and citation emptiness, not full extraction coverage.",
+      "trace": {
+        "attempts": [
+          {
+            "reservation": "2e125f0836cf4f2c8d66714856535919",
+            "first_request_in_client": false,
+            "status": "received",
+            "cost_usd": 0.0001725,
+            "reserved_usd": 0.52048,
+            "usage": {
+              "cache_creation": {
+                "ephemeral_1h_input_tokens": 0,
+                "ephemeral_5m_input_tokens": 0
+              },
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 0,
+              "inference_geo": "global",
+              "input_tokens": 940,
+              "output_tokens": 157,
+              "output_tokens_details": {
+                "thinking_tokens": 0
+              },
+              "server_tool_use": null,
+              "service_tier": "standard",
+              "speed": "standard"
+            },
+            "stop_reason": "end_turn",
+            "raw_text": "{\"claims\":[{\"claim_text\":\"FernRelay retries requests after a reset.\",\"verdict\":\"UNSUPPORTED\",\"reasoning\":\"The context passages list is empty, so there is no source text supporting this claim.\",\"citations\":[]},{\"claim_text\":\"FernRelay deletes logs after one hour.\",\"verdict\":\"UNSUPPORTED\",\"reasoning\":\"The context passages list is empty, so there is no source text supporting this claim.\",\"citations\":[]}]}",
+            "response_id": "msg_011Cg8hGQdGD78gj4WqxMpkX",
+            "model": "claude-haiku-5-5",
+            "latency_seconds": 1.2367153000086546
+          }
+        ],
+        "first_output": {
+          "claims": [
+            {
+              "claim_text": "FernRelay retries requests after a reset.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "The context passages list is empty, so there is no source text supporting this claim.",
+              "citations": []
+            },
+            {
+              "claim_text": "FernRelay deletes logs after one hour.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "The context passages list is empty, so there is no source text supporting this claim.",
+              "citations": []
+            }
+          ]
+        },
+        "citation_expansion": {
+          "policy": "full_already_cited_passages",
+          "original_quote_characters": 0,
+          "final_quote_characters": 0
+        },
+        "latency_seconds": 1.2391776000149548
+      },
+      "status": "ok",
+      "output": {
+        "claims": [
+          {
+            "claim_text": "FernRelay retries requests after a reset.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "The context passages list is empty, so there is no source text supporting this claim.",
+            "citations": []
+          },
+          {
+            "claim_text": "FernRelay deletes logs after one hour.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "The context passages list is empty, so there is no source text supporting this claim.",
+            "citations": []
+          }
+        ]
+      },
+      "boundary_passed": true,
+      "output_hash": "01b981520bdba1639c8dc56cf2b40ced0b6efb739cc35e23b9aac0515151c57d"
+    },
+    {
+      "case_id": "boundary-no-facts",
+      "method": "optimized",
+      "expected": "empty_claims",
+      "request": {
+        "context_passages": [
+          "FernRelay accepts requests on port 9012."
+        ],
+        "generated_answer": "Thank you! Could you explain the interface?"
+      },
+      "reason": "A greeting and request for explanation contain no factual assertion. Not counted toward the labeled benchmark.",
+      "trace": {
+        "attempts": [
+          {
+            "reservation": "188f66d401964a6fa39c596febc4e21f",
+            "first_request_in_client": false,
+            "status": "received",
+            "cost_usd": 9.980000000000001e-05,
+            "reserved_usd": 0.52048,
+            "usage": {
+              "cache_creation": {
+                "ephemeral_1h_input_tokens": 0,
+                "ephemeral_5m_input_tokens": 0
+              },
+              "cache_creation_input_tokens": 0,
+              "cache_read_input_tokens": 0,
+              "inference_geo": "global",
+              "input_tokens": 948,
+              "output_tokens": 10,
+              "output_tokens_details": {
+                "thinking_tokens": 0
+              },
+              "server_tool_use": null,
+              "service_tier": "standard",
+              "speed": "standard"
+            },
+            "stop_reason": "end_turn",
+            "raw_text": "{\"claims\":[]}",
+            "response_id": "msg_011Cg8hGVxjUELCu5w7NccFd",
+            "model": "claude-haiku-5-5",
+            "latency_seconds": 0.7584121000254527
+          }
+        ],
+        "first_output": {
+          "claims": []
+        },
+        "citation_expansion": {
+          "policy": "full_already_cited_passages",
+          "original_quote_characters": 0,
+          "final_quote_characters": 0
+        },
+        "latency_seconds": 0.7615644999896176
+      },
+      "status": "ok",
+      "output": {
+        "claims": []
+      },
+      "boundary_passed": true,
+      "output_hash": "c1066c38e2db48e4ac1582b4b3264a933e1e6b778d1451772a3169e16b555753"
+    }
+  ],
+  "optimized_variant": "lean-v1",
+  "citation_policy": "passage",
+  "model": "claude-haiku-5-5",
+  "effort": "medium",
+  "max_output": 8192,
+  "input_digest": "2b1cd27806b329712869df90525f3c2d94a7c1c6b8ab6e401a6651f8eeb3477b"
+}

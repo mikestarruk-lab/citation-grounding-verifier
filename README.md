@@ -76,6 +76,11 @@ Paid runs share the local $20 budget ledger; retain it across experiments.
 
 ## Project records
 
+- [First optimized-method development cycle](experiments/2026-10-18-optimized-v1/README.md):
+  actual variant/repeat runs, controlled repair faults and live boundary checks.
+  Added development challenges retain draft gold; no new complete semantic F1 or
+  final winner is claimed. [Gold-only review](experiments/2026-10-18-optimized-v1/challenge-gold-review.md).
+
 - [Baseline decision, 2026-10-18](experiments/baseline-freeze-2026-10-18.json):
   retain the owner-reviewed lexical starting threshold 0.65 and fixed minimal
   LLM comparator. The 22-threshold study is sensitivity analysis; neither

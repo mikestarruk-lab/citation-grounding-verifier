@@ -1,0 +1,790 @@
+{
+  "status": "automatic_metrics_and_diagnostics_only_human_quality_pending",
+  "original_dev_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+  "challenge_hash": "999dc8f013fe3da0477f4c81dbe7045959b93538d8ec9cc7deb57d29bda5f83c",
+  "live_calls": 58,
+  "configured_rate_estimated_cost_usd": 0.0221816,
+  "summaries": [
+    {
+      "run": "minimal-challenges",
+      "group": "challenge",
+      "mode": "e2e",
+      "method": "minimal",
+      "cases": 5,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0023290999999999997,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 5,
+      "p50_seconds": 3.8406797000207007,
+      "p95_seconds": 5.055104839999695,
+      "first_client_call_seconds": [
+        4.716271100012818
+      ],
+      "warm_call_p50_seconds": 3.7266703999921447,
+      "pending_reviews": [
+        "challenge-01",
+        "challenge-02",
+        "challenge-03",
+        "challenge-04",
+        "challenge-05"
+      ],
+      "counts": {
+        "cases": 5,
+        "gold_facts": 12,
+        "calls": 5,
+        "repaired_requests": 0,
+        "input_tokens": 4831,
+        "output_tokens": 3692,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 13,
+        "first_quotes": 13,
+        "final_valid_quotes": 13,
+        "final_quotes": 13,
+        "successes": 5
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 603,
+      "final_quote_characters": 603
+    },
+    {
+      "run": "optimized-challenges",
+      "group": "challenge",
+      "mode": "e2e",
+      "method": "optimized",
+      "cases": 5,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0023916,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 5,
+      "p50_seconds": 3.3840085999981966,
+      "p95_seconds": 4.432732760009822,
+      "first_client_call_seconds": [
+        4.583320700010518
+      ],
+      "warm_call_p50_seconds": 3.1006395000003977,
+      "pending_reviews": [
+        "challenge-01",
+        "challenge-02",
+        "challenge-03",
+        "challenge-04",
+        "challenge-05"
+      ],
+      "counts": {
+        "cases": 5,
+        "gold_facts": 12,
+        "calls": 5,
+        "repaired_requests": 0,
+        "input_tokens": 6286,
+        "output_tokens": 3526,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 13,
+        "first_quotes": 13,
+        "final_valid_quotes": 13,
+        "final_quotes": 13,
+        "successes": 5
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 768,
+      "final_quote_characters": 768
+    },
+    {
+      "run": "optimized-v2-challenges",
+      "group": "challenge",
+      "mode": "e2e",
+      "method": "optimized",
+      "cases": 5,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0032040999999999997,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 5,
+      "p50_seconds": 4.504977999982657,
+      "p95_seconds": 6.036634680011775,
+      "first_client_call_seconds": [
+        4.203230599989183
+      ],
+      "warm_call_p50_seconds": 4.528837849997217,
+      "pending_reviews": [
+        "challenge-01",
+        "challenge-02",
+        "challenge-03",
+        "challenge-04",
+        "challenge-05"
+      ],
+      "counts": {
+        "cases": 5,
+        "gold_facts": 12,
+        "calls": 5,
+        "repaired_requests": 0,
+        "input_tokens": 7696,
+        "output_tokens": 4869,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 12,
+        "first_quotes": 12,
+        "final_valid_quotes": 12,
+        "final_quotes": 12,
+        "successes": 5
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 629,
+      "final_quote_characters": 629
+    },
+    {
+      "run": "optimized-passage-challenges",
+      "group": "challenge",
+      "mode": "e2e",
+      "method": "optimized",
+      "cases": 5,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0028851,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 5,
+      "p50_seconds": 3.865542900020955,
+      "p95_seconds": 5.825192839978262,
+      "first_client_call_seconds": [
+        4.66122079998604
+      ],
+      "warm_call_p50_seconds": 3.6968471500003943,
+      "pending_reviews": [
+        "challenge-01",
+        "challenge-02",
+        "challenge-03",
+        "challenge-04",
+        "challenge-05"
+      ],
+      "counts": {
+        "cases": 5,
+        "gold_facts": 12,
+        "calls": 5,
+        "repaired_requests": 0,
+        "input_tokens": 7696,
+        "output_tokens": 4231,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 13,
+        "first_quotes": 13,
+        "final_valid_quotes": 11,
+        "final_quotes": 11,
+        "successes": 5
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 628,
+      "final_quote_characters": 1807
+    },
+    {
+      "run": "optimized-original-dev",
+      "group": "original",
+      "mode": "e2e",
+      "method": "optimized",
+      "cases": 8,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0018997999999999999,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 8,
+      "p50_seconds": 1.7335703499993542,
+      "p95_seconds": 2.199759830000403,
+      "first_client_call_seconds": [
+        1.5011107999889646
+      ],
+      "warm_call_p50_seconds": 1.7887906999967527,
+      "pending_reviews": [
+        "dev-01",
+        "dev-02",
+        "dev-03",
+        "dev-04",
+        "dev-05",
+        "dev-06",
+        "dev-07",
+        "dev-08"
+      ],
+      "counts": {
+        "cases": 8,
+        "gold_facts": 12,
+        "calls": 8,
+        "repaired_requests": 0,
+        "input_tokens": 9038,
+        "output_tokens": 1992,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 12,
+        "first_quotes": 12,
+        "final_valid_quotes": 12,
+        "final_quotes": 12,
+        "successes": 8
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 517,
+      "final_quote_characters": 517
+    },
+    {
+      "run": "optimized-v2-original-dev",
+      "group": "original",
+      "mode": "e2e",
+      "method": "optimized",
+      "cases": 8,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0020019,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 8,
+      "p50_seconds": 1.5325501500046812,
+      "p95_seconds": 2.0804996700098854,
+      "first_client_call_seconds": [
+        1.4554631999926642
+      ],
+      "warm_call_p50_seconds": 1.5797527999966405,
+      "pending_reviews": [
+        "dev-01",
+        "dev-02",
+        "dev-03",
+        "dev-04",
+        "dev-05",
+        "dev-06",
+        "dev-07",
+        "dev-08"
+      ],
+      "counts": {
+        "cases": 8,
+        "gold_facts": 12,
+        "calls": 8,
+        "repaired_requests": 0,
+        "input_tokens": 11294,
+        "output_tokens": 1745,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 12,
+        "first_quotes": 12,
+        "final_valid_quotes": 12,
+        "final_quotes": 12,
+        "successes": 8
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 517,
+      "final_quote_characters": 517
+    },
+    {
+      "run": "optimized-passage-original-dev",
+      "group": "original",
+      "mode": "e2e",
+      "method": "optimized",
+      "cases": 8,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0022474,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 8,
+      "p50_seconds": 1.7180148999905214,
+      "p95_seconds": 2.828843310003867,
+      "first_client_call_seconds": [
+        1.712541200016858
+      ],
+      "warm_call_p50_seconds": 1.7177356000174768,
+      "pending_reviews": [
+        "dev-01",
+        "dev-02",
+        "dev-03",
+        "dev-04",
+        "dev-05",
+        "dev-06",
+        "dev-07",
+        "dev-08"
+      ],
+      "counts": {
+        "cases": 8,
+        "gold_facts": 12,
+        "calls": 8,
+        "repaired_requests": 0,
+        "input_tokens": 11294,
+        "output_tokens": 2236,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 10,
+        "first_quotes": 10,
+        "final_valid_quotes": 10,
+        "final_quotes": 10,
+        "successes": 8
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 441,
+      "final_quote_characters": 691
+    },
+    {
+      "run": "minimal-focused-repeat",
+      "group": "repeat",
+      "mode": "e2e",
+      "method": "minimal",
+      "cases": 2,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0009673,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 2,
+      "p50_seconds": 3.670768500000122,
+      "p95_seconds": 4.55216739000316,
+      "first_client_call_seconds": [
+        2.6883722000056878
+      ],
+      "warm_call_p50_seconds": 4.647155900020152,
+      "pending_reviews": [
+        "challenge-02",
+        "challenge-03"
+      ],
+      "counts": {
+        "cases": 2,
+        "gold_facts": 3,
+        "calls": 2,
+        "repaired_requests": 0,
+        "input_tokens": 1938,
+        "output_tokens": 1547,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 7,
+        "first_quotes": 7,
+        "final_valid_quotes": 7,
+        "final_quotes": 7,
+        "successes": 2
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 275,
+      "final_quote_characters": 275
+    },
+    {
+      "run": "optimized-v1-focused-repeat",
+      "group": "repeat",
+      "mode": "e2e",
+      "method": "optimized",
+      "cases": 2,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0011095,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 2,
+      "p50_seconds": 4.078970350004965,
+      "p95_seconds": 4.729636465007206,
+      "first_client_call_seconds": [
+        3.3531421000079717
+      ],
+      "warm_call_p50_seconds": 4.798902300011832,
+      "pending_reviews": [
+        "challenge-02",
+        "challenge-03"
+      ],
+      "counts": {
+        "cases": 2,
+        "gold_facts": 3,
+        "calls": 2,
+        "repaired_requests": 0,
+        "input_tokens": 2520,
+        "output_tokens": 1715,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 6,
+        "first_quotes": 6,
+        "final_valid_quotes": 6,
+        "final_quotes": 6,
+        "successes": 2
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 243,
+      "final_quote_characters": 243
+    },
+    {
+      "run": "optimized-v2-focused-repeat",
+      "group": "repeat",
+      "mode": "e2e",
+      "method": "optimized",
+      "cases": 2,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0010769,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 2,
+      "p50_seconds": 3.89650664999499,
+      "p95_seconds": 4.19346322499332,
+      "first_client_call_seconds": [
+        4.222742300014943
+      ],
+      "warm_call_p50_seconds": 3.5645392000151332,
+      "pending_reviews": [
+        "challenge-02",
+        "challenge-03"
+      ],
+      "counts": {
+        "cases": 2,
+        "gold_facts": 3,
+        "calls": 2,
+        "repaired_requests": 0,
+        "input_tokens": 3084,
+        "output_tokens": 1537,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 7,
+        "first_quotes": 7,
+        "final_valid_quotes": 7,
+        "final_quotes": 7,
+        "successes": 2
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 313,
+      "final_quote_characters": 313
+    },
+    {
+      "run": "optimized-passage-focused-repeat",
+      "group": "repeat",
+      "mode": "e2e",
+      "method": "optimized",
+      "cases": 2,
+      "success_rate": 1.0,
+      "repair_rate": 0.0,
+      "confirmed_cost_usd": 0.0010079,
+      "unsettled_reserved_usd": 0.0,
+      "first_quote_validity": 1.0,
+      "final_quote_validity": 1.0,
+      "latency_sample_size": 2,
+      "p50_seconds": 3.2818104999896605,
+      "p95_seconds": 3.843571149991476,
+      "first_client_call_seconds": [
+        3.903392799984431
+      ],
+      "warm_call_p50_seconds": 2.6557105999963824,
+      "pending_reviews": [
+        "challenge-02",
+        "challenge-03"
+      ],
+      "counts": {
+        "cases": 2,
+        "gold_facts": 3,
+        "calls": 2,
+        "repaired_requests": 0,
+        "input_tokens": 3084,
+        "output_tokens": 1399,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 7,
+        "first_quotes": 7,
+        "final_valid_quotes": 6,
+        "final_quotes": 6,
+        "successes": 2
+      },
+      "semantic_status": "pending_human_review",
+      "raw_quote_characters": 313,
+      "final_quote_characters": 798
+    }
+  ],
+  "diagnostics": [
+    {
+      "run": "minimal-challenges",
+      "case_id": "challenge-02",
+      "diagnostic_only": true,
+      "quoted_exclusion_premises": {
+        "single_host": false,
+        "single_region": false,
+        "distinct_regions": false
+      },
+      "note": "Exact required-premise presence only; not a full evidence grade."
+    },
+    {
+      "run": "minimal-challenges",
+      "case_id": "challenge-03",
+      "diagnostic_only": true,
+      "claims": [
+        {
+          "claim_text": "PatchFerry automatically retries the request.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context says Bronze, which PatchFerry uses, retries only idempotent requests after a connection reset. The request's idempotency is not stated, and the only documented timeout retry (Silver) is not used by PatchFerry.",
+          "citations": []
+        },
+        {
+          "claim_text": "PatchFerry's automatic retry of the request occurs after its timeout.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context says a timeout is a different failure from a connection reset, so Bronze's retry behavior does not cover timeouts. The only route that retries GET requests after timeouts is Silver, which PatchFerry does not use.",
+          "citations": []
+        }
+      ],
+      "note": "Review preservation of the timeout relation and reasoning strength."
+    },
+    {
+      "run": "optimized-challenges",
+      "case_id": "challenge-02",
+      "diagnostic_only": true,
+      "quoted_exclusion_premises": {
+        "single_host": false,
+        "single_region": false,
+        "distinct_regions": false
+      },
+      "note": "Exact required-premise presence only; not a full evidence grade."
+    },
+    {
+      "run": "optimized-challenges",
+      "case_id": "challenge-03",
+      "diagnostic_only": true,
+      "claims": [
+        {
+          "claim_text": "PatchFerry automatically retries the request after its timeout.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context says route Bronze retries idempotent requests only after a connection reset, and that a timeout is a different failure. Route Silver retries GET requests after timeouts, but the context says PatchFerry does not use route Silver. The context also does not state whether the request was marked idempotent. No passage establishes an automatic retry after this timeout, and no passage directly refutes it.",
+          "citations": []
+        }
+      ],
+      "note": "Review preservation of the timeout relation and reasoning strength."
+    },
+    {
+      "run": "optimized-v2-challenges",
+      "case_id": "challenge-02",
+      "diagnostic_only": true,
+      "quoted_exclusion_premises": {
+        "single_host": false,
+        "single_region": true,
+        "distinct_regions": true
+      },
+      "note": "Exact required-premise presence only; not a full evidence grade."
+    },
+    {
+      "run": "optimized-v2-challenges",
+      "case_id": "challenge-03",
+      "diagnostic_only": true,
+      "claims": [
+        {
+          "claim_text": "PatchFerry automatically retries the request after its timeout.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context does not establish an automatic retry after a timeout for this request. Route Bronze's automatic retry is stated only for idempotent requests after a connection reset, and the context says a timeout is a different failure. Route Silver retries GET requests after timeouts, but PatchFerry does not use route Silver. The context also does not state whether this request was marked idempotent, and it does not say that no other retry mechanism exists, so the claim lacks direct support and is not directly refuted.",
+          "citations": []
+        }
+      ],
+      "note": "Review preservation of the timeout relation and reasoning strength."
+    },
+    {
+      "run": "optimized-passage-challenges",
+      "case_id": "challenge-02",
+      "diagnostic_only": true,
+      "quoted_exclusion_premises": {
+        "single_host": true,
+        "single_region": true,
+        "distinct_regions": true
+      },
+      "note": "Exact required-premise presence only; not a full evidence grade."
+    },
+    {
+      "run": "optimized-passage-challenges",
+      "case_id": "challenge-03",
+      "diagnostic_only": true,
+      "claims": [
+        {
+          "claim_text": "PatchFerry automatically retries the request after its timeout.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context says route Bronze enables automatic retries for idempotent requests after a connection reset, and that a timeout is a different failure. It also says the request's idempotency status is not stated. Route Silver retries GET requests after timeouts, but PatchFerry does not use route Silver. No passage establishes an automatic retry after a timeout for PatchFerry, and the context does not state that Bronze is the only route PatchFerry could use. The missing evidence means the claim is unsupported rather than contradicted.",
+          "citations": []
+        }
+      ],
+      "note": "Review preservation of the timeout relation and reasoning strength."
+    },
+    {
+      "run": "minimal-focused-repeat",
+      "case_id": "challenge-02",
+      "diagnostic_only": true,
+      "quoted_exclusion_premises": {
+        "single_host": false,
+        "single_region": false,
+        "distinct_regions": false
+      },
+      "note": "Exact required-premise presence only; not a full evidence grade."
+    },
+    {
+      "run": "minimal-focused-repeat",
+      "case_id": "challenge-03",
+      "diagnostic_only": true,
+      "claims": [
+        {
+          "claim_text": "PatchFerry automatically retries the request.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The passages say Bronze, which PatchFerry uses, retries idempotent requests after a connection reset, and that the request's idempotency is not stated. The only route described as retrying after timeouts is Silver, which PatchFerry does not use. No passage states that PatchFerry automatically retries this timed-out request.",
+          "citations": []
+        },
+        {
+          "claim_text": "The request failed with a timeout.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 1 states that the request's final failure was a timeout.",
+          "citations": [
+            {
+              "index": 1,
+              "quote": "Its final failure was a timeout."
+            }
+          ]
+        }
+      ],
+      "note": "Review preservation of the timeout relation and reasoning strength."
+    },
+    {
+      "run": "optimized-v1-focused-repeat",
+      "case_id": "challenge-02",
+      "diagnostic_only": true,
+      "quoted_exclusion_premises": {
+        "single_host": false,
+        "single_region": false,
+        "distinct_regions": false
+      },
+      "note": "Exact required-premise presence only; not a full evidence grade."
+    },
+    {
+      "run": "optimized-v1-focused-repeat",
+      "case_id": "challenge-03",
+      "diagnostic_only": true,
+      "claims": [
+        {
+          "claim_text": "PatchFerry automatically retries the request after its timeout.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The passages say route Bronze, which PatchFerry uses, retries idempotent requests only after a connection reset, and a timeout is a different failure. Route Silver retries GET requests after timeouts, but PatchFerry does not use it. The context therefore makes automatic timeout retry unlikely, but it never directly states that PatchFerry does not retry after a timeout, and it does not establish that this request was retried. Because the refutation is inferred rather than direct, the claim is UNSUPPORTED, not CONTRADICTED.",
+          "citations": []
+        }
+      ],
+      "note": "Review preservation of the timeout relation and reasoning strength."
+    },
+    {
+      "run": "optimized-v2-focused-repeat",
+      "case_id": "challenge-02",
+      "diagnostic_only": true,
+      "quoted_exclusion_premises": {
+        "single_host": false,
+        "single_region": true,
+        "distinct_regions": true
+      },
+      "note": "Exact required-premise presence only; not a full evidence grade."
+    },
+    {
+      "run": "optimized-v2-focused-repeat",
+      "case_id": "challenge-03",
+      "diagnostic_only": true,
+      "claims": [
+        {
+          "claim_text": "PatchFerry automatically retries the request after its timeout.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The only automatic retry rule for timeouts is route Silver's, which applies to GET requests after timeouts, but the context states PatchFerry does not use route Silver. Route Bronze's automatic retry rule covers idempotent requests after a connection reset, and the context says a timeout is a different failure. The context also does not state whether the request was marked idempotent. No passage establishes an automatic retry after a timeout for PatchFerry, and the context does not directly refute one.",
+          "citations": []
+        }
+      ],
+      "note": "Review preservation of the timeout relation and reasoning strength."
+    },
+    {
+      "run": "optimized-passage-focused-repeat",
+      "case_id": "challenge-02",
+      "diagnostic_only": true,
+      "quoted_exclusion_premises": {
+        "single_host": true,
+        "single_region": true,
+        "distinct_regions": true
+      },
+      "note": "Exact required-premise presence only; not a full evidence grade."
+    },
+    {
+      "run": "optimized-passage-focused-repeat",
+      "case_id": "challenge-03",
+      "diagnostic_only": true,
+      "claims": [
+        {
+          "claim_text": "PatchFerry automatically retries the request after its timeout.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "PatchFerry uses route Bronze, but Bronze's automatic retry applies to idempotent requests after a connection reset, and the context says a timeout is a different failure. The request's idempotency is not stated. Route Silver retries GET requests after timeouts, but PatchFerry does not use route Silver. No passage establishes an automatic retry after a timeout for this request, and no passage directly refutes it.",
+          "citations": []
+        }
+      ],
+      "note": "Review preservation of the timeout relation and reasoning strength."
+    }
+  ],
+  "sources": [
+    {
+      "path": "minimal-challenges.json",
+      "digest": "83127c53e8750ac1e9a433fb3289eb61367fa8d61d81af87dfe3397801eef4b8"
+    },
+    {
+      "path": "optimized-challenges.json",
+      "digest": "b45ea159e012d29da274ee86f4b70a1dadd25844ae3bb39c9b5f8b2554bf43de"
+    },
+    {
+      "path": "optimized-v2-challenges.json",
+      "digest": "80c363d105174df265697cd535e40d4562837a4d0af0f82cc3a0a1aa135becee"
+    },
+    {
+      "path": "optimized-passage-challenges.json",
+      "digest": "6a70ed4516f2af97da9ec685da289df31c4c82c2c1ce2f539237c1ff17962cfe"
+    },
+    {
+      "path": "optimized-original-dev.json",
+      "digest": "40be54cf53a67b66d897799ef10d5d272e114d74fb21d031b45a307618e13d8a"
+    },
+    {
+      "path": "optimized-v2-original-dev.json",
+      "digest": "71afe006b7996ed67ff307467aac0933ff7d1867a8d4c6af05da475dfaac2dcf"
+    },
+    {
+      "path": "optimized-passage-original-dev.json",
+      "digest": "b7301f0566f40c9b254391f0a6d0ca29b385340029168d7a2146cbe9c0eaba03"
+    },
+    {
+      "path": "minimal-focused-repeat.json",
+      "digest": "88d5dde589077f4be5d7da939db6c2f6fab0f48f75e7716a6fc918dff9018715"
+    },
+    {
+      "path": "optimized-v1-focused-repeat.json",
+      "digest": "03c6136214b8298173347d8053c278a3054428f1703e59bb85907a6bb1a72e34"
+    },
+    {
+      "path": "optimized-v2-focused-repeat.json",
+      "digest": "b6e44c7fe352556c43c37024ca679c0fba7799ec439eded6fdfbdf5cf75c95f5"
+    },
+    {
+      "path": "optimized-passage-focused-repeat.json",
+      "digest": "ee48a6cb72aaf45002dd6e235ab46312cf07cedb6ec9d23bcaa5b33655870b10"
+    }
+  ],
+  "boundary_checks": [
+    {
+      "method": "minimal",
+      "passed": 2,
+      "total": 3
+    },
+    {
+      "method": "optimized",
+      "passed": 3,
+      "total": 3
+    }
+  ],
+  "controlled_faults": [
+    {
+      "method": "minimal",
+      "recovered": 0,
+      "total": 6
+    },
+    {
+      "method": "optimized",
+      "recovered": 6,
+      "total": 6
+    }
+  ]
+}

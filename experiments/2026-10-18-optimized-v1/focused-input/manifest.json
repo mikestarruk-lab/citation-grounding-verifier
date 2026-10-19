@@ -1,0 +1,13 @@
+{
+  "dev": {
+    "review_status": "draft",
+    "reviewed_by": null
+  },
+  "note": "Focused diagnostic repeat, not independent data or main benchmark.",
+  "parent_data": "data\\development-challenges-v1\\dev.jsonl",
+  "parent_digest": "999dc8f013fe3da0477f4c81dbe7045959b93538d8ec9cc7deb57d29bda5f83c",
+  "case_ids": [
+    "challenge-02",
+    "challenge-03"
+  ]
+}

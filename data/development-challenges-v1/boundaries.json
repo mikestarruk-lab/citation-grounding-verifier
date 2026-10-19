@@ -1,0 +1,32 @@
+[
+  {
+    "id": "boundary-conflict",
+    "request": {
+      "context_passages": [
+        "For release 9, PierLedger stores its event log in an immutable file.",
+        "For release 9, PierLedger stores its event log in a mutable file."
+      ],
+      "generated_answer": "For release 9, PierLedger stores its event log in an immutable file."
+    },
+    "expected": "nonempty_all_unsupported",
+    "reason": "The project's declared boundary policy treats unresolved same-condition source conflict as UNSUPPORTED with no citations. The assignment itself does not specify conflict precedence. Not part of main quality scores."
+  },
+  {
+    "id": "boundary-empty-context",
+    "request": {
+      "context_passages": [],
+      "generated_answer": "FernRelay retries requests after a reset and deletes logs after one hour."
+    },
+    "expected": "nonempty_all_unsupported",
+    "reason": "Facts with no context cannot be verified. This automatic boundary check tests labels and citation emptiness, not full extraction coverage."
+  },
+  {
+    "id": "boundary-no-facts",
+    "request": {
+      "context_passages": ["FernRelay accepts requests on port 9012."],
+      "generated_answer": "Thank you! Could you explain the interface?"
+    },
+    "expected": "empty_claims",
+    "reason": "A greeting and request for explanation contain no factual assertion. Not counted toward the labeled benchmark."
+  }
+]

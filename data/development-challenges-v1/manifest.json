@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "dev": {
+    "review_status": "draft",
+    "reviewed_by": null,
+    "purpose": "AI-authored development challenges for the first optimized-method comparison; not the approved original dev split or final test."
+  },
+  "note": "Gold and evidence are proposals pending owner review. No final end-to-end quality claim may be based on this draft alone. Boundary-only cases are stored separately."
+}

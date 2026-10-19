@@ -1,0 +1,523 @@
+[
+  {
+    "review_id": "206b67252abfb3bf",
+    "case_id": "dev-05",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "9ae73e6d314a935ce8966ff2c000e800994d2f8f07e4221d9e9a1164c4e998a2",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "CachePebble writes entries to a local file after each update."
+    ],
+    "generated_answer": "CachePebble writes entries to a local file after each update. Its files are encrypted with AES-256.",
+    "gold_claims": [
+      {
+        "claim_text": "CachePebble writes entries to a local file after each update.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source explicitly writes CachePebble entries to a local file after each update.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "CachePebble writes entries to a local file after each update."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Preserve the after-each-update condition; the separate encryption assertion has a different evidential status."
+      },
+      {
+        "claim_text": "CachePebble files are encrypted with AES-256.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "The source describes local file writes but gives no encryption algorithm or encryption guarantee.",
+        "citations": [],
+        "id": "g2",
+        "annotation_reason": "Local storage neither establishes nor rules out AES-256; absence of evidence is not a contradiction."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "CachePebble writes entries to a local file after each update.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 states exactly that CachePebble writes entries to a local file after each update.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "CachePebble writes entries to a local file after each update."
+            }
+          ]
+        },
+        {
+          "claim_text": "CachePebble's files are encrypted with AES-256.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context passage says nothing about encryption or AES-256 for CachePebble's files.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "CachePebble writes entries to a local file after each update.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "CachePebble's files are encrypted with AES-256.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "4c1bb1c526c7a82c",
+    "case_id": "dev-02",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "d0fdd208323cea1d1b913e164e0f0e4ccb89db09b0c2898b2d7911d14448826a",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "RelayGate retries GET requests after a connection reset. It never retries POST requests."
+    ],
+    "generated_answer": "RelayGate retries GET requests after a connection reset, but never retries POST requests.",
+    "gold_claims": [
+      {
+        "claim_text": "RelayGate retries GET requests after a connection reset.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source explicitly retries GET requests after a connection reset, matching the answer's request type and condition.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "RelayGate retries GET requests after a connection reset. It never retries POST requests."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "The connection-reset condition is part of the fact; this does not establish retries after every kind of failure."
+      },
+      {
+        "claim_text": "RelayGate never retries POST requests.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source states that RelayGate never retries POST requests.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "RelayGate retries GET requests after a connection reset. It never retries POST requests."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "Resolve It to RelayGate and preserve never; the exception for POST is independent of the supported GET behavior."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "RelayGate retries GET requests after a connection reset.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The first passage states directly that RelayGate retries GET requests after a connection reset.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "RelayGate retries GET requests after a connection reset. It never retries POST requests."
+            }
+          ]
+        },
+        {
+          "claim_text": "RelayGate never retries POST requests.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The passage states that RelayGate never retries POST requests, with 'It' referring to RelayGate.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "RelayGate retries GET requests after a connection reset. It never retries POST requests."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "RelayGate retries GET requests after a connection reset.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "RelayGate never retries POST requests.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "5b76478bf818d807",
+    "case_id": "dev-08",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "9c2252ee6504d514d8418eb818aa7451c9d6b80d2f76776f67c54b350ac07a27",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "The recovery worker runs on host Maple.",
+      "Host Maple is located in region West."
+    ],
+    "generated_answer": "The recovery worker runs in region West.",
+    "gold_claims": [
+      {
+        "claim_text": "The recovery worker runs in region West.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The worker runs on Maple according to passage 0, and Maple is in West according to passage 1, placing the worker in West.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "The recovery worker runs on host Maple."
+          },
+          {
+            "index": 1,
+            "quote": "Host Maple is located in region West."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "The conclusion follows by joining the same host Maple across the two passages; both location premises are required."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "The recovery worker runs in region West.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "Passage 0 says the recovery worker runs on host Maple, and passage 1 says Host Maple is located in region West. Combining them would require a link the context does not state: that a worker running on a host runs in that host's region. Without that bridge, the claim is not established.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "The recovery worker runs in region West.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "9429a558b7a63ab6",
+    "case_id": "dev-06",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "d4fa49dc01dafe47ff4d9fbcc7dbab8a8beaace690b945bddb621a79fcfd8696",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "WireFin reuses an established connection for subsequent requests."
+    ],
+    "generated_answer": "WireFin uses Brotli compression for request payloads.",
+    "gold_claims": [
+      {
+        "claim_text": "WireFin uses Brotli compression for request payloads.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "The only supplied behavior is connection reuse; the source does not specify request compression or Brotli.",
+        "citations": [],
+        "id": "g1",
+        "annotation_reason": "Connection reuse and payload compression are independent properties, so neither support nor direct refutation is available."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "WireFin uses Brotli compression for request payloads.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context only states that WireFin reuses an established connection for subsequent requests. Nothing in the passage mentions Brotli compression or request payload compression.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "WireFin uses Brotli compression for request payloads.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "a193261c981b1a7c",
+    "case_id": "dev-07",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "a7f6bc74b288993d4f12d2e2a8d671e3d4d860f4f2bb49ad4b1c2a73a4bdfdfa",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "Service Juniper runs in mode Q.",
+      "Every service in mode Q encrypts its stored payloads."
+    ],
+    "generated_answer": "Service Juniper encrypts its stored payloads.",
+    "gold_claims": [
+      {
+        "claim_text": "Service Juniper encrypts its stored payloads.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Passage 0 places Juniper in mode Q; passage 1 says every service in Q encrypts stored payloads. Together they entail the claim.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "Service Juniper runs in mode Q."
+          },
+          {
+            "index": 1,
+            "quote": "Every service in mode Q encrypts its stored payloads."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Both the service's membership and the universal encryption rule are necessary; citing either passage alone omits a premise."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "Service Juniper encrypts its stored payloads.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 establishes that Service Juniper runs in mode Q, and passage 1 establishes that every service in mode Q encrypts its stored payloads. Combining these gives the claim.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Service Juniper runs in mode Q."
+            },
+            {
+              "index": 1,
+              "quote": "Every service in mode Q encrypts its stored payloads."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "Service Juniper encrypts its stored payloads.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "be3aac9ec69bba2b",
+    "case_id": "dev-04",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "9934aa5a655aefbd665f5659167b56665e8f6b90ac6aa0cf6ac6ba564294bca9",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "CedarCache does not persist entries across restarts."
+    ],
+    "generated_answer": "CedarCache persists entries across restarts.",
+    "gold_claims": [
+      {
+        "claim_text": "CedarCache persists entries across restarts.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "The source says CedarCache does not persist entries across restarts, directly opposing the answer's persistence claim.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "CedarCache does not persist entries across restarts."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Compare the same cache, entries, and restart condition; the answer reverses an explicit negation."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "CedarCache persists entries across restarts.",
+          "verdict": "CONTRADICTED",
+          "reasoning": "Passage 0 directly states that CedarCache does not persist entries across restarts, which refutes the claim under the same condition (across restarts).",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "CedarCache does not persist entries across restarts."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "CedarCache persists entries across restarts.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "bec30cc4d84d821c",
+    "case_id": "dev-01",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "6d79af562583c3cb8555a59f3dabceb45f7873aba6248993de85c078019910b1",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days."
+    ],
+    "generated_answer": "ArchiveBox creates hourly snapshots. It retains snapshots for seven days.",
+    "gold_claims": [
+      {
+        "claim_text": "ArchiveBox creates a snapshot every hour.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source says ArchiveBox creates a snapshot every hour, which is equivalent to hourly snapshots.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Keep snapshot frequency separate from retention duration; hourly is a valid paraphrase of every hour."
+      },
+      {
+        "claim_text": "ArchiveBox retains snapshots for seven days.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source explicitly retains ArchiveBox snapshots for seven days.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "The second answer sentence refers to ArchiveBox snapshots; retain the object and seven-day duration."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "ArchiveBox creates hourly snapshots.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The passage states that ArchiveBox creates a snapshot every hour, which directly establishes hourly snapshot creation.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days."
+            }
+          ]
+        },
+        {
+          "claim_text": "ArchiveBox retains snapshots for seven days.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The passage states that snapshots are retained for seven days, directly matching the claim.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "ArchiveBox creates hourly snapshots.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "ArchiveBox retains snapshots for seven days.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "c2caf1400f8404d4",
+    "case_id": "dev-03",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "78fc27542ce2735d051e6e9b54e7553bf379685b3447c88a6838c3284882d9ed",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "TaskDock permits at most four active workers. Additional workers remain queued."
+    ],
+    "generated_answer": "TaskDock permits five active workers. Additional workers remain queued.",
+    "gold_claims": [
+      {
+        "claim_text": "TaskDock permits five active workers.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "The specification permits at most four active TaskDock workers, so permitting five active workers exceeds the stated maximum.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "TaskDock permits at most four active workers. Additional workers remain queued."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Four is an inclusive upper bound on active workers, not a lower bound or a limit on queued workers."
+      },
+      {
+        "claim_text": "Additional TaskDock workers remain queued.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The specification explicitly states that additional workers remain queued.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "TaskDock permits at most four active workers. Additional workers remain queued."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "Additional workers refers to workers beyond TaskDock's active-worker limit; this remains supported despite the answer's incorrect number."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "TaskDock permits five active workers.",
+          "verdict": "CONTRADICTED",
+          "reasoning": "The context states that TaskDock permits at most four active workers, which directly refutes permitting five.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "TaskDock permits at most four active workers. Additional workers remain queued."
+            }
+          ]
+        },
+        {
+          "claim_text": "Additional workers remain queued.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The context states directly that additional workers remain queued.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "TaskDock permits at most four active workers. Additional workers remain queued."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "TaskDock permits five active workers.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "Additional workers remain queued.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  }
+]

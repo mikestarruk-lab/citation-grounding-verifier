@@ -1,0 +1,7 @@
+{
+  "dev": {
+    "review_status": "approved",
+    "reviewed_by": "Original dev gold approval"
+  },
+  "note": "Explicit dev-08 stability subset, not extra independent data."
+}
