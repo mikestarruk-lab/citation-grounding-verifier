@@ -349,3 +349,33 @@ refined-v2-passage 最终 9/9、原始 8/9；lean-v1-passage 最终 9/9、原始
 修订另存为 `ai-alignment-2026-10-19.rev2.*`，rev1 原样保留。全部记录仍为
 ai_proposed/reviewer=null，评分器对五配置仍返回 pending_human_review，不产生 F1；
 没有新模型调用，也没有修改输出、gold 或方法默认值。修订仍待你人工确认。
+
+## 2026-10-19：修复 test 冻结门禁与空白标注理由（MIC-104）
+
+第二次 gold 审计的 F2、F3 本次修复。`require_frozen_test` 原来只要求 reviewed_by 与
+frozen 为真值并且哈希相等，draft/rejected 状态、字符串 `"false"`、空白审核人都能通过。
+现在必须同时满足：review_status 恰为 approved、审核人为去空白后非空的字符串、
+frozen 恰为布尔 true、哈希与当前 test 一致。GoldClaim 的 annotation_reason 增加
+非空白检查，与 reasoning 的既有规则一致；非空不代表解释语义正确。
+
+新增回归测试覆盖审计复现的 4 种错误放行，以及 frozen=1、缺审核人、哈希不符和
+一个完全合法的批准路径；空串与纯空格的 annotation_reason 均被拒绝。在旧代码上这 7 项
+新增拒绝测试全部失败，修复后 68 项 pytest、Ruff、validate-data 与审阅页同步检查通过。
+真实 manifest 仍为 draft/frozen=false，test 照常被拒绝；没有修改数据、gold 或审批。
+
+### 按你的确认修改 test-18、test-04、test-03
+
+你回复同意：test-18 改 reasoning，test-04 改答案，test-03 改 g2 措辞，都按审计建议。
+test-18/g1 的 reasoning 不再把“开启安全模式时加密”写成“加密必须开启安全模式”，
+改为：条件规则存在，但 Finch 是否满足条件、是否另有加密依据都未确立，也没有反证，
+因此仍为 U。test-04 的答案把 first 明确为 before normal-priority messages；原 g1 的
+reasoning 与 annotation_reason 都在解释 first 的范围，答案改后同步去掉对 first 的
+引用，含义不变。test-03/g2 改为 `With compact mode enabled, IrisStore leaves existing
+segments unchanged.`，与答案的“启用期间”语境一致。
+
+三处标签和引文都不变。test 规范化哈希由 `68d7f4554a71fa9944185a4808782af33887b4125265a72fbc006b3a76c426fa`
+变为 `19b9766741e3843a8deaea65dd7bef7bacc997eaf841dd7dd3afee338dbeb8e6`；已重新生成
+[gold 审阅页](../reviews/gold-dataset-review.md)，同步检查通过。test-04 的答案是模型
+输入，此前任何 test-04 输出都不能用于新版本；目前未运行过最终 test。dev 数据与哈希不变，
+dev 批准仍有效。manifest 中 test 仍为 draft/frozen=false：这次是按你确认修改措辞，
+不是 test gold 的整体批准。冻结前仍需你审阅全部 20 个 test 案例，并把审批绑定到新哈希。

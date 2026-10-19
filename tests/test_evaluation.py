@@ -1,4 +1,5 @@
 import copy
+import json
 from pathlib import Path
 
 import pytest
@@ -165,3 +166,45 @@ def test_dataset_structure_and_freeze_gate():
 
     with pytest.raises(ValueError, match="human gold review"):
         require_frozen_test(Path("data"), load_cases(Path("data/test.jsonl")))
+
+
+APPROVED_TEST = {"review_status": "approved", "reviewed_by": "Owner", "frozen": True}
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        {"review_status": "draft"},
+        {"review_status": "rejected"},
+        {"frozen": "false"},
+        {"frozen": 1},
+        {"reviewed_by": "   "},
+        {"reviewed_by": None},
+        {"dataset_hash": "0" * 64},
+    ],
+)
+def test_freeze_gate_rejects_unapproved_or_mistyped_manifest(tmp_path, change):
+    from grounding_verifier.dataset import load_cases
+
+    cases = load_cases(Path("data/test.jsonl"))
+    test = {**APPROVED_TEST, "dataset_hash": dataset_hash(cases), **change}
+    (tmp_path / "manifest.json").write_text(json.dumps({"test": test}), encoding="utf-8")
+    with pytest.raises(ValueError, match="human gold review"):
+        require_frozen_test(tmp_path, cases)
+
+
+def test_freeze_gate_accepts_exact_approval(tmp_path):
+    from grounding_verifier.dataset import load_cases
+
+    cases = load_cases(Path("data/test.jsonl"))
+    test = {**APPROVED_TEST, "dataset_hash": dataset_hash(cases)}
+    (tmp_path / "manifest.json").write_text(json.dumps({"test": test}), encoding="utf-8")
+    require_frozen_test(tmp_path, cases)
+
+
+@pytest.mark.parametrize("blank", ["", "   "])
+def test_gold_annotation_reason_must_contain_text(blank):
+    raw = fixture()[0].model_dump(mode="json")
+    raw["gold_claims"][0]["annotation_reason"] = blank
+    with pytest.raises(ValueError, match="annotation_reason"):
+        Case.model_validate(raw)

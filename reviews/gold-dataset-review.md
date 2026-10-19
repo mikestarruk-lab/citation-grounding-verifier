@@ -12,7 +12,7 @@ Review each fact's meaning, qualifiers, verdict, explanation and complete eviden
 ## Source versions
 
 - dev canonical dataset hash: `e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c`
-- test canonical dataset hash: `68d7f4554a71fa9944185a4808782af33887b4125265a72fbc006b3a76c426fa`
+- test canonical dataset hash: `19b9766741e3843a8deaea65dd7bef7bacc997eaf841dd7dd3afee338dbeb8e6`
 
 ### Full approval manifest
 
@@ -638,7 +638,7 @@ With compact mode enabled, IrisStore compresses newly written segments but leave
 
 #### g2 — SUPPORTED
 
-**claim_text:** Enabling compact mode leaves existing IrisStore segments unchanged.
+**claim_text:** With compact mode enabled, IrisStore leaves existing segments unchanged.
 
 **reasoning:** In the compact-mode operation described by the source, existing IrisStore segments remain unchanged.
 
@@ -676,16 +676,16 @@ BirchQueue processes high-priority messages before normal-priority messages. Mes
 **generated_answer**
 
 ```text
-BirchQueue processes high-priority messages first and uses arrival order within a priority.
+BirchQueue processes high-priority messages before normal-priority messages and uses arrival order within a priority.
 ```
 
 #### g1 — SUPPORTED
 
 **claim_text:** BirchQueue processes high-priority messages before normal-priority messages.
 
-**reasoning:** The specification processes high-priority messages before normal-priority messages, supporting first in this two-priority comparison.
+**reasoning:** The specification processes high-priority messages before normal-priority messages, exactly matching the claim.
 
-**annotation_reason:** Interpret first relative to the normal-priority messages in the source, without adding a priority class not mentioned there.
+**annotation_reason:** Keep the comparison relative to normal-priority messages, as the source states, without adding a priority class not mentioned there.
 
 **citations (original indices and verbatim quotes):**
 
@@ -1442,7 +1442,7 @@ Service Finch encrypts writes.
 
 **claim_text:** Service Finch encrypts writes.
 
-**reasoning:** Finch uses Ember, but Ember's write encryption requires enabled secure mode and Finch's configuration is unspecified. The necessary premise is missing.
+**reasoning:** Finch uses Ember. The source guarantees encrypted writes when secure mode is enabled, but does not establish that this condition holds for Finch or otherwise establish encryption. It also does not refute encryption, so the claim is unsupported.
 
 **annotation_reason:** An unspecified secure-mode setting proves neither encryption nor its absence; do not turn this missing condition into a contradiction.
 

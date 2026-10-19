@@ -21,6 +21,12 @@ class GoldClaim(Claim):
     id: str
     annotation_reason: str
 
+    @model_validator(mode="after")
+    def annotation_has_text(self):
+        if not self.annotation_reason.strip():
+            raise ValueError("annotation_reason must contain text")
+        return self
+
 
 class Case(VerifyRequest):
     id: str
@@ -86,9 +92,13 @@ def validate_splits(directory: Path):
 def require_frozen_test(directory: Path, cases: list[Case]):
     manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
     test = manifest.get("test", {})
+    reviewer = test.get("reviewed_by")
+    # Exact checks: a stale reviewer, a "false" string or a draft status must not pass.
     if not (
-        test.get("reviewed_by")
-        and test.get("frozen")
+        test.get("review_status") == "approved"
+        and isinstance(reviewer, str)
+        and reviewer.strip()
+        and test.get("frozen") is True
         and test.get("dataset_hash") == dataset_hash(cases)
     ):
         raise ValueError("Test data needs human gold review and a matching frozen manifest first")
