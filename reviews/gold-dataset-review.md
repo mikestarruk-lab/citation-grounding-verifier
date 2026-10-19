@@ -12,7 +12,7 @@ Review each fact's meaning, qualifiers, verdict, explanation and complete eviden
 ## Source versions
 
 - dev canonical dataset hash: `e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c`
-- test canonical dataset hash: `19b9766741e3843a8deaea65dd7bef7bacc997eaf841dd7dd3afee338dbeb8e6`
+- test canonical dataset hash: `cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a`
 
 ### Full approval manifest
 
@@ -1347,7 +1347,7 @@ Archived objects in the Acorn project are retained for 90 days.
 **context_passages[0]**
 
 ```text
-User Lina has the auditor role.
+User Lina's only role is auditor. Lina has no user-specific permissions.
 ```
 
 **context_passages[1]**
@@ -1366,9 +1366,9 @@ Lina can view logs. Lina can delete logs.
 
 **claim_text:** Lina can view logs.
 
-**reasoning:** Lina has the auditor role, and the role rule permits auditors to view logs, so Lina can view logs.
+**reasoning:** Lina's role is auditor, and the role rule permits auditors to view logs, so Lina can view logs.
 
-**annotation_reason:** Both role assignment and the permission rule are required; do not infer additional roles or overrides.
+**annotation_reason:** Both the role assignment and the permission rule are required; viewing needs only the auditor assignment, not its exclusivity.
 
 **citations (original indices and verbatim quotes):**
 
@@ -1376,7 +1376,7 @@ Lina can view logs. Lina can delete logs.
 [
   {
     "index": 0,
-    "quote": "User Lina has the auditor role."
+    "quote": "User Lina's only role is auditor."
   },
   {
     "index": 1,
@@ -1389,9 +1389,9 @@ Lina can view logs. Lina can delete logs.
 
 **claim_text:** Lina can delete logs.
 
-**reasoning:** Lina is an auditor, and auditors cannot delete logs, directly refuting Lina's claimed deletion permission.
+**reasoning:** Auditor is Lina's only role and Lina has no user-specific permissions. Auditors cannot delete logs, so the stated prohibition applies to Lina and refutes the claim.
 
-**annotation_reason:** The contradiction needs both passages: the role assignment connects Lina to the explicit deletion prohibition.
+**annotation_reason:** The contradiction needs both passages, including the exclusivity premises that rule out another role or a user-level override granting deletion.
 
 **citations (original indices and verbatim quotes):**
 
@@ -1399,7 +1399,7 @@ Lina can view logs. Lina can delete logs.
 [
   {
     "index": 0,
-    "quote": "User Lina has the auditor role."
+    "quote": "User Lina's only role is auditor. Lina has no user-specific permissions."
   },
   {
     "index": 1,
@@ -1473,7 +1473,7 @@ The shared request pool has exactly 12 slots.
 **context_passages[1]**
 
 ```text
-Seven slots are occupied. Every slot is either occupied or available.
+Exactly seven slots are occupied. Every slot is in exactly one state: occupied or available.
 ```
 
 **generated_answer**
@@ -1486,9 +1486,9 @@ The shared request pool has five available slots.
 
 **claim_text:** The shared request pool has five available slots.
 
-**reasoning:** There are exactly 12 slots and seven are occupied. With occupied and available as the two states, the remaining 12 minus 7 equals five available slots.
+**reasoning:** There are exactly 12 slots and exactly seven are occupied. Every slot is in exactly one of the two states, so 12 minus 7 equals five available slots.
 
-**annotation_reason:** Both the total and the occupied/available state partition are needed for the arithmetic; keep both passages as evidence.
+**annotation_reason:** The total, the exact occupied count and the exclusive two-state partition are all needed for the arithmetic; keep both passages as evidence.
 
 **citations (original indices and verbatim quotes):**
 
@@ -1500,7 +1500,7 @@ The shared request pool has five available slots.
   },
   {
     "index": 1,
-    "quote": "Seven slots are occupied. Every slot is either occupied or available."
+    "quote": "Exactly seven slots are occupied. Every slot is in exactly one state: occupied or available."
   }
 ]
 ```

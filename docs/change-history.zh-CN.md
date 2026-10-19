@@ -379,3 +379,23 @@ segments unchanged.`，与答案的“启用期间”语境一致。
 输入，此前任何 test-04 输出都不能用于新版本；目前未运行过最终 test。dev 数据与哈希不变，
 dev 批准仍有效。manifest 中 test 仍为 draft/frozen=false：这次是按你确认修改措辞，
 不是 test gold 的整体批准。冻结前仍需你审阅全部 20 个 test 案例，并把审批绑定到新哈希。
+
+### 冻结前修改 test-17、test-19 的原文
+
+AI 逐条审阅 20 个 test 案例后，32 条事实都建议保留原标签。你要求在冻结前把 test-17
+与 test-19 的原文一起改明确：两处都是模型输入，只改 gold 说明不够，因为模型看不到
+gold 说明；test 尚未运行，现在改不影响任何结果。
+
+test-17 原文 `User Lina has the auditor role.` 改为 `User Lina's only role is auditor.
+Lina has no user-specific permissions.`。原写法下 Lina 可能还有别的角色或个人授权允许
+删除日志，g2 的 C 依赖“没有别的授权”这一默认假设；现在这个前提写进了原文。g1 只引用
+角色句，g2 引用整段，两条的 reasoning 与 annotation_reason 同步更新。
+
+test-19 原文 `Seven slots are occupied. Every slot is either occupied or available.` 改为
+`Exactly seven slots are occupied. Every slot is in exactly one state: occupied or
+available.`，消除“至少七个”和“同一槽位两种状态”的读法，12 − 7 = 5 不再依赖常识补全。
+引文和解释同步更新。
+
+两处标签不变。test 哈希由 `19b9766741e3843a8deaea65dd7bef7bacc997eaf841dd7dd3afee338dbeb8e6`
+变为 `cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a`，审阅页已重新生成，
+68 项 pytest、Ruff、validate-data 与审阅页同步检查通过。test 仍为 draft、未冻结。
