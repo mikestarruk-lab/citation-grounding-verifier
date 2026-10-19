@@ -7,9 +7,10 @@ answer and classify them using only the supplied passages. The contract is in
 **Work in progress.** The service, lexical baseline, LLM paths and evaluation tools
 are implemented. Development gold is owner-approved. Test gold was owner-approved
 and frozen on 2026-10-19. The two development baselines have owner-reviewed
-semantic results. Final test runs and reviews,
-optimization comparisons and final benchmark results are pending. The optimized
-path is a candidate, not a demonstrated improvement.
+semantic results. The optimized method (lean-v1 prompt, span citations, one
+validated repair) was selected on 2026-10-19 from preregistered stability repeats;
+it is the most stable candidate, not a demonstrated improvement over minimal.
+Final test runs, their reviews and the evaluation report are pending.
 
 ## Run locally
 
@@ -33,7 +34,7 @@ uv run uvicorn grounding_verifier.api:app --host 127.0.0.1 --port 8000
 
 Open `http://127.0.0.1:8000/docs` for the request/response schema. Set
 `VERIFIER_METHOD=lexical` in the environment for a key-free service; other choices
-are `minimal` (default) and `optimized`. Both LLM paths use `claude-haiku-5-5` with
+are `minimal` (default) and `optimized` (lean-v1). Both LLM paths use `claude-haiku-5-5` with
 the same inference configuration. Local citation validation rejects invalid
 indices, fabricated quotes and incompatible verdict/citation combinations.
 Technical failures return HTTP errors rather than factual verdicts.
@@ -99,6 +100,9 @@ Paid runs share the local $20 budget ledger; retain it across experiments.
   [The completed workbook](reviews/dev-v2/dev-v2-alignment.xlsx), approved JSON
   records and import receipt preserve the review decisions. This was review after
   AI feedback, not independent blind annotation or final test evaluation.
+- [Optimized method selection, 2026-10-19](experiments/method-freeze-2026-10-19.json),
+  from [stability repeats](experiments/2026-10-19-stability/README.md) of three
+  candidates on approved dev and development challenges.
 - [Owner approval and freeze of test gold](reviews/test-gold-approval-2026-10-19.md).
 - [Owner approval of development gold](reviews/dev-gold-approval-2026-10-16.md).
 

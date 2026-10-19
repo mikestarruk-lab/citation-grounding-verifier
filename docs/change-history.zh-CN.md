@@ -435,3 +435,11 @@ approved、frozen=true，审核人和哈希写入，并链接批准记录；审�
 证明 lean 优于固定的 minimal；报告中应把它写成“最稳定的优化候选”，修复路径是可测的
 工程收益。选定仍需你确认，HTTP 默认配置暂未修改。详见
 [复跑结果](../experiments/2026-10-19-stability/README.md)。
+
+### 你确认选定 lean-v1，方法冻结
+
+你回复“确认选择”。optimized 的默认配置由 refined-v1 改为 lean-v1、片段引用，修复路径不变；
+HTTP 服务的 `VERIFIER_METHOD=optimized` 与 CLI 默认都随之改变，minimal 仍拒绝任何提示词变体。
+新增 [方法冻结记录](../experiments/method-freeze-2026-10-19.json)，绑定 lean 提示词摘要、模型配置、
+复跑计划与结果的提交和汇总摘要。refined-v1、refined-v2 和整段引用仍可显式指定，作为历史对照。
+从现在到最终 test 运行前，不再修改提示词、变体、引用策略或模型配置；68 项测试、Ruff 通过。

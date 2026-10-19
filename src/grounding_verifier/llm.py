@@ -18,6 +18,8 @@ from .domain import Citation, VerificationReport, VerifyError, VerifyRequest, va
 from .prompts import FIXED, LEAN, MINIMAL, REFINED, REFINED_V2
 
 MODEL = "claude-haiku-5-5"
+# Owner-confirmed optimized method (experiments/method-freeze-2026-10-19.json).
+SELECTED_VARIANT = "lean-v1"
 MAX_OUTPUT = 8192
 # Reserve a full 1M input window at the higher rate, plus max output. Actual usage settles it.
 MAX_CALL_USD = 0.50 + MAX_OUTPUT * 2.50 / 1_000_000
@@ -183,7 +185,7 @@ class LLMVerifier:
             raise ValueError("minimal baseline does not accept prompt variants")
         if optimized and prompt_variant is not None and prompt_variant not in variants:
             raise ValueError("unknown optimized prompt variant")
-        self.prompt_variant = (prompt_variant or "refined-v1") if optimized else "minimal"
+        self.prompt_variant = (prompt_variant or SELECTED_VARIANT) if optimized else "minimal"
         self.prompt = variants[self.prompt_variant] if optimized else MINIMAL
         if citation_policy not in {"span", "passage"}:
             raise ValueError("unknown citation policy")

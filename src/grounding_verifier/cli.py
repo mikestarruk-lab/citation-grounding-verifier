@@ -14,7 +14,7 @@ from .dataset import dataset_hash, digest, load_cases, require_frozen_test, vali
 from .domain import VerifyError
 from .evaluation import output_hash, review_template, score
 from .gold_review import render_gold_review
-from .llm import MODEL, AnthropicProvider, LLMVerifier, execute
+from .llm import MODEL, SELECTED_VARIANT, AnthropicProvider, LLMVerifier, execute
 
 
 def write_json(path: Path, value):
@@ -33,7 +33,7 @@ async def run_benchmark(args):
     if args.out.exists():
         raise ValueError("output already exists; select a new run path")
     if args.method != "optimized" and (
-        getattr(args, "prompt_variant", "refined-v1") != "refined-v1"
+        getattr(args, "prompt_variant", SELECTED_VARIANT) != SELECTED_VARIANT
         or getattr(args, "citation_policy", "span") != "span"
     ):
         raise ValueError("prompt variants and citation expansion apply only to optimized")
@@ -42,7 +42,7 @@ async def run_benchmark(args):
         require_frozen_test(args.data, cases)
     if args.method == "optimized" and not args.experiment_note:
         raise ValueError(
-            "optimized is a candidate: provide --experiment-note documenting dev failures"
+            "optimized runs need --experiment-note naming the plan or method-freeze record"
         )
     provider = None
     if args.method == "lexical":
@@ -135,7 +135,9 @@ def main():
     run.add_argument("--threshold", type=float, default=0.65)
     run.add_argument("--experiment-note")
     run.add_argument(
-        "--prompt-variant", choices=["refined-v1", "refined-v2", "lean-v1"], default="refined-v1"
+        "--prompt-variant",
+        choices=["refined-v1", "refined-v2", "lean-v1"],
+        default=SELECTED_VARIANT,
     )
     run.add_argument("--citation-policy", choices=["span", "passage"], default="span")
     run.add_argument("--out", type=Path, required=True)

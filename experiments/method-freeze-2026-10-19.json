@@ -1,0 +1,29 @@
+{
+  "decision_date": "2026-10-19",
+  "status": "owner_accepted",
+  "authorization": "Owner replied “确认选择” after the recommendation to select lean-v1 with span citations under the preregistered rule.",
+  "optimized": {
+    "selection": "lean-v1_span",
+    "prompt_variant": "lean-v1",
+    "citation_policy": "span",
+    "prompt_digest": "d6b6e9b55ec96495ffcd3848066c6a9eee88e60c647568f6a166035fa8bd043e",
+    "fixed_claims_prompt_digest": "1432cf9f99ab9f761da508f9b03f9b6dadf9f461daeb2a437cab701d403b09ad",
+    "model": "claude-haiku-5-5",
+    "effort": "medium",
+    "max_output_tokens": 8192,
+    "output_repair": "one validated repair attempt, unchanged"
+  },
+  "evidence": {
+    "plan": "experiments/2026-10-19-stability/PLAN.md",
+    "plan_commit": "588911e",
+    "results": "experiments/2026-10-19-stability/README.md",
+    "results_commit": "58a2d73",
+    "summary_digest": "e9a3635adef4c1c07bd59801fa317198faf1712da954c8a352d9c9d762152202",
+    "rule": "docs/design-rationale.zh-CN.md section 6.3: invariants, then approved-dev fact+label F1, challenge F1 as tie-break, then false support, evidence, cost and latency.",
+    "outcome": "refined-v2 excluded (one unrecovered contract violation; dev-08 false rejection). refined-v1 and lean tie at dev F1 1.0; lean leads on challenge F1 (0.906 vs 0.880) and original-citation evidence (50/55 vs 44/54)."
+  },
+  "limits": "AI-proposed scoring pending owner review. The challenge gap is small and lean is not shown to beat the fixed minimal comparator. Full-passage expansion remains an optional documented ablation, not the selected configuration.",
+  "frozen_after": "No prompt, variant, citation-policy or model change before the final test runs. Final test runs use lexical 0.65, fixed minimal and this configuration, once each.",
+  "comparators": "experiments/baseline-freeze-2026-10-18.json",
+  "test_freeze": "reviews/test-gold-approval-2026-10-19.md"
+}

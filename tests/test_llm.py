@@ -22,7 +22,9 @@ REQUEST = VerifyRequest(context_passages=["A works."], generated_answer="A works
 
 def test_prompt_experiments_cannot_modify_minimal_baseline():
     assert LLMVerifier(None).prompt == MINIMAL
-    assert LLMVerifier(None, True).prompt == REFINED
+    assert LLMVerifier(None, True).prompt == LEAN  # owner-selected default
+    assert LLMVerifier(None, True).citation_policy == "span"
+    assert LLMVerifier(None, True, prompt_variant="refined-v1").prompt == REFINED
     assert LLMVerifier(None, True, prompt_variant="refined-v2").prompt == REFINED_V2
     assert LLMVerifier(None, True, prompt_variant="lean-v1").prompt == LEAN
     with pytest.raises(ValueError, match="minimal baseline"):
