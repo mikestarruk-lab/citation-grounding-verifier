@@ -22,7 +22,16 @@ These are AI observations, not complete human-reviewed quality scores.
 
 ## Review artifacts
 
-- [AI-filled alignment draft](ai-alignment-2026-10-19.zh-CN.md) and matching JSON:
+- [AI alignment draft, revision 2](ai-alignment-2026-10-19.rev2.zh-CN.md) and matching
+  JSON, produced by `align_ai_rev2.py` from the unchanged rev1 decisions. It applies
+  one reference rule (pronouns resolve to entities only; propositional content and
+  independently necessary premises must come from the prediction's own text and
+  citations) and adds evidence judged on the model's original citations before
+  passage expansion. Counts: 59 matched, 5 unmatched, 1 missing gold. With original
+  citations, refined-v2-passage is 8/9 and lean-v1-passage 5/9 sufficient, versus
+  9/9 for both after expansion. Still AI-proposed and owner-pending.
+- [Revision 1 alignment draft](ai-alignment-2026-10-19.zh-CN.md) and matching JSON
+  (historical, superseded by rev2):
   all 25 records, 56 predictions and 64 proposed scoring units. Qualifiers,
   unmatched partial relations and local-reference uncertainties are explicit.
   The scorer continues to treat these AI-proposed records as pending.

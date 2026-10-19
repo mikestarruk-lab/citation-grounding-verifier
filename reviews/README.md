@@ -6,8 +6,10 @@ files store those exact paths.
 
 ## Current task
 
-An [AI-filled v2 alignment draft](../experiments/2026-10-18-challenges-v2/ai-alignment-2026-10-19.zh-CN.md)
-now covers all 25 challenge outputs (56 original predictions / 64 scoring units).
+Review the [revised AI alignment draft (rev2)](../experiments/2026-10-18-challenges-v2/ai-alignment-2026-10-19.rev2.zh-CN.md).
+It supersedes rev1 with a single reference rule and shows evidence on both final
+and original (pre-expansion) citations; rev1 is kept unchanged for history.
+The draft covers all 25 challenge outputs (56 original predictions / 64 scoring units).
 It includes full source, gold and outputs, proposed alignment/evidence decisions,
 and owner fields. Transaction-reference ambiguities are explicitly flagged.
 All records remain AI-proposed; no human approval or complete semantic score is implied.
