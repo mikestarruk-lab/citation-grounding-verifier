@@ -1,0 +1,1782 @@
+{
+  "title": "Citation verifier · Error explorer",
+  "surface": "dashboard",
+  "generatedAt": "2026-10-17T23:25:37.982069+00:00",
+  "status": "local-experiment-evidence",
+  "buildStatus": "complete",
+  "filters": [],
+  "queries": {
+    "comparisons": {
+      "rows": [
+        {
+          "config": "lexical",
+          "label": "Lexical · 0.65",
+          "threshold": 0.65,
+          "score_status": "Owner reviewed",
+          "selection_status": "retained_baseline",
+          "f1": 0.5833333333333334,
+          "falseSupportRate": 0.0,
+          "false_support": 0,
+          "non_supported": 4,
+          "cases": 8,
+          "gold_facts": 12,
+          "tp": 7,
+          "fp": 5,
+          "fn": 5,
+          "coverage": 1.0,
+          "evidenceRate": 0.6,
+          "evidence_numerator": 3,
+          "evidence_denominator": 5,
+          "success_rate": 1.0,
+          "quote_validity": 1.0
+        },
+        {
+          "config": "minimal",
+          "label": "Minimal LLM",
+          "threshold": null,
+          "score_status": "Owner reviewed",
+          "selection_status": "retained_baseline",
+          "f1": 1.0,
+          "falseSupportRate": 0.0,
+          "false_support": 0,
+          "non_supported": 4,
+          "cases": 8,
+          "gold_facts": 12,
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "coverage": 1.0,
+          "evidenceRate": 1.0,
+          "evidence_numerator": 10,
+          "evidence_denominator": 10,
+          "success_rate": 1.0,
+          "quote_validity": 1.0
+        },
+        {
+          "config": "f1-candidate",
+          "label": "Lexical · best F1",
+          "threshold": 0.26600227007264704,
+          "score_status": "Projected / not adopted",
+          "selection_status": "sensitivity_only",
+          "f1": 0.8333333333333334,
+          "falseSupportRate": 0.5,
+          "false_support": 2,
+          "non_supported": 4,
+          "cases": 8,
+          "gold_facts": 12,
+          "tp": 10,
+          "fp": 2,
+          "fn": 2,
+          "coverage": 1.0,
+          "evidenceRate": null,
+          "evidence_numerator": null,
+          "evidence_denominator": null,
+          "success_rate": 1.0,
+          "quote_validity": 1.0
+        },
+        {
+          "config": "safe-candidate",
+          "label": "Lexical · zero false support",
+          "threshold": 0.5967592242416415,
+          "score_status": "Projected / not adopted",
+          "selection_status": "sensitivity_only",
+          "f1": 0.6666666666666666,
+          "falseSupportRate": 0.0,
+          "false_support": 0,
+          "non_supported": 4,
+          "cases": 8,
+          "gold_facts": 12,
+          "tp": 8,
+          "fp": 4,
+          "fn": 4,
+          "coverage": 1.0,
+          "evidenceRate": null,
+          "evidence_numerator": null,
+          "evidence_denominator": null,
+          "success_rate": 1.0,
+          "quote_validity": 1.0
+        }
+      ],
+      "source": {
+        "label": "Repository development experiment and owner review files",
+        "files": [
+          "experiments/2026-10-16-dev-v2/lexical-dev-v2.json",
+          "experiments/2026-10-16-dev-v2/minimal-dev-v2.json",
+          "reviews/dev-v2/dev-v2-A-approved.json",
+          "reviews/dev-v2/dev-v2-B-approved.json",
+          "experiments/baseline-freeze-2026-10-18.json",
+          "experiments/2026-10-17-lexical-thresholds/study.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-00.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-01.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-02.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-03.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-04.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-05.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-06.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-07.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-08.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-09.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-10.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-11.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-12.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-13.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-14.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-15.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-16.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-17.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-18.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-19.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-20.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-21.json",
+          "data/dev.jsonl"
+        ],
+        "contentDigests": [
+          {
+            "name": "experiments/2026-10-16-dev-v2/lexical-dev-v2.json",
+            "content_digest": "88fd6e0a351d753372f00d815c5734b5e7bc9a7c60bcaf1b3f4606cd7c4706a7"
+          },
+          {
+            "name": "experiments/2026-10-16-dev-v2/minimal-dev-v2.json",
+            "content_digest": "e8a391f18d86e7db17a347a5a951add1559f05b856c447d85e3c9296efddf8b1"
+          },
+          {
+            "name": "reviews/dev-v2/dev-v2-A-approved.json",
+            "content_digest": "1d8647b823452365ad4a999a554839fb85ac33e12d9a409dc62cd083121be947"
+          },
+          {
+            "name": "reviews/dev-v2/dev-v2-B-approved.json",
+            "content_digest": "c90fbe655d5cd61ae07bf11ca59bcb291d280209bc356a66579440d98dbcc418"
+          },
+          {
+            "name": "experiments/baseline-freeze-2026-10-18.json",
+            "content_digest": "882de78503bb226fac307785a9ae5d833b639d67e85af0426191341756fcc099"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/study.json",
+            "content_digest": "7397af45bb8a3a77c6fc7f79c30547c5bef265174e2f9a9edc7a7a804fc42276"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-00.json",
+            "content_digest": "b08b108cb1355c77881c165c4aa66d6600bb7038aa9feae10131149849da48d9"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-01.json",
+            "content_digest": "0759de52b1f986872665907ebdf33c5470a89434d86b7c7c5c161004450693a5"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-02.json",
+            "content_digest": "511e748d89976e037633af1702e5dccb021451b7ac818d800826efbcb36dec65"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-03.json",
+            "content_digest": "1f6034886a46dc1bb1379bc39069ad6d8873873c6f8fafbeab7f4ee597a1b451"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-04.json",
+            "content_digest": "ac602b682e7ccb14a3369e0e4730fec8dfe22571a5bab820086396b972299243"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-05.json",
+            "content_digest": "c612dec41f064e4b8f946272f028dbcb7a1c3ad2ddef680cc023774f85d608bf"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-06.json",
+            "content_digest": "d82ecd47c6db4afac570073fb41979d4bb982f0be29d4b6d44b07d0e3ea7ff71"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-07.json",
+            "content_digest": "072406a3792679c5215782d84fd70aeb351c4fd9515cd26511669acc1bfabe5a"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-08.json",
+            "content_digest": "0f10b63551f14d85439583afaac78b8e2f724de10149faa6d139bf98bdc8297b"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-09.json",
+            "content_digest": "96dbcf21d85cd8e0f3d953c382ee9f66fde3f36aa717e06b1e121ed766fa0fa8"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-10.json",
+            "content_digest": "d4e2131ed18fe59314a2b0f43e85522b4e38d0bf6b3b7d87029f0c6516b7d9ad"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-11.json",
+            "content_digest": "71f4a5ea125620e3efc76f110bd2fa656b24a0a3e1630c518666b437025d7bad"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-12.json",
+            "content_digest": "767c632833e5c732158159de9a530bdfa5102b9e82940b801eab20d5913b1f31"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-13.json",
+            "content_digest": "2ce490451b9620f03bc8129eb183017e64aa33516df11010f267a91a3a2e6a2f"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-14.json",
+            "content_digest": "03fa1d65253f3612957d20e4879163e9ae4d8b32fbac9be22f881499ae7171d9"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-15.json",
+            "content_digest": "f46e00c9332dccc1a4e7b8c25ee451176dce380ac4e615432da803e4e717a188"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-16.json",
+            "content_digest": "9b1b2e67f4085fecd90f6a6def3e471f17869d1b7d74d85921337ccb3b7c55dd"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-17.json",
+            "content_digest": "3b8aeecc5f3147a1c76effec8e83b0316c3c03215245d137e16f789140cf1a68"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-18.json",
+            "content_digest": "b67bbbb395c7d19848e701c4cc8bd6e93c6f4e8ed4972b75981ac8c025f21822"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-19.json",
+            "content_digest": "48e9d0f6685de6d18cae77baea877f96ffdfb56380e02ebb9c2362b3541a1af9"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-20.json",
+            "content_digest": "a16e7fda8f39fecbd4ba11b64fe3103632c8f27c28ff9075138fb4eac5c99676"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-21.json",
+            "content_digest": "d45ce7c5315ac0c54f23d82c0847505c0c6141e67892bb36fdb3e98085040351"
+          }
+        ],
+        "datasetHash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+        "classification": "Synthetic development specifications with real saved method outputs",
+        "executedAt": "2026-10-17T23:25:37.982069+00:00",
+        "timezone": "Europe/London",
+        "metricDefinitions": [
+          {
+            "label": "Fact + label F1",
+            "definition": "2TP/(2TP+FP+FN). Wrong labels count as both FP and FN. Candidate labels use unchanged owner-aligned text; this is not new owner approval."
+          },
+          {
+            "label": "False support",
+            "definition": "Non-supported gold facts predicted SUPPORTED / all non-supported gold facts. Coverage and success remain visible."
+          },
+          {
+            "label": "Evidence sufficiency",
+            "definition": "Sufficient evidence units / all supported or contradicted prediction units. Unknown for candidate-wide results until reviewed."
+          },
+          {
+            "label": "Error units",
+            "definition": "Scoring units after the owner's compound split. Error types overlap. Compound marks repeat prediction-level issues; do not add error totals."
+          }
+        ],
+        "caveats": [
+          "Owner retained lexical 0.65 and minimal LLM; other thresholds are sensitivity only.",
+          "8 dev cases / 12 gold facts; test not read or run.",
+          "Owner review followed AI feedback; not independent blind review.",
+          "Candidate evidence is unknown, not zero. No default threshold change."
+        ],
+        "evidenceFlow": [
+          {
+            "title": "Load and validate",
+            "detail": "Load dev.jsonl, saved v2 runs and approved review JSON. score() validates dataset/output hashes and review coverage."
+          },
+          {
+            "title": "Verify threshold study",
+            "detail": "Verify study source digests, every run digest and recomputed unchanged-text label projections."
+          },
+          {
+            "title": "Export snapshot",
+            "detail": "python -m grounding_verifier.error_explorer --out tools/error-explorer/src/data.json. No model calls, test data access or review writes."
+          }
+        ]
+      }
+    },
+    "thresholds": {
+      "rows": [
+        {
+          "threshold": 0.0,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 8,
+          "fp": 4,
+          "fn": 4,
+          "f1": 0.6666666666666666,
+          "coverage": 1.0,
+          "false_support": 4,
+          "false_support_denominator": 4,
+          "false_support_rate": 1.0,
+          "false_rejection": 0,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.0874806958574271,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 9,
+          "fp": 3,
+          "fn": 3,
+          "f1": 0.75,
+          "coverage": 1.0,
+          "false_support": 3,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.75,
+          "false_rejection": 0,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.1749613917148542,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 9,
+          "fp": 3,
+          "fn": 3,
+          "f1": 0.75,
+          "coverage": 1.0,
+          "false_support": 3,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.75,
+          "false_rejection": 0,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.26600227007264704,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 10,
+          "fp": 2,
+          "fn": 2,
+          "f1": 0.8333333333333334,
+          "coverage": 1.0,
+          "false_support": 2,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.5,
+          "false_rejection": 0,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.3570431484304399,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 10,
+          "fp": 2,
+          "fn": 2,
+          "f1": 0.8333333333333334,
+          "coverage": 1.0,
+          "false_support": 2,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.5,
+          "false_rejection": 0,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.45925260962523895,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 9,
+          "fp": 3,
+          "fn": 3,
+          "f1": 0.75,
+          "coverage": 1.0,
+          "false_support": 2,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.5,
+          "false_rejection": 1,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.561462070820038,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 9,
+          "fp": 3,
+          "fn": 3,
+          "f1": 0.75,
+          "coverage": 1.0,
+          "false_support": 2,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.5,
+          "false_rejection": 1,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.5677091765669063,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 8,
+          "fp": 4,
+          "fn": 4,
+          "f1": 0.6666666666666666,
+          "coverage": 1.0,
+          "false_support": 2,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.5,
+          "false_rejection": 2,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.5739562823137747,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 8,
+          "fp": 4,
+          "fn": 4,
+          "f1": 0.6666666666666666,
+          "coverage": 1.0,
+          "false_support": 2,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.5,
+          "false_rejection": 2,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.5754513201876664,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 8,
+          "fp": 4,
+          "fn": 4,
+          "f1": 0.6666666666666666,
+          "coverage": 1.0,
+          "false_support": 1,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.25,
+          "false_rejection": 2,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.5769463580615581,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 8,
+          "fp": 4,
+          "fn": 4,
+          "f1": 0.6666666666666666,
+          "coverage": 1.0,
+          "false_support": 1,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.25,
+          "false_rejection": 2,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.5967592242416415,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 8,
+          "fp": 4,
+          "fn": 4,
+          "f1": 0.6666666666666666,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 2,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.616572090421725,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 8,
+          "fp": 4,
+          "fn": 4,
+          "f1": 0.6666666666666666,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 2,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.65,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 7,
+          "fp": 5,
+          "fn": 5,
+          "f1": 0.5833333333333334,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 3,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.6705578723174919,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 7,
+          "fp": 5,
+          "fn": 5,
+          "f1": 0.5833333333333334,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 3,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.7245436542132586,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 7,
+          "fp": 5,
+          "fn": 5,
+          "f1": 0.5833333333333334,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 3,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.7632498750752632,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 6,
+          "fp": 6,
+          "fn": 6,
+          "f1": 0.5,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 4,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.8019560959372677,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 6,
+          "fp": 6,
+          "fn": 6,
+          "f1": 0.5,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 4,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.9009780479686338,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 4,
+          "fp": 8,
+          "fn": 8,
+          "f1": 0.3333333333333333,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 6,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.9999999999999998,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 4,
+          "fp": 8,
+          "fn": 8,
+          "f1": 0.3333333333333333,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 6,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 0.9999999999999999,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 3,
+          "fp": 9,
+          "fn": 9,
+          "f1": 0.25,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 7,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        },
+        {
+          "threshold": 1.0,
+          "status": "projected_from_owner_alignment_not_new_output_approval",
+          "tp": 2,
+          "fp": 10,
+          "fn": 10,
+          "f1": 0.16666666666666666,
+          "coverage": 1.0,
+          "false_support": 0,
+          "false_support_denominator": 4,
+          "false_support_rate": 0.0,
+          "false_rejection": 8,
+          "false_rejection_denominator": 8,
+          "evidence_sufficiency": null
+        }
+      ],
+      "source": {
+        "label": "Repository development experiment and owner review files",
+        "files": [
+          "experiments/2026-10-16-dev-v2/lexical-dev-v2.json",
+          "experiments/2026-10-16-dev-v2/minimal-dev-v2.json",
+          "reviews/dev-v2/dev-v2-A-approved.json",
+          "reviews/dev-v2/dev-v2-B-approved.json",
+          "experiments/baseline-freeze-2026-10-18.json",
+          "experiments/2026-10-17-lexical-thresholds/study.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-00.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-01.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-02.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-03.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-04.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-05.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-06.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-07.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-08.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-09.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-10.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-11.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-12.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-13.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-14.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-15.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-16.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-17.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-18.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-19.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-20.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-21.json",
+          "data/dev.jsonl"
+        ],
+        "contentDigests": [
+          {
+            "name": "experiments/2026-10-16-dev-v2/lexical-dev-v2.json",
+            "content_digest": "88fd6e0a351d753372f00d815c5734b5e7bc9a7c60bcaf1b3f4606cd7c4706a7"
+          },
+          {
+            "name": "experiments/2026-10-16-dev-v2/minimal-dev-v2.json",
+            "content_digest": "e8a391f18d86e7db17a347a5a951add1559f05b856c447d85e3c9296efddf8b1"
+          },
+          {
+            "name": "reviews/dev-v2/dev-v2-A-approved.json",
+            "content_digest": "1d8647b823452365ad4a999a554839fb85ac33e12d9a409dc62cd083121be947"
+          },
+          {
+            "name": "reviews/dev-v2/dev-v2-B-approved.json",
+            "content_digest": "c90fbe655d5cd61ae07bf11ca59bcb291d280209bc356a66579440d98dbcc418"
+          },
+          {
+            "name": "experiments/baseline-freeze-2026-10-18.json",
+            "content_digest": "882de78503bb226fac307785a9ae5d833b639d67e85af0426191341756fcc099"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/study.json",
+            "content_digest": "7397af45bb8a3a77c6fc7f79c30547c5bef265174e2f9a9edc7a7a804fc42276"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-00.json",
+            "content_digest": "b08b108cb1355c77881c165c4aa66d6600bb7038aa9feae10131149849da48d9"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-01.json",
+            "content_digest": "0759de52b1f986872665907ebdf33c5470a89434d86b7c7c5c161004450693a5"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-02.json",
+            "content_digest": "511e748d89976e037633af1702e5dccb021451b7ac818d800826efbcb36dec65"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-03.json",
+            "content_digest": "1f6034886a46dc1bb1379bc39069ad6d8873873c6f8fafbeab7f4ee597a1b451"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-04.json",
+            "content_digest": "ac602b682e7ccb14a3369e0e4730fec8dfe22571a5bab820086396b972299243"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-05.json",
+            "content_digest": "c612dec41f064e4b8f946272f028dbcb7a1c3ad2ddef680cc023774f85d608bf"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-06.json",
+            "content_digest": "d82ecd47c6db4afac570073fb41979d4bb982f0be29d4b6d44b07d0e3ea7ff71"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-07.json",
+            "content_digest": "072406a3792679c5215782d84fd70aeb351c4fd9515cd26511669acc1bfabe5a"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-08.json",
+            "content_digest": "0f10b63551f14d85439583afaac78b8e2f724de10149faa6d139bf98bdc8297b"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-09.json",
+            "content_digest": "96dbcf21d85cd8e0f3d953c382ee9f66fde3f36aa717e06b1e121ed766fa0fa8"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-10.json",
+            "content_digest": "d4e2131ed18fe59314a2b0f43e85522b4e38d0bf6b3b7d87029f0c6516b7d9ad"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-11.json",
+            "content_digest": "71f4a5ea125620e3efc76f110bd2fa656b24a0a3e1630c518666b437025d7bad"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-12.json",
+            "content_digest": "767c632833e5c732158159de9a530bdfa5102b9e82940b801eab20d5913b1f31"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-13.json",
+            "content_digest": "2ce490451b9620f03bc8129eb183017e64aa33516df11010f267a91a3a2e6a2f"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-14.json",
+            "content_digest": "03fa1d65253f3612957d20e4879163e9ae4d8b32fbac9be22f881499ae7171d9"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-15.json",
+            "content_digest": "f46e00c9332dccc1a4e7b8c25ee451176dce380ac4e615432da803e4e717a188"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-16.json",
+            "content_digest": "9b1b2e67f4085fecd90f6a6def3e471f17869d1b7d74d85921337ccb3b7c55dd"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-17.json",
+            "content_digest": "3b8aeecc5f3147a1c76effec8e83b0316c3c03215245d137e16f789140cf1a68"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-18.json",
+            "content_digest": "b67bbbb395c7d19848e701c4cc8bd6e93c6f4e8ed4972b75981ac8c025f21822"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-19.json",
+            "content_digest": "48e9d0f6685de6d18cae77baea877f96ffdfb56380e02ebb9c2362b3541a1af9"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-20.json",
+            "content_digest": "a16e7fda8f39fecbd4ba11b64fe3103632c8f27c28ff9075138fb4eac5c99676"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-21.json",
+            "content_digest": "d45ce7c5315ac0c54f23d82c0847505c0c6141e67892bb36fdb3e98085040351"
+          }
+        ],
+        "datasetHash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+        "classification": "Synthetic development specifications with real saved method outputs",
+        "executedAt": "2026-10-17T23:25:37.982069+00:00",
+        "timezone": "Europe/London",
+        "metricDefinitions": [
+          {
+            "label": "Fact + label F1",
+            "definition": "2TP/(2TP+FP+FN). Wrong labels count as both FP and FN. Candidate labels use unchanged owner-aligned text; this is not new owner approval."
+          },
+          {
+            "label": "False support",
+            "definition": "Non-supported gold facts predicted SUPPORTED / all non-supported gold facts. Coverage and success remain visible."
+          },
+          {
+            "label": "Evidence sufficiency",
+            "definition": "Sufficient evidence units / all supported or contradicted prediction units. Unknown for candidate-wide results until reviewed."
+          },
+          {
+            "label": "Error units",
+            "definition": "Scoring units after the owner's compound split. Error types overlap. Compound marks repeat prediction-level issues; do not add error totals."
+          }
+        ],
+        "caveats": [
+          "Owner retained lexical 0.65 and minimal LLM; other thresholds are sensitivity only.",
+          "8 dev cases / 12 gold facts; test not read or run.",
+          "Owner review followed AI feedback; not independent blind review.",
+          "Candidate evidence is unknown, not zero. No default threshold change."
+        ],
+        "evidenceFlow": [
+          {
+            "title": "Load and validate",
+            "detail": "Load dev.jsonl, saved v2 runs and approved review JSON. score() validates dataset/output hashes and review coverage."
+          },
+          {
+            "title": "Verify threshold study",
+            "detail": "Verify study source digests, every run digest and recomputed unchanged-text label projections."
+          },
+          {
+            "title": "Export snapshot",
+            "detail": "python -m grounding_verifier.error_explorer --out tools/error-explorer/src/data.json. No model calls, test data access or review writes."
+          }
+        ]
+      }
+    },
+    "units": {
+      "rows": [
+        {
+          "id": "lexical:dev-01:0",
+          "config": "lexical",
+          "case_id": "dev-01",
+          "category": "supported",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "ArchiveBox creates hourly snapshots.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "label",
+          "payload": "{\"context_passages\": [\"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"], \"generated_answer\": \"ArchiveBox creates hourly snapshots. It retains snapshots for seven days.\", \"gold\": {\"claim_text\": \"ArchiveBox creates a snapshot every hour.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source says ArchiveBox creates a snapshot every hour, which is equivalent to hourly snapshots.\", \"citations\": [{\"index\": 0, \"quote\": \"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"}], \"id\": \"g1\", \"annotation_reason\": \"Keep snapshot frequency separate from retention duration; hourly is a valid paraphrase of every hour.\"}, \"prediction\": {\"claim_text\": \"ArchiveBox creates hourly snapshots.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"b1416fb783e67787b8c42c0d14e2e003e5a2c63a9094afcfa2f24639c35a0fb7\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-01:1",
+          "config": "lexical",
+          "case_id": "dev-01",
+          "category": "supported",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "It retains snapshots for seven days.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "label",
+          "payload": "{\"context_passages\": [\"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"], \"generated_answer\": \"ArchiveBox creates hourly snapshots. It retains snapshots for seven days.\", \"gold\": {\"claim_text\": \"ArchiveBox retains snapshots for seven days.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly retains ArchiveBox snapshots for seven days.\", \"citations\": [{\"index\": 0, \"quote\": \"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"}], \"id\": \"g2\", \"annotation_reason\": \"The second answer sentence refers to ArchiveBox snapshots; retain the object and seven-day duration.\"}, \"prediction\": {\"claim_text\": \"It retains snapshots for seven days.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"b1416fb783e67787b8c42c0d14e2e003e5a2c63a9094afcfa2f24639c35a0fb7\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-02:0",
+          "config": "lexical",
+          "case_id": "dev-02",
+          "category": "supported",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "RelayGate retries GET requests after a connection reset.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "compound",
+          "payload": "{\"context_passages\": [\"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"], \"generated_answer\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"gold\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly retries GET requests after a connection reset, matching the answer's request type and condition.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"}], \"id\": \"g1\", \"annotation_reason\": \"The connection-reset condition is part of the fact; this does not establish retries after every kind of failure.\"}, \"prediction\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset.\"}]}, \"review_note\": \"如果只引用了GET 的话不充分，应该都引用 拆成 g1、g2；GET 证据充分，POST 证据不充分，评分时分别记录。\", \"output_hash\": \"f33a0644d46cbea8e7cb0bf5828a6ca286bc00e857aa22ae63a30effc65f6588\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-02:1",
+          "config": "lexical",
+          "case_id": "dev-02",
+          "category": "supported",
+          "gold_id": "g2",
+          "prediction_index": 0,
+          "text": "RelayGate never retries POST requests.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": false,
+          "review_status": "reviewed",
+          "errors": "evidence,compound",
+          "payload": "{\"context_passages\": [\"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"], \"generated_answer\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"gold\": {\"claim_text\": \"RelayGate never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source states that RelayGate never retries POST requests.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"}], \"id\": \"g2\", \"annotation_reason\": \"Resolve It to RelayGate and preserve never; the exception for POST is independent of the supported GET behavior.\"}, \"prediction\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset.\"}]}, \"review_note\": \"如果只引用了GET 的话不充分，应该都引用 拆成 g1、g2；GET 证据充分，POST 证据不充分，评分时分别记录。\", \"output_hash\": \"f33a0644d46cbea8e7cb0bf5828a6ca286bc00e857aa22ae63a30effc65f6588\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-03:0",
+          "config": "lexical",
+          "case_id": "dev-03",
+          "category": "distortion",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "TaskDock permits five active workers.",
+          "gold_verdict": "CONTRADICTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "label",
+          "payload": "{\"context_passages\": [\"TaskDock permits at most four active workers. Additional workers remain queued.\"], \"generated_answer\": \"TaskDock permits five active workers. Additional workers remain queued.\", \"gold\": {\"claim_text\": \"TaskDock permits five active workers.\", \"verdict\": \"CONTRADICTED\", \"reasoning\": \"The specification permits at most four active TaskDock workers, so permitting five active workers exceeds the stated maximum.\", \"citations\": [{\"index\": 0, \"quote\": \"TaskDock permits at most four active workers. Additional workers remain queued.\"}], \"id\": \"g1\", \"annotation_reason\": \"Four is an inclusive upper bound on active workers, not a lower bound or a limit on queued workers.\"}, \"prediction\": {\"claim_text\": \"TaskDock permits five active workers.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"1d8534e71662179852272be10dffef9c5396a6f084ac7d429bf800cd5446901d\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-03:1",
+          "config": "lexical",
+          "case_id": "dev-03",
+          "category": "distortion",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "Additional workers remain queued.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"TaskDock permits at most four active workers. Additional workers remain queued.\"], \"generated_answer\": \"TaskDock permits five active workers. Additional workers remain queued.\", \"gold\": {\"claim_text\": \"Additional TaskDock workers remain queued.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The specification explicitly states that additional workers remain queued.\", \"citations\": [{\"index\": 0, \"quote\": \"TaskDock permits at most four active workers. Additional workers remain queued.\"}], \"id\": \"g2\", \"annotation_reason\": \"Additional workers refers to workers beyond TaskDock's active-worker limit; this remains supported despite the answer's incorrect number.\"}, \"prediction\": {\"claim_text\": \"Additional workers remain queued.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"Additional workers remain queued.\"}]}, \"review_note\": \"\", \"output_hash\": \"1d8534e71662179852272be10dffef9c5396a6f084ac7d429bf800cd5446901d\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-04:0",
+          "config": "lexical",
+          "case_id": "dev-04",
+          "category": "distortion",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "CedarCache persists entries across restarts.",
+          "gold_verdict": "CONTRADICTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "label",
+          "payload": "{\"context_passages\": [\"CedarCache does not persist entries across restarts.\"], \"generated_answer\": \"CedarCache persists entries across restarts.\", \"gold\": {\"claim_text\": \"CedarCache persists entries across restarts.\", \"verdict\": \"CONTRADICTED\", \"reasoning\": \"The source says CedarCache does not persist entries across restarts, directly opposing the answer's persistence claim.\", \"citations\": [{\"index\": 0, \"quote\": \"CedarCache does not persist entries across restarts.\"}], \"id\": \"g1\", \"annotation_reason\": \"Compare the same cache, entries, and restart condition; the answer reverses an explicit negation.\"}, \"prediction\": {\"claim_text\": \"CedarCache persists entries across restarts.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"04fb314023354f58bf14f818f84f88d2895121fa5fe2b77f99023c162b89e130\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-05:0",
+          "config": "lexical",
+          "case_id": "dev-05",
+          "category": "extrinsic",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "CachePebble writes entries to a local file after each update.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"CachePebble writes entries to a local file after each update.\"], \"generated_answer\": \"CachePebble writes entries to a local file after each update. Its files are encrypted with AES-256.\", \"gold\": {\"claim_text\": \"CachePebble writes entries to a local file after each update.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly writes CachePebble entries to a local file after each update.\", \"citations\": [{\"index\": 0, \"quote\": \"CachePebble writes entries to a local file after each update.\"}], \"id\": \"g1\", \"annotation_reason\": \"Preserve the after-each-update condition; the separate encryption assertion has a different evidential status.\"}, \"prediction\": {\"claim_text\": \"CachePebble writes entries to a local file after each update.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"CachePebble writes entries to a local file after each update.\"}]}, \"review_note\": \"\", \"output_hash\": \"f450e1cfb84d6661812da01cdbe9724c6a3fd12aaa9ea9f1e3d49e929baf8d80\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-05:1",
+          "config": "lexical",
+          "case_id": "dev-05",
+          "category": "extrinsic",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "Its files are encrypted with AES-256.",
+          "gold_verdict": "UNSUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"CachePebble writes entries to a local file after each update.\"], \"generated_answer\": \"CachePebble writes entries to a local file after each update. Its files are encrypted with AES-256.\", \"gold\": {\"claim_text\": \"CachePebble files are encrypted with AES-256.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"The source describes local file writes but gives no encryption algorithm or encryption guarantee.\", \"citations\": [], \"id\": \"g2\", \"annotation_reason\": \"Local storage neither establishes nor rules out AES-256; absence of evidence is not a contradiction.\"}, \"prediction\": {\"claim_text\": \"Its files are encrypted with AES-256.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"f450e1cfb84d6661812da01cdbe9724c6a3fd12aaa9ea9f1e3d49e929baf8d80\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-06:0",
+          "config": "lexical",
+          "case_id": "dev-06",
+          "category": "extrinsic",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "WireFin uses Brotli compression for request payloads.",
+          "gold_verdict": "UNSUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"WireFin reuses an established connection for subsequent requests.\"], \"generated_answer\": \"WireFin uses Brotli compression for request payloads.\", \"gold\": {\"claim_text\": \"WireFin uses Brotli compression for request payloads.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"The only supplied behavior is connection reuse; the source does not specify request compression or Brotli.\", \"citations\": [], \"id\": \"g1\", \"annotation_reason\": \"Connection reuse and payload compression are independent properties, so neither support nor direct refutation is available.\"}, \"prediction\": {\"claim_text\": \"WireFin uses Brotli compression for request payloads.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"43b012ce8475d6432465a94866f7a387a036fa9f98a98694981a86e836c5241f\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-07:0",
+          "config": "lexical",
+          "case_id": "dev-07",
+          "category": "multi_passage",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "Service Juniper encrypts its stored payloads.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": false,
+          "review_status": "reviewed",
+          "errors": "evidence",
+          "payload": "{\"context_passages\": [\"Service Juniper runs in mode Q.\", \"Every service in mode Q encrypts its stored payloads.\"], \"generated_answer\": \"Service Juniper encrypts its stored payloads.\", \"gold\": {\"claim_text\": \"Service Juniper encrypts its stored payloads.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Passage 0 places Juniper in mode Q; passage 1 says every service in Q encrypts stored payloads. Together they entail the claim.\", \"citations\": [{\"index\": 0, \"quote\": \"Service Juniper runs in mode Q.\"}, {\"index\": 1, \"quote\": \"Every service in mode Q encrypts its stored payloads.\"}], \"id\": \"g1\", \"annotation_reason\": \"Both the service's membership and the universal encryption rule are necessary; citing either passage alone omits a premise.\"}, \"prediction\": {\"claim_text\": \"Service Juniper encrypts its stored payloads.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 1, \"quote\": \"Every service in mode Q encrypts its stored payloads.\"}]}, \"review_note\": \"应该有两条引用\", \"output_hash\": \"d611784c2bd4c653e506bf283b0d93c11fc6f540aca2bcbfe9d5079a1e2dcc8d\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "lexical:dev-08:0",
+          "config": "lexical",
+          "case_id": "dev-08",
+          "category": "multi_passage",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "The recovery worker runs in region West.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "label",
+          "payload": "{\"context_passages\": [\"The recovery worker runs on host Maple.\", \"Host Maple is located in region West.\"], \"generated_answer\": \"The recovery worker runs in region West.\", \"gold\": {\"claim_text\": \"The recovery worker runs in region West.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The worker runs on Maple according to passage 0, and Maple is in West according to passage 1, placing the worker in West.\", \"citations\": [{\"index\": 0, \"quote\": \"The recovery worker runs on host Maple.\"}, {\"index\": 1, \"quote\": \"Host Maple is located in region West.\"}], \"id\": \"g1\", \"annotation_reason\": \"The conclusion follows by joining the same host Maple across the two passages; both location premises are required.\"}, \"prediction\": {\"claim_text\": \"The recovery worker runs in region West.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"7658d41b97de788a8231bc7a7e999c3a97800de91abdad98a0f8df66694bb776\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-01:0",
+          "config": "minimal",
+          "case_id": "dev-01",
+          "category": "supported",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "ArchiveBox creates hourly snapshots.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"], \"generated_answer\": \"ArchiveBox creates hourly snapshots. It retains snapshots for seven days.\", \"gold\": {\"claim_text\": \"ArchiveBox creates a snapshot every hour.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source says ArchiveBox creates a snapshot every hour, which is equivalent to hourly snapshots.\", \"citations\": [{\"index\": 0, \"quote\": \"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"}], \"id\": \"g1\", \"annotation_reason\": \"Keep snapshot frequency separate from retention duration; hourly is a valid paraphrase of every hour.\"}, \"prediction\": {\"claim_text\": \"ArchiveBox creates hourly snapshots.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Passage 0 states that ArchiveBox creates a snapshot every hour.\", \"citations\": [{\"index\": 0, \"quote\": \"ArchiveBox creates a snapshot every hour.\"}]}, \"review_note\": \"\", \"output_hash\": \"abe5197b71601efdbc3fee9d372eca3912ec43f6d569ad211cb04a1107795249\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-01:1",
+          "config": "minimal",
+          "case_id": "dev-01",
+          "category": "supported",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "ArchiveBox retains snapshots for seven days.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"], \"generated_answer\": \"ArchiveBox creates hourly snapshots. It retains snapshots for seven days.\", \"gold\": {\"claim_text\": \"ArchiveBox retains snapshots for seven days.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly retains ArchiveBox snapshots for seven days.\", \"citations\": [{\"index\": 0, \"quote\": \"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"}], \"id\": \"g2\", \"annotation_reason\": \"The second answer sentence refers to ArchiveBox snapshots; retain the object and seven-day duration.\"}, \"prediction\": {\"claim_text\": \"ArchiveBox retains snapshots for seven days.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Passage 0 states that snapshots are retained for seven days.\", \"citations\": [{\"index\": 0, \"quote\": \"Snapshots are retained for seven days.\"}]}, \"review_note\": \"\", \"output_hash\": \"abe5197b71601efdbc3fee9d372eca3912ec43f6d569ad211cb04a1107795249\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-02:0",
+          "config": "minimal",
+          "case_id": "dev-02",
+          "category": "supported",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "RelayGate retries GET requests after a connection reset.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"], \"generated_answer\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"gold\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly retries GET requests after a connection reset, matching the answer's request type and condition.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"}], \"id\": \"g1\", \"annotation_reason\": \"The connection-reset condition is part of the fact; this does not establish retries after every kind of failure.\"}, \"prediction\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Passage 0 states that RelayGate retries GET requests after a connection reset.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset.\"}]}, \"review_note\": \"\", \"output_hash\": \"e5e1e0f3681f5b6ef441d67b410a4791fef27fd800b8f361ddd0aa734e5c2dbb\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-02:1",
+          "config": "minimal",
+          "case_id": "dev-02",
+          "category": "supported",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "RelayGate never retries POST requests.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"], \"generated_answer\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"gold\": {\"claim_text\": \"RelayGate never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source states that RelayGate never retries POST requests.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"}], \"id\": \"g2\", \"annotation_reason\": \"Resolve It to RelayGate and preserve never; the exception for POST is independent of the supported GET behavior.\"}, \"prediction\": {\"claim_text\": \"RelayGate never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Passage 0 states that RelayGate never retries POST requests.\", \"citations\": [{\"index\": 0, \"quote\": \"It never retries POST requests.\"}]}, \"review_note\": \"\", \"output_hash\": \"e5e1e0f3681f5b6ef441d67b410a4791fef27fd800b8f361ddd0aa734e5c2dbb\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-03:0",
+          "config": "minimal",
+          "case_id": "dev-03",
+          "category": "distortion",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "TaskDock permits five active workers.",
+          "gold_verdict": "CONTRADICTED",
+          "predicted_verdict": "CONTRADICTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"TaskDock permits at most four active workers. Additional workers remain queued.\"], \"generated_answer\": \"TaskDock permits five active workers. Additional workers remain queued.\", \"gold\": {\"claim_text\": \"TaskDock permits five active workers.\", \"verdict\": \"CONTRADICTED\", \"reasoning\": \"The specification permits at most four active TaskDock workers, so permitting five active workers exceeds the stated maximum.\", \"citations\": [{\"index\": 0, \"quote\": \"TaskDock permits at most four active workers. Additional workers remain queued.\"}], \"id\": \"g1\", \"annotation_reason\": \"Four is an inclusive upper bound on active workers, not a lower bound or a limit on queued workers.\"}, \"prediction\": {\"claim_text\": \"TaskDock permits five active workers.\", \"verdict\": \"CONTRADICTED\", \"reasoning\": \"The context states TaskDock permits at most four active workers, not five.\", \"citations\": [{\"index\": 0, \"quote\": \"TaskDock permits at most four active workers.\"}]}, \"review_note\": \"\", \"output_hash\": \"d0122f0e1a7d3fb65a0439bdd166e792564843dda5a8fc6543eb262e8c6b6888\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-03:1",
+          "config": "minimal",
+          "case_id": "dev-03",
+          "category": "distortion",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "Additional workers remain queued.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"TaskDock permits at most four active workers. Additional workers remain queued.\"], \"generated_answer\": \"TaskDock permits five active workers. Additional workers remain queued.\", \"gold\": {\"claim_text\": \"Additional TaskDock workers remain queued.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The specification explicitly states that additional workers remain queued.\", \"citations\": [{\"index\": 0, \"quote\": \"TaskDock permits at most four active workers. Additional workers remain queued.\"}], \"id\": \"g2\", \"annotation_reason\": \"Additional workers refers to workers beyond TaskDock's active-worker limit; this remains supported despite the answer's incorrect number.\"}, \"prediction\": {\"claim_text\": \"Additional workers remain queued.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The context states that additional workers remain queued.\", \"citations\": [{\"index\": 0, \"quote\": \"Additional workers remain queued.\"}]}, \"review_note\": \"\", \"output_hash\": \"d0122f0e1a7d3fb65a0439bdd166e792564843dda5a8fc6543eb262e8c6b6888\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-04:0",
+          "config": "minimal",
+          "case_id": "dev-04",
+          "category": "distortion",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "CedarCache persists entries across restarts.",
+          "gold_verdict": "CONTRADICTED",
+          "predicted_verdict": "CONTRADICTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"CedarCache does not persist entries across restarts.\"], \"generated_answer\": \"CedarCache persists entries across restarts.\", \"gold\": {\"claim_text\": \"CedarCache persists entries across restarts.\", \"verdict\": \"CONTRADICTED\", \"reasoning\": \"The source says CedarCache does not persist entries across restarts, directly opposing the answer's persistence claim.\", \"citations\": [{\"index\": 0, \"quote\": \"CedarCache does not persist entries across restarts.\"}], \"id\": \"g1\", \"annotation_reason\": \"Compare the same cache, entries, and restart condition; the answer reverses an explicit negation.\"}, \"prediction\": {\"claim_text\": \"CedarCache persists entries across restarts.\", \"verdict\": \"CONTRADICTED\", \"reasoning\": \"Passage 0 states that CedarCache does not persist entries across restarts, which directly contradicts the claim.\", \"citations\": [{\"index\": 0, \"quote\": \"CedarCache does not persist entries across restarts.\"}]}, \"review_note\": \"\", \"output_hash\": \"9875f5db31865a5c25d4bc305a065b7797e8b64641106d6aac36c592f036ccb0\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-05:0",
+          "config": "minimal",
+          "case_id": "dev-05",
+          "category": "extrinsic",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "CachePebble writes entries to a local file after each update.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"CachePebble writes entries to a local file after each update.\"], \"generated_answer\": \"CachePebble writes entries to a local file after each update. Its files are encrypted with AES-256.\", \"gold\": {\"claim_text\": \"CachePebble writes entries to a local file after each update.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly writes CachePebble entries to a local file after each update.\", \"citations\": [{\"index\": 0, \"quote\": \"CachePebble writes entries to a local file after each update.\"}], \"id\": \"g1\", \"annotation_reason\": \"Preserve the after-each-update condition; the separate encryption assertion has a different evidential status.\"}, \"prediction\": {\"claim_text\": \"CachePebble writes entries to a local file after each update.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The first passage states directly that CachePebble writes entries to a local file after each update.\", \"citations\": [{\"index\": 0, \"quote\": \"CachePebble writes entries to a local file after each update.\"}]}, \"review_note\": \"\", \"output_hash\": \"17872aa4278fb8cb930d5de6ac93a5a44d2b0a881703c7b2fd590e475fcd4f4e\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-05:1",
+          "config": "minimal",
+          "case_id": "dev-05",
+          "category": "extrinsic",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "CachePebble's files are encrypted with AES-256.",
+          "gold_verdict": "UNSUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"CachePebble writes entries to a local file after each update.\"], \"generated_answer\": \"CachePebble writes entries to a local file after each update. Its files are encrypted with AES-256.\", \"gold\": {\"claim_text\": \"CachePebble files are encrypted with AES-256.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"The source describes local file writes but gives no encryption algorithm or encryption guarantee.\", \"citations\": [], \"id\": \"g2\", \"annotation_reason\": \"Local storage neither establishes nor rules out AES-256; absence of evidence is not a contradiction.\"}, \"prediction\": {\"claim_text\": \"CachePebble's files are encrypted with AES-256.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"The context passage does not mention encryption or AES-256.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"17872aa4278fb8cb930d5de6ac93a5a44d2b0a881703c7b2fd590e475fcd4f4e\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-06:0",
+          "config": "minimal",
+          "case_id": "dev-06",
+          "category": "extrinsic",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "WireFin uses Brotli compression for request payloads.",
+          "gold_verdict": "UNSUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"WireFin reuses an established connection for subsequent requests.\"], \"generated_answer\": \"WireFin uses Brotli compression for request payloads.\", \"gold\": {\"claim_text\": \"WireFin uses Brotli compression for request payloads.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"The only supplied behavior is connection reuse; the source does not specify request compression or Brotli.\", \"citations\": [], \"id\": \"g1\", \"annotation_reason\": \"Connection reuse and payload compression are independent properties, so neither support nor direct refutation is available.\"}, \"prediction\": {\"claim_text\": \"WireFin uses Brotli compression for request payloads.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"The context passages only state that WireFin reuses an established connection for subsequent requests; nothing about Brotli compression or request payload compression is mentioned.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"607b3582f730436050a39a5334b8332557252a316d7cdb9dfbe07ce6d988e6e3\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-07:0",
+          "config": "minimal",
+          "case_id": "dev-07",
+          "category": "multi_passage",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "Service Juniper encrypts its stored payloads.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"Service Juniper runs in mode Q.\", \"Every service in mode Q encrypts its stored payloads.\"], \"generated_answer\": \"Service Juniper encrypts its stored payloads.\", \"gold\": {\"claim_text\": \"Service Juniper encrypts its stored payloads.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Passage 0 places Juniper in mode Q; passage 1 says every service in Q encrypts stored payloads. Together they entail the claim.\", \"citations\": [{\"index\": 0, \"quote\": \"Service Juniper runs in mode Q.\"}, {\"index\": 1, \"quote\": \"Every service in mode Q encrypts its stored payloads.\"}], \"id\": \"g1\", \"annotation_reason\": \"Both the service's membership and the universal encryption rule are necessary; citing either passage alone omits a premise.\"}, \"prediction\": {\"claim_text\": \"Service Juniper encrypts its stored payloads.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Passage 0 places Service Juniper in mode Q, and passage 1 states every service in mode Q encrypts its stored payloads, so the claim follows.\", \"citations\": [{\"index\": 0, \"quote\": \"Service Juniper runs in mode Q.\"}, {\"index\": 1, \"quote\": \"Every service in mode Q encrypts its stored payloads.\"}]}, \"review_note\": \"\", \"output_hash\": \"f784f0dde6ac011e6ab3ba7fd8bf0e68dafeb1d2cab3a240fa83d99a50dfb9d8\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "minimal:dev-08:0",
+          "config": "minimal",
+          "case_id": "dev-08",
+          "category": "multi_passage",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "The recovery worker runs in region West.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"The recovery worker runs on host Maple.\", \"Host Maple is located in region West.\"], \"generated_answer\": \"The recovery worker runs in region West.\", \"gold\": {\"claim_text\": \"The recovery worker runs in region West.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The worker runs on Maple according to passage 0, and Maple is in West according to passage 1, placing the worker in West.\", \"citations\": [{\"index\": 0, \"quote\": \"The recovery worker runs on host Maple.\"}, {\"index\": 1, \"quote\": \"Host Maple is located in region West.\"}], \"id\": \"g1\", \"annotation_reason\": \"The conclusion follows by joining the same host Maple across the two passages; both location premises are required.\"}, \"prediction\": {\"claim_text\": \"The recovery worker runs in region West.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Passage 0 states the recovery worker runs on host Maple, and passage 1 states Host Maple is located in region West, so the claim follows by linking the two passages.\", \"citations\": [{\"index\": 0, \"quote\": \"The recovery worker runs on host Maple.\"}, {\"index\": 1, \"quote\": \"Host Maple is located in region West.\"}]}, \"review_note\": \"\", \"output_hash\": \"c0fe6144ed5bc09e4dff4ea7066e985b18fb9d04465eed4c75e373c0d57f0845\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-01:0",
+          "config": "f1-candidate",
+          "case_id": "dev-01",
+          "category": "supported",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "ArchiveBox creates hourly snapshots.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "pending",
+          "errors": "pending",
+          "payload": "{\"context_passages\": [\"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"], \"generated_answer\": \"ArchiveBox creates hourly snapshots. It retains snapshots for seven days.\", \"gold\": {\"claim_text\": \"ArchiveBox creates a snapshot every hour.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source says ArchiveBox creates a snapshot every hour, which is equivalent to hourly snapshots.\", \"citations\": [{\"index\": 0, \"quote\": \"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"}], \"id\": \"g1\", \"annotation_reason\": \"Keep snapshot frequency separate from retention duration; hourly is a valid paraphrase of every hour.\"}, \"prediction\": {\"claim_text\": \"ArchiveBox creates hourly snapshots.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"ArchiveBox creates a snapshot every hour.\"}]}, \"review_note\": \"\", \"output_hash\": \"73cf15b266d7a4fb4f342adb6e77c773d0b571040d603ea25c00ebe8c5f1d62e\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-01:1",
+          "config": "f1-candidate",
+          "case_id": "dev-01",
+          "category": "supported",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "It retains snapshots for seven days.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "pending",
+          "errors": "pending",
+          "payload": "{\"context_passages\": [\"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"], \"generated_answer\": \"ArchiveBox creates hourly snapshots. It retains snapshots for seven days.\", \"gold\": {\"claim_text\": \"ArchiveBox retains snapshots for seven days.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly retains ArchiveBox snapshots for seven days.\", \"citations\": [{\"index\": 0, \"quote\": \"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"}], \"id\": \"g2\", \"annotation_reason\": \"The second answer sentence refers to ArchiveBox snapshots; retain the object and seven-day duration.\"}, \"prediction\": {\"claim_text\": \"It retains snapshots for seven days.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"Snapshots are retained for seven days.\"}]}, \"review_note\": \"\", \"output_hash\": \"73cf15b266d7a4fb4f342adb6e77c773d0b571040d603ea25c00ebe8c5f1d62e\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-02:0",
+          "config": "f1-candidate",
+          "case_id": "dev-02",
+          "category": "supported",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "RelayGate retries GET requests after a connection reset.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "compound",
+          "payload": "{\"context_passages\": [\"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"], \"generated_answer\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"gold\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly retries GET requests after a connection reset, matching the answer's request type and condition.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"}], \"id\": \"g1\", \"annotation_reason\": \"The connection-reset condition is part of the fact; this does not establish retries after every kind of failure.\"}, \"prediction\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset.\"}]}, \"review_note\": \"如果只引用了GET 的话不充分，应该都引用 拆成 g1、g2；GET 证据充分，POST 证据不充分，评分时分别记录。\", \"output_hash\": \"f33a0644d46cbea8e7cb0bf5828a6ca286bc00e857aa22ae63a30effc65f6588\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-02:1",
+          "config": "f1-candidate",
+          "case_id": "dev-02",
+          "category": "supported",
+          "gold_id": "g2",
+          "prediction_index": 0,
+          "text": "RelayGate never retries POST requests.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": false,
+          "review_status": "reviewed",
+          "errors": "evidence,compound",
+          "payload": "{\"context_passages\": [\"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"], \"generated_answer\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"gold\": {\"claim_text\": \"RelayGate never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source states that RelayGate never retries POST requests.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"}], \"id\": \"g2\", \"annotation_reason\": \"Resolve It to RelayGate and preserve never; the exception for POST is independent of the supported GET behavior.\"}, \"prediction\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset.\"}]}, \"review_note\": \"如果只引用了GET 的话不充分，应该都引用 拆成 g1、g2；GET 证据充分，POST 证据不充分，评分时分别记录。\", \"output_hash\": \"f33a0644d46cbea8e7cb0bf5828a6ca286bc00e857aa22ae63a30effc65f6588\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-03:0",
+          "config": "f1-candidate",
+          "case_id": "dev-03",
+          "category": "distortion",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "TaskDock permits five active workers.",
+          "gold_verdict": "CONTRADICTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "pending",
+          "errors": "label,pending",
+          "payload": "{\"context_passages\": [\"TaskDock permits at most four active workers. Additional workers remain queued.\"], \"generated_answer\": \"TaskDock permits five active workers. Additional workers remain queued.\", \"gold\": {\"claim_text\": \"TaskDock permits five active workers.\", \"verdict\": \"CONTRADICTED\", \"reasoning\": \"The specification permits at most four active TaskDock workers, so permitting five active workers exceeds the stated maximum.\", \"citations\": [{\"index\": 0, \"quote\": \"TaskDock permits at most four active workers. Additional workers remain queued.\"}], \"id\": \"g1\", \"annotation_reason\": \"Four is an inclusive upper bound on active workers, not a lower bound or a limit on queued workers.\"}, \"prediction\": {\"claim_text\": \"TaskDock permits five active workers.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"TaskDock permits at most four active workers.\"}]}, \"review_note\": \"\", \"output_hash\": \"2069146ca5d7939801d3acf1976cc198a9569a21b9debbea3956ee67ededa5da\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-03:1",
+          "config": "f1-candidate",
+          "case_id": "dev-03",
+          "category": "distortion",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "Additional workers remain queued.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "pending",
+          "errors": "pending",
+          "payload": "{\"context_passages\": [\"TaskDock permits at most four active workers. Additional workers remain queued.\"], \"generated_answer\": \"TaskDock permits five active workers. Additional workers remain queued.\", \"gold\": {\"claim_text\": \"Additional TaskDock workers remain queued.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The specification explicitly states that additional workers remain queued.\", \"citations\": [{\"index\": 0, \"quote\": \"TaskDock permits at most four active workers. Additional workers remain queued.\"}], \"id\": \"g2\", \"annotation_reason\": \"Additional workers refers to workers beyond TaskDock's active-worker limit; this remains supported despite the answer's incorrect number.\"}, \"prediction\": {\"claim_text\": \"Additional workers remain queued.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"Additional workers remain queued.\"}]}, \"review_note\": \"\", \"output_hash\": \"2069146ca5d7939801d3acf1976cc198a9569a21b9debbea3956ee67ededa5da\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-04:0",
+          "config": "f1-candidate",
+          "case_id": "dev-04",
+          "category": "distortion",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "CedarCache persists entries across restarts.",
+          "gold_verdict": "CONTRADICTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "pending",
+          "errors": "label,pending",
+          "payload": "{\"context_passages\": [\"CedarCache does not persist entries across restarts.\"], \"generated_answer\": \"CedarCache persists entries across restarts.\", \"gold\": {\"claim_text\": \"CedarCache persists entries across restarts.\", \"verdict\": \"CONTRADICTED\", \"reasoning\": \"The source says CedarCache does not persist entries across restarts, directly opposing the answer's persistence claim.\", \"citations\": [{\"index\": 0, \"quote\": \"CedarCache does not persist entries across restarts.\"}], \"id\": \"g1\", \"annotation_reason\": \"Compare the same cache, entries, and restart condition; the answer reverses an explicit negation.\"}, \"prediction\": {\"claim_text\": \"CedarCache persists entries across restarts.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"CedarCache does not persist entries across restarts.\"}]}, \"review_note\": \"\", \"output_hash\": \"3a481cbeaf30d49819708559345f56e69271c59abe22b2a762e529ffcef4bc53\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-05:0",
+          "config": "f1-candidate",
+          "case_id": "dev-05",
+          "category": "extrinsic",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "CachePebble writes entries to a local file after each update.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"CachePebble writes entries to a local file after each update.\"], \"generated_answer\": \"CachePebble writes entries to a local file after each update. Its files are encrypted with AES-256.\", \"gold\": {\"claim_text\": \"CachePebble writes entries to a local file after each update.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly writes CachePebble entries to a local file after each update.\", \"citations\": [{\"index\": 0, \"quote\": \"CachePebble writes entries to a local file after each update.\"}], \"id\": \"g1\", \"annotation_reason\": \"Preserve the after-each-update condition; the separate encryption assertion has a different evidential status.\"}, \"prediction\": {\"claim_text\": \"CachePebble writes entries to a local file after each update.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"CachePebble writes entries to a local file after each update.\"}]}, \"review_note\": \"\", \"output_hash\": \"f450e1cfb84d6661812da01cdbe9724c6a3fd12aaa9ea9f1e3d49e929baf8d80\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-05:1",
+          "config": "f1-candidate",
+          "case_id": "dev-05",
+          "category": "extrinsic",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "Its files are encrypted with AES-256.",
+          "gold_verdict": "UNSUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"CachePebble writes entries to a local file after each update.\"], \"generated_answer\": \"CachePebble writes entries to a local file after each update. Its files are encrypted with AES-256.\", \"gold\": {\"claim_text\": \"CachePebble files are encrypted with AES-256.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"The source describes local file writes but gives no encryption algorithm or encryption guarantee.\", \"citations\": [], \"id\": \"g2\", \"annotation_reason\": \"Local storage neither establishes nor rules out AES-256; absence of evidence is not a contradiction.\"}, \"prediction\": {\"claim_text\": \"Its files are encrypted with AES-256.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"f450e1cfb84d6661812da01cdbe9724c6a3fd12aaa9ea9f1e3d49e929baf8d80\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-06:0",
+          "config": "f1-candidate",
+          "case_id": "dev-06",
+          "category": "extrinsic",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "WireFin uses Brotli compression for request payloads.",
+          "gold_verdict": "UNSUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"WireFin reuses an established connection for subsequent requests.\"], \"generated_answer\": \"WireFin uses Brotli compression for request payloads.\", \"gold\": {\"claim_text\": \"WireFin uses Brotli compression for request payloads.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"The only supplied behavior is connection reuse; the source does not specify request compression or Brotli.\", \"citations\": [], \"id\": \"g1\", \"annotation_reason\": \"Connection reuse and payload compression are independent properties, so neither support nor direct refutation is available.\"}, \"prediction\": {\"claim_text\": \"WireFin uses Brotli compression for request payloads.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"43b012ce8475d6432465a94866f7a387a036fa9f98a98694981a86e836c5241f\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-07:0",
+          "config": "f1-candidate",
+          "case_id": "dev-07",
+          "category": "multi_passage",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "Service Juniper encrypts its stored payloads.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": false,
+          "review_status": "reviewed",
+          "errors": "evidence",
+          "payload": "{\"context_passages\": [\"Service Juniper runs in mode Q.\", \"Every service in mode Q encrypts its stored payloads.\"], \"generated_answer\": \"Service Juniper encrypts its stored payloads.\", \"gold\": {\"claim_text\": \"Service Juniper encrypts its stored payloads.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Passage 0 places Juniper in mode Q; passage 1 says every service in Q encrypts stored payloads. Together they entail the claim.\", \"citations\": [{\"index\": 0, \"quote\": \"Service Juniper runs in mode Q.\"}, {\"index\": 1, \"quote\": \"Every service in mode Q encrypts its stored payloads.\"}], \"id\": \"g1\", \"annotation_reason\": \"Both the service's membership and the universal encryption rule are necessary; citing either passage alone omits a premise.\"}, \"prediction\": {\"claim_text\": \"Service Juniper encrypts its stored payloads.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 1, \"quote\": \"Every service in mode Q encrypts its stored payloads.\"}]}, \"review_note\": \"应该有两条引用\", \"output_hash\": \"d611784c2bd4c653e506bf283b0d93c11fc6f540aca2bcbfe9d5079a1e2dcc8d\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "f1-candidate:dev-08:0",
+          "config": "f1-candidate",
+          "case_id": "dev-08",
+          "category": "multi_passage",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "The recovery worker runs in region West.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "pending",
+          "errors": "pending",
+          "payload": "{\"context_passages\": [\"The recovery worker runs on host Maple.\", \"Host Maple is located in region West.\"], \"generated_answer\": \"The recovery worker runs in region West.\", \"gold\": {\"claim_text\": \"The recovery worker runs in region West.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The worker runs on Maple according to passage 0, and Maple is in West according to passage 1, placing the worker in West.\", \"citations\": [{\"index\": 0, \"quote\": \"The recovery worker runs on host Maple.\"}, {\"index\": 1, \"quote\": \"Host Maple is located in region West.\"}], \"id\": \"g1\", \"annotation_reason\": \"The conclusion follows by joining the same host Maple across the two passages; both location premises are required.\"}, \"prediction\": {\"claim_text\": \"The recovery worker runs in region West.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"The recovery worker runs on host Maple.\"}]}, \"review_note\": \"\", \"output_hash\": \"af4719a7c3ee5d9bda3c1e7d08b87498e2afe01280bddd5f9c88bb141e987453\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-01:0",
+          "config": "safe-candidate",
+          "case_id": "dev-01",
+          "category": "supported",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "ArchiveBox creates hourly snapshots.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "label",
+          "payload": "{\"context_passages\": [\"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"], \"generated_answer\": \"ArchiveBox creates hourly snapshots. It retains snapshots for seven days.\", \"gold\": {\"claim_text\": \"ArchiveBox creates a snapshot every hour.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source says ArchiveBox creates a snapshot every hour, which is equivalent to hourly snapshots.\", \"citations\": [{\"index\": 0, \"quote\": \"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"}], \"id\": \"g1\", \"annotation_reason\": \"Keep snapshot frequency separate from retention duration; hourly is a valid paraphrase of every hour.\"}, \"prediction\": {\"claim_text\": \"ArchiveBox creates hourly snapshots.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"b1416fb783e67787b8c42c0d14e2e003e5a2c63a9094afcfa2f24639c35a0fb7\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-01:1",
+          "config": "safe-candidate",
+          "case_id": "dev-01",
+          "category": "supported",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "It retains snapshots for seven days.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "label",
+          "payload": "{\"context_passages\": [\"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"], \"generated_answer\": \"ArchiveBox creates hourly snapshots. It retains snapshots for seven days.\", \"gold\": {\"claim_text\": \"ArchiveBox retains snapshots for seven days.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly retains ArchiveBox snapshots for seven days.\", \"citations\": [{\"index\": 0, \"quote\": \"ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days.\"}], \"id\": \"g2\", \"annotation_reason\": \"The second answer sentence refers to ArchiveBox snapshots; retain the object and seven-day duration.\"}, \"prediction\": {\"claim_text\": \"It retains snapshots for seven days.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"b1416fb783e67787b8c42c0d14e2e003e5a2c63a9094afcfa2f24639c35a0fb7\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-02:0",
+          "config": "safe-candidate",
+          "case_id": "dev-02",
+          "category": "supported",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "RelayGate retries GET requests after a connection reset.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "compound",
+          "payload": "{\"context_passages\": [\"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"], \"generated_answer\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"gold\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly retries GET requests after a connection reset, matching the answer's request type and condition.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"}], \"id\": \"g1\", \"annotation_reason\": \"The connection-reset condition is part of the fact; this does not establish retries after every kind of failure.\"}, \"prediction\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset.\"}]}, \"review_note\": \"如果只引用了GET 的话不充分，应该都引用 拆成 g1、g2；GET 证据充分，POST 证据不充分，评分时分别记录。\", \"output_hash\": \"f33a0644d46cbea8e7cb0bf5828a6ca286bc00e857aa22ae63a30effc65f6588\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-02:1",
+          "config": "safe-candidate",
+          "case_id": "dev-02",
+          "category": "supported",
+          "gold_id": "g2",
+          "prediction_index": 0,
+          "text": "RelayGate never retries POST requests.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": false,
+          "review_status": "reviewed",
+          "errors": "evidence,compound",
+          "payload": "{\"context_passages\": [\"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"], \"generated_answer\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"gold\": {\"claim_text\": \"RelayGate never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source states that RelayGate never retries POST requests.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset. It never retries POST requests.\"}], \"id\": \"g2\", \"annotation_reason\": \"Resolve It to RelayGate and preserve never; the exception for POST is independent of the supported GET behavior.\"}, \"prediction\": {\"claim_text\": \"RelayGate retries GET requests after a connection reset, but never retries POST requests.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"RelayGate retries GET requests after a connection reset.\"}]}, \"review_note\": \"如果只引用了GET 的话不充分，应该都引用 拆成 g1、g2；GET 证据充分，POST 证据不充分，评分时分别记录。\", \"output_hash\": \"f33a0644d46cbea8e7cb0bf5828a6ca286bc00e857aa22ae63a30effc65f6588\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-03:0",
+          "config": "safe-candidate",
+          "case_id": "dev-03",
+          "category": "distortion",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "TaskDock permits five active workers.",
+          "gold_verdict": "CONTRADICTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "label",
+          "payload": "{\"context_passages\": [\"TaskDock permits at most four active workers. Additional workers remain queued.\"], \"generated_answer\": \"TaskDock permits five active workers. Additional workers remain queued.\", \"gold\": {\"claim_text\": \"TaskDock permits five active workers.\", \"verdict\": \"CONTRADICTED\", \"reasoning\": \"The specification permits at most four active TaskDock workers, so permitting five active workers exceeds the stated maximum.\", \"citations\": [{\"index\": 0, \"quote\": \"TaskDock permits at most four active workers. Additional workers remain queued.\"}], \"id\": \"g1\", \"annotation_reason\": \"Four is an inclusive upper bound on active workers, not a lower bound or a limit on queued workers.\"}, \"prediction\": {\"claim_text\": \"TaskDock permits five active workers.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"1d8534e71662179852272be10dffef9c5396a6f084ac7d429bf800cd5446901d\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-03:1",
+          "config": "safe-candidate",
+          "case_id": "dev-03",
+          "category": "distortion",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "Additional workers remain queued.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"TaskDock permits at most four active workers. Additional workers remain queued.\"], \"generated_answer\": \"TaskDock permits five active workers. Additional workers remain queued.\", \"gold\": {\"claim_text\": \"Additional TaskDock workers remain queued.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The specification explicitly states that additional workers remain queued.\", \"citations\": [{\"index\": 0, \"quote\": \"TaskDock permits at most four active workers. Additional workers remain queued.\"}], \"id\": \"g2\", \"annotation_reason\": \"Additional workers refers to workers beyond TaskDock's active-worker limit; this remains supported despite the answer's incorrect number.\"}, \"prediction\": {\"claim_text\": \"Additional workers remain queued.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"Additional workers remain queued.\"}]}, \"review_note\": \"\", \"output_hash\": \"1d8534e71662179852272be10dffef9c5396a6f084ac7d429bf800cd5446901d\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-04:0",
+          "config": "safe-candidate",
+          "case_id": "dev-04",
+          "category": "distortion",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "CedarCache persists entries across restarts.",
+          "gold_verdict": "CONTRADICTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": false,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "label",
+          "payload": "{\"context_passages\": [\"CedarCache does not persist entries across restarts.\"], \"generated_answer\": \"CedarCache persists entries across restarts.\", \"gold\": {\"claim_text\": \"CedarCache persists entries across restarts.\", \"verdict\": \"CONTRADICTED\", \"reasoning\": \"The source says CedarCache does not persist entries across restarts, directly opposing the answer's persistence claim.\", \"citations\": [{\"index\": 0, \"quote\": \"CedarCache does not persist entries across restarts.\"}], \"id\": \"g1\", \"annotation_reason\": \"Compare the same cache, entries, and restart condition; the answer reverses an explicit negation.\"}, \"prediction\": {\"claim_text\": \"CedarCache persists entries across restarts.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"04fb314023354f58bf14f818f84f88d2895121fa5fe2b77f99023c162b89e130\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-05:0",
+          "config": "safe-candidate",
+          "case_id": "dev-05",
+          "category": "extrinsic",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "CachePebble writes entries to a local file after each update.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": true,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"CachePebble writes entries to a local file after each update.\"], \"generated_answer\": \"CachePebble writes entries to a local file after each update. Its files are encrypted with AES-256.\", \"gold\": {\"claim_text\": \"CachePebble writes entries to a local file after each update.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The source explicitly writes CachePebble entries to a local file after each update.\", \"citations\": [{\"index\": 0, \"quote\": \"CachePebble writes entries to a local file after each update.\"}], \"id\": \"g1\", \"annotation_reason\": \"Preserve the after-each-update condition; the separate encryption assertion has a different evidential status.\"}, \"prediction\": {\"claim_text\": \"CachePebble writes entries to a local file after each update.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"CachePebble writes entries to a local file after each update.\"}]}, \"review_note\": \"\", \"output_hash\": \"f450e1cfb84d6661812da01cdbe9724c6a3fd12aaa9ea9f1e3d49e929baf8d80\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-05:1",
+          "config": "safe-candidate",
+          "case_id": "dev-05",
+          "category": "extrinsic",
+          "gold_id": "g2",
+          "prediction_index": 1,
+          "text": "Its files are encrypted with AES-256.",
+          "gold_verdict": "UNSUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"CachePebble writes entries to a local file after each update.\"], \"generated_answer\": \"CachePebble writes entries to a local file after each update. Its files are encrypted with AES-256.\", \"gold\": {\"claim_text\": \"CachePebble files are encrypted with AES-256.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"The source describes local file writes but gives no encryption algorithm or encryption guarantee.\", \"citations\": [], \"id\": \"g2\", \"annotation_reason\": \"Local storage neither establishes nor rules out AES-256; absence of evidence is not a contradiction.\"}, \"prediction\": {\"claim_text\": \"Its files are encrypted with AES-256.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"f450e1cfb84d6661812da01cdbe9724c6a3fd12aaa9ea9f1e3d49e929baf8d80\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-06:0",
+          "config": "safe-candidate",
+          "case_id": "dev-06",
+          "category": "extrinsic",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "WireFin uses Brotli compression for request payloads.",
+          "gold_verdict": "UNSUPPORTED",
+          "predicted_verdict": "UNSUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "reviewed",
+          "errors": "",
+          "payload": "{\"context_passages\": [\"WireFin reuses an established connection for subsequent requests.\"], \"generated_answer\": \"WireFin uses Brotli compression for request payloads.\", \"gold\": {\"claim_text\": \"WireFin uses Brotli compression for request payloads.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"The only supplied behavior is connection reuse; the source does not specify request compression or Brotli.\", \"citations\": [], \"id\": \"g1\", \"annotation_reason\": \"Connection reuse and payload compression are independent properties, so neither support nor direct refutation is available.\"}, \"prediction\": {\"claim_text\": \"WireFin uses Brotli compression for request payloads.\", \"verdict\": \"UNSUPPORTED\", \"reasoning\": \"No sufficiently similar source sentence was found by the lexical heuristic.\", \"citations\": []}, \"review_note\": \"\", \"output_hash\": \"43b012ce8475d6432465a94866f7a387a036fa9f98a98694981a86e836c5241f\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-07:0",
+          "config": "safe-candidate",
+          "case_id": "dev-07",
+          "category": "multi_passage",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "Service Juniper encrypts its stored payloads.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": false,
+          "review_status": "reviewed",
+          "errors": "evidence",
+          "payload": "{\"context_passages\": [\"Service Juniper runs in mode Q.\", \"Every service in mode Q encrypts its stored payloads.\"], \"generated_answer\": \"Service Juniper encrypts its stored payloads.\", \"gold\": {\"claim_text\": \"Service Juniper encrypts its stored payloads.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Passage 0 places Juniper in mode Q; passage 1 says every service in Q encrypts stored payloads. Together they entail the claim.\", \"citations\": [{\"index\": 0, \"quote\": \"Service Juniper runs in mode Q.\"}, {\"index\": 1, \"quote\": \"Every service in mode Q encrypts its stored payloads.\"}], \"id\": \"g1\", \"annotation_reason\": \"Both the service's membership and the universal encryption rule are necessary; citing either passage alone omits a premise.\"}, \"prediction\": {\"claim_text\": \"Service Juniper encrypts its stored payloads.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 1, \"quote\": \"Every service in mode Q encrypts its stored payloads.\"}]}, \"review_note\": \"应该有两条引用\", \"output_hash\": \"d611784c2bd4c653e506bf283b0d93c11fc6f540aca2bcbfe9d5079a1e2dcc8d\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        },
+        {
+          "id": "safe-candidate:dev-08:0",
+          "config": "safe-candidate",
+          "case_id": "dev-08",
+          "category": "multi_passage",
+          "gold_id": "g1",
+          "prediction_index": 0,
+          "text": "The recovery worker runs in region West.",
+          "gold_verdict": "SUPPORTED",
+          "predicted_verdict": "SUPPORTED",
+          "label_correct": true,
+          "evidence_sufficient": null,
+          "review_status": "pending",
+          "errors": "pending",
+          "payload": "{\"context_passages\": [\"The recovery worker runs on host Maple.\", \"Host Maple is located in region West.\"], \"generated_answer\": \"The recovery worker runs in region West.\", \"gold\": {\"claim_text\": \"The recovery worker runs in region West.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"The worker runs on Maple according to passage 0, and Maple is in West according to passage 1, placing the worker in West.\", \"citations\": [{\"index\": 0, \"quote\": \"The recovery worker runs on host Maple.\"}, {\"index\": 1, \"quote\": \"Host Maple is located in region West.\"}], \"id\": \"g1\", \"annotation_reason\": \"The conclusion follows by joining the same host Maple across the two passages; both location premises are required.\"}, \"prediction\": {\"claim_text\": \"The recovery worker runs in region West.\", \"verdict\": \"SUPPORTED\", \"reasoning\": \"Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.\", \"citations\": [{\"index\": 0, \"quote\": \"The recovery worker runs on host Maple.\"}]}, \"review_note\": \"\", \"output_hash\": \"af4719a7c3ee5d9bda3c1e7d08b87498e2afe01280bddd5f9c88bb141e987453\", \"alignment_provenance\": \"owner-reviewed original text alignment\"}"
+        }
+      ],
+      "payloadColumns": [
+        "payload"
+      ],
+      "source": {
+        "label": "Repository development experiment and owner review files",
+        "files": [
+          "experiments/2026-10-16-dev-v2/lexical-dev-v2.json",
+          "experiments/2026-10-16-dev-v2/minimal-dev-v2.json",
+          "reviews/dev-v2/dev-v2-A-approved.json",
+          "reviews/dev-v2/dev-v2-B-approved.json",
+          "experiments/baseline-freeze-2026-10-18.json",
+          "experiments/2026-10-17-lexical-thresholds/study.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-00.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-01.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-02.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-03.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-04.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-05.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-06.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-07.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-08.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-09.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-10.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-11.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-12.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-13.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-14.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-15.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-16.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-17.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-18.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-19.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-20.json",
+          "experiments/2026-10-17-lexical-thresholds/threshold-21.json",
+          "data/dev.jsonl"
+        ],
+        "contentDigests": [
+          {
+            "name": "experiments/2026-10-16-dev-v2/lexical-dev-v2.json",
+            "content_digest": "88fd6e0a351d753372f00d815c5734b5e7bc9a7c60bcaf1b3f4606cd7c4706a7"
+          },
+          {
+            "name": "experiments/2026-10-16-dev-v2/minimal-dev-v2.json",
+            "content_digest": "e8a391f18d86e7db17a347a5a951add1559f05b856c447d85e3c9296efddf8b1"
+          },
+          {
+            "name": "reviews/dev-v2/dev-v2-A-approved.json",
+            "content_digest": "1d8647b823452365ad4a999a554839fb85ac33e12d9a409dc62cd083121be947"
+          },
+          {
+            "name": "reviews/dev-v2/dev-v2-B-approved.json",
+            "content_digest": "c90fbe655d5cd61ae07bf11ca59bcb291d280209bc356a66579440d98dbcc418"
+          },
+          {
+            "name": "experiments/baseline-freeze-2026-10-18.json",
+            "content_digest": "882de78503bb226fac307785a9ae5d833b639d67e85af0426191341756fcc099"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/study.json",
+            "content_digest": "7397af45bb8a3a77c6fc7f79c30547c5bef265174e2f9a9edc7a7a804fc42276"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-00.json",
+            "content_digest": "b08b108cb1355c77881c165c4aa66d6600bb7038aa9feae10131149849da48d9"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-01.json",
+            "content_digest": "0759de52b1f986872665907ebdf33c5470a89434d86b7c7c5c161004450693a5"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-02.json",
+            "content_digest": "511e748d89976e037633af1702e5dccb021451b7ac818d800826efbcb36dec65"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-03.json",
+            "content_digest": "1f6034886a46dc1bb1379bc39069ad6d8873873c6f8fafbeab7f4ee597a1b451"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-04.json",
+            "content_digest": "ac602b682e7ccb14a3369e0e4730fec8dfe22571a5bab820086396b972299243"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-05.json",
+            "content_digest": "c612dec41f064e4b8f946272f028dbcb7a1c3ad2ddef680cc023774f85d608bf"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-06.json",
+            "content_digest": "d82ecd47c6db4afac570073fb41979d4bb982f0be29d4b6d44b07d0e3ea7ff71"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-07.json",
+            "content_digest": "072406a3792679c5215782d84fd70aeb351c4fd9515cd26511669acc1bfabe5a"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-08.json",
+            "content_digest": "0f10b63551f14d85439583afaac78b8e2f724de10149faa6d139bf98bdc8297b"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-09.json",
+            "content_digest": "96dbcf21d85cd8e0f3d953c382ee9f66fde3f36aa717e06b1e121ed766fa0fa8"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-10.json",
+            "content_digest": "d4e2131ed18fe59314a2b0f43e85522b4e38d0bf6b3b7d87029f0c6516b7d9ad"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-11.json",
+            "content_digest": "71f4a5ea125620e3efc76f110bd2fa656b24a0a3e1630c518666b437025d7bad"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-12.json",
+            "content_digest": "767c632833e5c732158159de9a530bdfa5102b9e82940b801eab20d5913b1f31"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-13.json",
+            "content_digest": "2ce490451b9620f03bc8129eb183017e64aa33516df11010f267a91a3a2e6a2f"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-14.json",
+            "content_digest": "03fa1d65253f3612957d20e4879163e9ae4d8b32fbac9be22f881499ae7171d9"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-15.json",
+            "content_digest": "f46e00c9332dccc1a4e7b8c25ee451176dce380ac4e615432da803e4e717a188"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-16.json",
+            "content_digest": "9b1b2e67f4085fecd90f6a6def3e471f17869d1b7d74d85921337ccb3b7c55dd"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-17.json",
+            "content_digest": "3b8aeecc5f3147a1c76effec8e83b0316c3c03215245d137e16f789140cf1a68"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-18.json",
+            "content_digest": "b67bbbb395c7d19848e701c4cc8bd6e93c6f4e8ed4972b75981ac8c025f21822"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-19.json",
+            "content_digest": "48e9d0f6685de6d18cae77baea877f96ffdfb56380e02ebb9c2362b3541a1af9"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-20.json",
+            "content_digest": "a16e7fda8f39fecbd4ba11b64fe3103632c8f27c28ff9075138fb4eac5c99676"
+          },
+          {
+            "name": "experiments/2026-10-17-lexical-thresholds/threshold-21.json",
+            "content_digest": "d45ce7c5315ac0c54f23d82c0847505c0c6141e67892bb36fdb3e98085040351"
+          }
+        ],
+        "datasetHash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+        "classification": "Synthetic development specifications with real saved method outputs",
+        "executedAt": "2026-10-17T23:25:37.982069+00:00",
+        "timezone": "Europe/London",
+        "metricDefinitions": [
+          {
+            "label": "Fact + label F1",
+            "definition": "2TP/(2TP+FP+FN). Wrong labels count as both FP and FN. Candidate labels use unchanged owner-aligned text; this is not new owner approval."
+          },
+          {
+            "label": "False support",
+            "definition": "Non-supported gold facts predicted SUPPORTED / all non-supported gold facts. Coverage and success remain visible."
+          },
+          {
+            "label": "Evidence sufficiency",
+            "definition": "Sufficient evidence units / all supported or contradicted prediction units. Unknown for candidate-wide results until reviewed."
+          },
+          {
+            "label": "Error units",
+            "definition": "Scoring units after the owner's compound split. Error types overlap. Compound marks repeat prediction-level issues; do not add error totals."
+          }
+        ],
+        "caveats": [
+          "Owner retained lexical 0.65 and minimal LLM; other thresholds are sensitivity only.",
+          "8 dev cases / 12 gold facts; test not read or run.",
+          "Owner review followed AI feedback; not independent blind review.",
+          "Candidate evidence is unknown, not zero. No default threshold change."
+        ],
+        "evidenceFlow": [
+          {
+            "title": "Load and validate",
+            "detail": "Load dev.jsonl, saved v2 runs and approved review JSON. score() validates dataset/output hashes and review coverage."
+          },
+          {
+            "title": "Verify threshold study",
+            "detail": "Verify study source digests, every run digest and recomputed unchanged-text label projections."
+          },
+          {
+            "title": "Export snapshot",
+            "detail": "python -m grounding_verifier.error_explorer --out tools/error-explorer/src/data.json. No model calls, test data access or review writes."
+          }
+        ]
+      }
+    }
+  },
+  "id": "dashboard:6a1fb24d-2c09-4820-a7f3-deac4260f155"
+}

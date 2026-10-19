@@ -1,0 +1,30 @@
+.ee-page { color: var(--text); padding-block: 20px 48px; }
+.ee-page p { line-height: 1.7; margin: 8px 0; }
+.ee-page h4 { font-size: 14px; margin: 22px 0 8px; }
+.ee-muted { color: var(--secondary); font-size: 13px; }
+.ee-decision { padding: 16px 0; max-width: 1020px; }
+.ee-decision > strong { font-size: 20px; line-height: 1.5; }
+.ee-detail { padding-block: 10px 18px; overflow-wrap: anywhere; }
+.ee-detail-head, .ee-verdict-line { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; }
+.ee-verdict-line { font-size: 13px; margin: 18px 0; }
+.ee-badge { padding: 5px 10px; font-size: 12px; border: 1px solid var(--border); border-radius: 6px; }
+.ee-passage { padding: 14px 16px; margin: 10px 0; border-left: 3px solid var(--chart-1); background: var(--muted, #f4f6f8); font-size: 14px; white-space: pre-wrap; }
+.ee-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.ee-detail-grid section { min-width: 0; }
+.ee-page blockquote { margin: 10px 0; padding: 12px 14px; border-left: 3px solid var(--border); background: var(--muted, #f4f6f8); font-size: 14px; line-height: 1.65; white-space: pre-wrap; }
+.ee-page pre { padding: 14px; max-height: 380px; overflow: auto; background: var(--muted, #f4f6f8); font-size: 12px; white-space: pre-wrap; }
+.ee-page summary { cursor: pointer; margin-top: 18px; font-size: 13px; }
+.ee-review-note { padding: 14px; margin-top: 18px; border: 1px solid var(--border); border-radius: 8px; }
+.ee-empty { padding: 20px 0; color: var(--secondary); }
+.ee-matrix-wrap { display: grid; grid-template-columns: minmax(340px, 1.1fr) minmax(220px, 1fr); gap: 36px; padding: 12px 0; }
+.ee-matrix { border-collapse: separate; border-spacing: 5px; width: 100%; font-size: 13px; }
+.ee-matrix th { font-weight: 500; padding: 5px; text-align: left; }
+.ee-matrix caption { text-align: left; font-size: 12px; color: var(--secondary); padding: 8px 0; }
+.ee-matrix td button { width: 100%; min-height: 45px; border: 1px solid var(--border); background: var(--muted, #f4f6f8); border-radius: 6px; cursor: pointer; font-size: 19px; font-variant-numeric: tabular-nums; }
+.ee-matrix td .ee-diagonal { background: #e6f3ee; color: #185a44; }
+.ee-matrix td .ee-offdiagonal { background: #ffe8e7; color: #912d28; }
+.ee-matrix td .ee-selected { outline: 2px solid var(--chart-1); outline-offset: 1px; }
+.ee-matrix-note { align-self: center; font-size: 14px; }
+.ee-reset { padding: 7px 11px; border: 1px solid var(--border); border-radius: 6px; background: var(--background); color: var(--text); cursor: pointer; font-size: 13px; }
+.ee-page button:focus-visible { outline: 2px solid var(--chart-1); outline-offset: 2px; }
+@media (max-width: 760px) { .ee-detail-grid, .ee-matrix-wrap { grid-template-columns: minmax(0, 1fr); gap: 16px; } .ee-matrix { font-size: 11px; border-spacing: 3px; } .ee-matrix th { padding: 3px; } }

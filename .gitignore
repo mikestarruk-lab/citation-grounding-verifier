@@ -15,3 +15,5 @@ runs/
 .budget/
 dist/
 build/
+node_modules/
+.data-app-offline/

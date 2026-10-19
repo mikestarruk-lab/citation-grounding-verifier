@@ -82,6 +82,11 @@ Paid runs share the local $20 budget ledger; retain it across experiments.
   unadopted candidate requires additional review. This is a scope decision,
   not a claim that 0.65 is optimal. Optimization work targets the third approach.
 
+- [Local error explorer](tools/error-explorer/USAGE.md): inspect reviewed baseline
+  errors, threshold tradeoffs, confusion matrices and complete evidence. On this
+  Windows workstation, run `./tools/error-explorer/start.ps1 -Refresh` from the
+  repository root. [Baseline adjustment rationale, Chinese](docs/baseline-adjustment.zh-CN.md).
+
 - [Development v2 reviewed results](experiments/2026-10-16-dev-v2/reviewed-results-2026-10-17.md):
   owner-reviewed end-to-end F1 is 0.5833 for lexical and 1.0 for minimal LLM on
   these eight development cases. Evidence sufficiency is 3/5 and 10/10.
