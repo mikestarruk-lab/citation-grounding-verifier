@@ -9,6 +9,10 @@ prompt relative to the v1 baselines; it replaces evidence tied to draft gold.
 
 ## Recorded results
 
+The table below preserves the original run-time, pre-review snapshots. Owner
+review was completed on 2026-10-17; see [reviewed end-to-end results](reviewed-results-2026-10-17.md)
+and the separate `.reviewed.summary.json` files. Original run records are unchanged.
+
 | Method / mode | Successful cases | Final valid citations | Fixed-fact macro-F1 | End-to-end F1 | Recorded cost USD |
 |---|---:|---:|---:|---|---:|
 | lexical / e2e | 8/8 | 4/4 | N/A | Pending human review | 0 |

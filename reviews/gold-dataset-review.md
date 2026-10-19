@@ -32,7 +32,7 @@ Review each fact's meaning, qualifiers, verdict, explanation and complete eviden
     "frozen": false,
     "dataset_hash": null
   },
-  "note": "Dev gold approved by the project owner in chat; test gold and model-output reviews remain pending. This is not independent external validation."
+  "note": "Dev gold and v2 development outputs are owner-reviewed; see reviews/dev-v2/dev-v2-human-review-import-2026-10-17.json. Test gold remains pending. Owner review followed AI feedback and is not independent external validation."
 }
 ```
 

@@ -6,7 +6,7 @@ answer and classify them using only the supplied passages. The contract is in
 
 **Work in progress.** The service, lexical baseline, LLM paths and evaluation tools
 are implemented. Development gold is owner-approved; test gold remains draft.
-Final semantic reviews,
+The two development baselines have owner-reviewed semantic results. Final test reviews,
 optimization comparisons and final benchmark results are pending. The optimized
 path is a candidate, not a demonstrated improvement.
 
@@ -76,9 +76,12 @@ Paid runs share the local $20 budget ledger; retain it across experiments.
 
 ## Project records
 
-- [Development v2 output review](reviews/dev-v2/dev-v2-output-review.md): pending
-  alignment/evidence review, with method names hidden as A/B. Review it before
-  opening the [method-labelled experiment records](experiments/2026-10-16-dev-v2/README.md).
+- [Development v2 reviewed results](experiments/2026-10-16-dev-v2/reviewed-results-2026-10-17.md):
+  owner-reviewed end-to-end F1 is 0.5833 for lexical and 1.0 for minimal LLM on
+  these eight development cases. Evidence sufficiency is 3/5 and 10/10.
+  [The completed workbook](reviews/dev-v2/dev-v2-alignment.xlsx), approved JSON
+  records and import receipt preserve the review decisions. This was review after
+  AI feedback, not independent blind annotation or final test evaluation.
 - [Owner approval of development gold](reviews/dev-gold-approval-2026-10-16.md).
 
 - [Gold audit](reviews/gold/gold-dataset-audit-2026-10-15.md) and

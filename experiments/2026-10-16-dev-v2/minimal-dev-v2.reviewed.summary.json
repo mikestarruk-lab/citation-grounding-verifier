@@ -1,0 +1,66 @@
+{
+  "mode": "e2e",
+  "method": "minimal",
+  "cases": 8,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0014240000000000001,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 8,
+  "p50_seconds": 1.6783197999975528,
+  "p95_seconds": 3.585220804999699,
+  "first_client_call_seconds": [
+    3.520020399999339
+  ],
+  "warm_call_p50_seconds": 1.6069548999948893,
+  "pending_reviews": [],
+  "counts": {
+    "cases": 8,
+    "gold_facts": 12,
+    "calls": 8,
+    "repaired_requests": 0,
+    "input_tokens": 6710,
+    "output_tokens": 1506,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 12,
+    "first_quotes": 12,
+    "final_valid_quotes": 12,
+    "final_quotes": 12,
+    "successes": 8,
+    "atomic_predictions": 12,
+    "predictions": 12,
+    "predicted_units": 12,
+    "evidence_units": 10,
+    "sufficient_evidence": 10,
+    "covered": 12,
+    "tp": 12,
+    "false_support": 0,
+    "false_rejection": 0,
+    "fn": 0
+  },
+  "semantic_status": "reviewed",
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "coverage": 1.0,
+  "false_support_rate": 0.0,
+  "false_rejection_rate": 0.0,
+  "evidence_sufficiency": 1.0,
+  "atomicity": 1.0,
+  "confusion": {
+    "SUPPORTED": {
+      "SUPPORTED": 8
+    },
+    "CONTRADICTED": {
+      "CONTRADICTED": 2
+    },
+    "UNSUPPORTED": {
+      "UNSUPPORTED": 2
+    }
+  },
+  "replayed": true,
+  "latency_note": "Recorded live latency; replay performs no model calls."
+}

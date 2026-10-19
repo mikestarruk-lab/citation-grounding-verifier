@@ -1,0 +1,310 @@
+{
+  "reviewer": "Michael (mikestarruk-lab)",
+  "reviewed_on": "2026-10-17",
+  "source_workbook": "reviews/dev-v2/dev-v2-alignment.xlsx",
+  "source_workbook_sha256": "fb637ff6013726e6ec5c1f11cd7c3dc7c6a893889336739a8843987e44745289",
+  "confirmation": "Owner stated the review was completed, revised the flagged cells, then confirmed the workbook was saved and closed.",
+  "review_process": "Owner review after Codex AI feedback; not an independent blind review.",
+  "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+  "source_sheet": "配对",
+  "input_columns": {
+    "gold_id": "J",
+    "evidence_sufficient": "K",
+    "note": "L"
+  },
+  "actual_review_minutes": null,
+  "scope": "Development v2 outputs only. Does not approve/freeze test gold or select an optimized method.",
+  "evidence_interpretation": "Workbook accepts paragraph-local attribution/coreference and rejects missing independently necessary quoted premises. This records these decisions, not a new test-set approval.",
+  "imported_rows": [
+    {
+      "excel_row": 2,
+      "case_id": "dev-01",
+      "review_label": "A",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "不用填",
+      "note_input": null
+    },
+    {
+      "excel_row": 3,
+      "case_id": "dev-01",
+      "review_label": "A",
+      "prediction_index": 1,
+      "gold_id_input": "g2",
+      "evidence_input": "不用填",
+      "note_input": null
+    },
+    {
+      "excel_row": 4,
+      "case_id": "dev-01",
+      "review_label": "B",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 5,
+      "case_id": "dev-01",
+      "review_label": "B",
+      "prediction_index": 1,
+      "gold_id_input": "g2",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 6,
+      "case_id": "dev-02",
+      "review_label": "A",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "否",
+      "note_input": "如果只引用了GET 的话不充分，应该都引用 拆成 g1、g2；GET 证据充分，POST 证据不充分，评分时分别记录。"
+    },
+    {
+      "excel_row": 7,
+      "case_id": "dev-02",
+      "review_label": "B",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 8,
+      "case_id": "dev-02",
+      "review_label": "B",
+      "prediction_index": 1,
+      "gold_id_input": "g2",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 9,
+      "case_id": "dev-03",
+      "review_label": "A",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "不用填",
+      "note_input": null
+    },
+    {
+      "excel_row": 10,
+      "case_id": "dev-03",
+      "review_label": "A",
+      "prediction_index": 1,
+      "gold_id_input": "g2",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 11,
+      "case_id": "dev-03",
+      "review_label": "B",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 12,
+      "case_id": "dev-03",
+      "review_label": "B",
+      "prediction_index": 1,
+      "gold_id_input": "g2",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 13,
+      "case_id": "dev-04",
+      "review_label": "A",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "不用填",
+      "note_input": null
+    },
+    {
+      "excel_row": 14,
+      "case_id": "dev-04",
+      "review_label": "B",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 15,
+      "case_id": "dev-05",
+      "review_label": "A",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 16,
+      "case_id": "dev-05",
+      "review_label": "A",
+      "prediction_index": 1,
+      "gold_id_input": "g2",
+      "evidence_input": "不用填",
+      "note_input": null
+    },
+    {
+      "excel_row": 17,
+      "case_id": "dev-05",
+      "review_label": "B",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 18,
+      "case_id": "dev-05",
+      "review_label": "B",
+      "prediction_index": 1,
+      "gold_id_input": "g2",
+      "evidence_input": "不用填",
+      "note_input": null
+    },
+    {
+      "excel_row": 19,
+      "case_id": "dev-06",
+      "review_label": "A",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "不用填",
+      "note_input": null
+    },
+    {
+      "excel_row": 20,
+      "case_id": "dev-06",
+      "review_label": "B",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "不用填",
+      "note_input": null
+    },
+    {
+      "excel_row": 21,
+      "case_id": "dev-07",
+      "review_label": "A",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "否",
+      "note_input": "应该有两条引用"
+    },
+    {
+      "excel_row": 22,
+      "case_id": "dev-07",
+      "review_label": "B",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "是",
+      "note_input": null
+    },
+    {
+      "excel_row": 23,
+      "case_id": "dev-08",
+      "review_label": "A",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "不用填",
+      "note_input": null
+    },
+    {
+      "excel_row": 24,
+      "case_id": "dev-08",
+      "review_label": "B",
+      "prediction_index": 0,
+      "gold_id_input": "g1",
+      "evidence_input": "是",
+      "note_input": null
+    }
+  ],
+  "reviews": {
+    "A": {
+      "path": "reviews/dev-v2/dev-v2-A-approved.json",
+      "digest": "1d8647b823452365ad4a999a554839fb85ac33e12d9a409dc62cd083121be947",
+      "run_path": "experiments/2026-10-16-dev-v2/lexical-dev-v2.json",
+      "run_digest": "88fd6e0a351d753372f00d815c5734b5e7bc9a7c60bcaf1b3f4606cd7c4706a7",
+      "units": 12
+    },
+    "B": {
+      "path": "reviews/dev-v2/dev-v2-B-approved.json",
+      "digest": "c90fbe655d5cd61ae07bf11ca59bcb291d280209bc356a66579440d98dbcc418",
+      "run_path": "experiments/2026-10-16-dev-v2/minimal-dev-v2.json",
+      "run_digest": "e8a391f18d86e7db17a347a5a951add1559f05b856c447d85e3c9296efddf8b1",
+      "units": 12
+    }
+  },
+  "scores": {
+    "A": {
+      "method": "lexical",
+      "f1": 0.5833333333333334,
+      "coverage": 1.0,
+      "false_support_rate": 0.0,
+      "false_rejection_rate": 0.375,
+      "evidence_sufficiency": 0.6,
+      "atomicity": 0.9090909090909091,
+      "counts": {
+        "cases": 8,
+        "gold_facts": 12,
+        "calls": 0,
+        "repaired_requests": 0,
+        "first_valid_quotes": 4,
+        "first_quotes": 4,
+        "final_valid_quotes": 4,
+        "final_quotes": 4,
+        "successes": 8,
+        "atomic_predictions": 10,
+        "predictions": 11,
+        "predicted_units": 12,
+        "covered": 12,
+        "fp": 5,
+        "false_support": 0,
+        "false_rejection": 3,
+        "fn": 5,
+        "evidence_units": 5,
+        "sufficient_evidence": 3,
+        "tp": 7
+      }
+    },
+    "B": {
+      "method": "minimal",
+      "f1": 1.0,
+      "coverage": 1.0,
+      "false_support_rate": 0.0,
+      "false_rejection_rate": 0.0,
+      "evidence_sufficiency": 1.0,
+      "atomicity": 1.0,
+      "counts": {
+        "cases": 8,
+        "gold_facts": 12,
+        "calls": 8,
+        "repaired_requests": 0,
+        "input_tokens": 6710,
+        "output_tokens": 1506,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "first_valid_quotes": 12,
+        "first_quotes": 12,
+        "final_valid_quotes": 12,
+        "final_quotes": 12,
+        "successes": 8,
+        "atomic_predictions": 12,
+        "predictions": 12,
+        "predicted_units": 12,
+        "evidence_units": 10,
+        "sufficient_evidence": 10,
+        "covered": 12,
+        "tp": 12,
+        "false_support": 0,
+        "false_rejection": 0,
+        "fn": 0
+      }
+    }
+  }
+}
