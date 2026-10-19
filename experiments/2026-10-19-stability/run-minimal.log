@@ -1,0 +1,306 @@
+Starting minimal/dev/r1
+dev-01: ok
+dev-02: ok
+dev-03: ok
+dev-04: ok
+dev-05: ok
+dev-06: ok
+dev-07: ok
+dev-08: ok
+{
+  "mode": "e2e",
+  "method": "minimal",
+  "cases": 8,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.001511,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 8,
+  "p50_seconds": 1.652298900007736,
+  "p95_seconds": 2.24453865501564,
+  "first_client_call_seconds": [
+    2.1317381000262685
+  ],
+  "warm_call_p50_seconds": 1.4604632999980822,
+  "pending_reviews": [
+    "dev-01",
+    "dev-02",
+    "dev-03",
+    "dev-04",
+    "dev-05",
+    "dev-06",
+    "dev-07",
+    "dev-08"
+  ],
+  "counts": {
+    "cases": 8,
+    "gold_facts": 12,
+    "calls": 8,
+    "repaired_requests": 0,
+    "input_tokens": 6710,
+    "output_tokens": 1680,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 12,
+    "first_quotes": 12,
+    "final_valid_quotes": 12,
+    "final_quotes": 12,
+    "successes": 8
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "approved"
+}
+Starting minimal/challenges/r1
+challenge-01: ok
+challenge-02: ok
+challenge-03: ok
+challenge-04: ok
+challenge-05: ok
+{
+  "mode": "e2e",
+  "method": "minimal",
+  "cases": 5,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0023177,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 5,
+  "p50_seconds": 3.4445213999715634,
+  "p95_seconds": 5.846527020016219,
+  "first_client_call_seconds": [
+    3.2280991000006907
+  ],
+  "warm_call_p50_seconds": 3.4665894000208937,
+  "pending_reviews": [
+    "challenge-01",
+    "challenge-02",
+    "challenge-03",
+    "challenge-04",
+    "challenge-05"
+  ],
+  "counts": {
+    "cases": 5,
+    "gold_facts": 12,
+    "calls": 5,
+    "repaired_requests": 0,
+    "input_tokens": 4837,
+    "output_tokens": 3668,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 13,
+    "first_quotes": 13,
+    "final_valid_quotes": 13,
+    "final_quotes": 13,
+    "successes": 5
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "draft"
+}
+Starting minimal/dev/r2
+dev-01: ok
+dev-02: ok
+dev-03: ok
+dev-04: ok
+dev-05: ok
+dev-06: ok
+dev-07: ok
+dev-08: ok
+{
+  "mode": "e2e",
+  "method": "minimal",
+  "cases": 8,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.001549,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 8,
+  "p50_seconds": 1.5517284000234213,
+  "p95_seconds": 2.3116978000063684,
+  "first_client_call_seconds": [
+    1.5411464999779128
+  ],
+  "warm_call_p50_seconds": 1.556353299994953,
+  "pending_reviews": [
+    "dev-01",
+    "dev-02",
+    "dev-03",
+    "dev-04",
+    "dev-05",
+    "dev-06",
+    "dev-07",
+    "dev-08"
+  ],
+  "counts": {
+    "cases": 8,
+    "gold_facts": 12,
+    "calls": 8,
+    "repaired_requests": 0,
+    "input_tokens": 6710,
+    "output_tokens": 1756,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 12,
+    "first_quotes": 12,
+    "final_valid_quotes": 12,
+    "final_quotes": 12,
+    "successes": 8
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "approved"
+}
+Starting minimal/challenges/r2
+challenge-01: ok
+challenge-02: ok
+challenge-03: ok
+challenge-04: ok
+challenge-05: ok
+{
+  "mode": "e2e",
+  "method": "minimal",
+  "cases": 5,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0023657,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 5,
+  "p50_seconds": 4.147108600009233,
+  "p95_seconds": 5.768602219992317,
+  "first_client_call_seconds": [
+    4.72067920002155
+  ],
+  "warm_call_p50_seconds": 3.801332699978957,
+  "pending_reviews": [
+    "challenge-01",
+    "challenge-02",
+    "challenge-03",
+    "challenge-04",
+    "challenge-05"
+  ],
+  "counts": {
+    "cases": 5,
+    "gold_facts": 12,
+    "calls": 5,
+    "repaired_requests": 0,
+    "input_tokens": 4837,
+    "output_tokens": 3764,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 13,
+    "first_quotes": 13,
+    "final_valid_quotes": 13,
+    "final_quotes": 13,
+    "successes": 5
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "draft"
+}
+Starting minimal/dev/r3
+dev-01: ok
+dev-02: ok
+dev-03: ok
+dev-04: ok
+dev-05: ok
+dev-06: ok
+dev-07: ok
+dev-08: ok
+{
+  "mode": "e2e",
+  "method": "minimal",
+  "cases": 8,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0016385000000000002,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 8,
+  "p50_seconds": 1.604187200020533,
+  "p95_seconds": 2.943150664994027,
+  "first_client_call_seconds": [
+    1.33953160000965
+  ],
+  "warm_call_p50_seconds": 1.8287696999614127,
+  "pending_reviews": [
+    "dev-01",
+    "dev-02",
+    "dev-03",
+    "dev-04",
+    "dev-05",
+    "dev-06",
+    "dev-07",
+    "dev-08"
+  ],
+  "counts": {
+    "cases": 8,
+    "gold_facts": 12,
+    "calls": 8,
+    "repaired_requests": 0,
+    "input_tokens": 6710,
+    "output_tokens": 1935,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 12,
+    "first_quotes": 12,
+    "final_valid_quotes": 12,
+    "final_quotes": 12,
+    "successes": 8
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "approved"
+}
+Starting minimal/challenges/r3
+challenge-01: ok
+challenge-02: ok
+challenge-03: ok
+challenge-04: ok
+challenge-05: ok
+{
+  "mode": "e2e",
+  "method": "minimal",
+  "cases": 5,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0025007000000000002,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 5,
+  "p50_seconds": 3.5179505000123754,
+  "p95_seconds": 5.686130620003678,
+  "first_client_call_seconds": [
+    3.5145936000044458
+  ],
+  "warm_call_p50_seconds": 3.965806549997069,
+  "pending_reviews": [
+    "challenge-01",
+    "challenge-02",
+    "challenge-03",
+    "challenge-04",
+    "challenge-05"
+  ],
+  "counts": {
+    "cases": 5,
+    "gold_facts": 12,
+    "calls": 5,
+    "repaired_requests": 0,
+    "input_tokens": 4837,
+    "output_tokens": 4034,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 14,
+    "first_quotes": 14,
+    "final_valid_quotes": 14,
+    "final_quotes": 14,
+    "successes": 5
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "draft"
+}

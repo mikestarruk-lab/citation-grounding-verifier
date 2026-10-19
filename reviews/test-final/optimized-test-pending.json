@@ -1,0 +1,1391 @@
+[
+  {
+    "review_id": "02e505f88847eaed",
+    "case_id": "test-07",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "8533c75d1be196789c0d93a755b25b315ecbadf912d3d92dd77de78b51d36345",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "In read-only mode, PineDB rejects all writes. In read-write mode, it accepts writes."
+    ],
+    "generated_answer": "PineDB accepts writes in read-only mode.",
+    "gold_claims": [
+      {
+        "claim_text": "PineDB accepts writes in read-only mode.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "In read-only mode the specification rejects all writes, directly refuting acceptance of writes in that same mode.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "In read-only mode, PineDB rejects all writes. In read-write mode, it accepts writes."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "The permission in read-write mode cannot be transferred to read-only mode; match the condition before comparing behavior."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "PineDB accepts writes in read-only mode.",
+          "verdict": "CONTRADICTED",
+          "reasoning": "The context states that in read-only mode PineDB rejects all writes, directly contradicting the claim.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "In read-only mode, PineDB rejects all writes."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "PineDB accepts writes in read-only mode.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "0a5ede82ef6cfbc5",
+    "case_id": "test-13",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "2071a1c760168aa627bc588138fe4d825c78062a53b64095e6c5583125ec9365",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "ClockFern stores timestamps in UTC."
+    ],
+    "generated_answer": "ClockFern stores timestamps in UTC and synchronizes clocks using NTP.",
+    "gold_claims": [
+      {
+        "claim_text": "ClockFern stores timestamps in UTC.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The specification explicitly stores ClockFern timestamps in UTC.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "ClockFern stores timestamps in UTC."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Timestamp storage format is a separate property from the mechanism used to synchronize clocks."
+      },
+      {
+        "claim_text": "ClockFern synchronizes clocks using NTP.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "The source specifies UTC timestamp storage but never mentions NTP or a clock-synchronization mechanism.",
+        "citations": [],
+        "id": "g2",
+        "annotation_reason": "UTC does not establish NTP use; the missing mechanism makes this unsupported rather than contradicted."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "ClockFern stores timestamps in UTC.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 states directly that ClockFern stores timestamps in UTC.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "ClockFern stores timestamps in UTC."
+            }
+          ]
+        },
+        {
+          "claim_text": "ClockFern synchronizes clocks using NTP.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context passages do not mention NTP or clock synchronization method.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "ClockFern stores timestamps in UTC.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "ClockFern synchronizes clocks using NTP.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "138630d507a5f6dc",
+    "case_id": "test-20",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "cac51f7446f40f604997c2b973634dec3cfe3d6534e4799989f36ea6b250c0fe",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "Production traffic is routed exclusively to release Azure.",
+      "Release Azure rejects protocol V1 and accepts protocol V2."
+    ],
+    "generated_answer": "Production accepts protocol V1 and protocol V2.",
+    "gold_claims": [
+      {
+        "claim_text": "Production accepts protocol V1.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "Production routes exclusively to Azure, which rejects V1. Production therefore cannot accept V1 under the supplied routing rule.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "Production traffic is routed exclusively to release Azure."
+          },
+          {
+            "index": 1,
+            "quote": "Release Azure rejects protocol V1 and accepts protocol V2."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "The rejection must be linked to production through the exclusive Azure route; either passage alone leaves that link unproved."
+      },
+      {
+        "claim_text": "Production accepts protocol V2.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Production routes exclusively to Azure, and Azure accepts V2, supporting production's acceptance of V2.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "Production traffic is routed exclusively to release Azure."
+          },
+          {
+            "index": 1,
+            "quote": "Release Azure rejects protocol V1 and accepts protocol V2."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "Combine the routing premise with the V2 acceptance rule without introducing other releases or routing exceptions."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "Production accepts protocol V1.",
+          "verdict": "CONTRADICTED",
+          "reasoning": "Production traffic is routed exclusively to release Azure, and release Azure rejects protocol V1, so production does not accept V1.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Production traffic is routed exclusively to release Azure."
+            },
+            {
+              "index": 1,
+              "quote": "Release Azure rejects protocol V1"
+            }
+          ]
+        },
+        {
+          "claim_text": "Production accepts protocol V2.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Production traffic is routed exclusively to release Azure, and release Azure accepts protocol V2, so production accepts V2 by valid multi-passage inference.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Production traffic is routed exclusively to release Azure."
+            },
+            {
+              "index": 1,
+              "quote": "accepts protocol V2"
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "Production accepts protocol V1.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "Production accepts protocol V2.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "21dd80756190963b",
+    "case_id": "test-14",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "17547786c767bfd74ba981bc1989088a039e26327546d39df83d3d206cf6f498",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "SpruceRunner launches each job in an isolated container."
+    ],
+    "generated_answer": "SpruceRunner schedules its containers using Kubernetes.",
+    "gold_claims": [
+      {
+        "claim_text": "SpruceRunner schedules its containers using Kubernetes.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "The source specifies an isolated container for each job but does not identify its scheduler or orchestrator.",
+        "citations": [],
+        "id": "g1",
+        "annotation_reason": "Container isolation alone does not imply Kubernetes, and the source provides no contrary orchestration choice."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "SpruceRunner schedules its containers using Kubernetes.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context passage states that SpruceRunner launches each job in an isolated container but says nothing about Kubernetes or how containers are scheduled.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "SpruceRunner schedules its containers using Kubernetes.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "3fcf9102c1c31dfc",
+    "case_id": "test-18",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "939695d061bfe41e73258d6c96248dab9870b089b711a805f758a1fa1bbcd82c",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "Service Finch uses engine Ember. Finch's engine configuration is not specified here.",
+      "Engine Ember encrypts writes when secure mode is enabled."
+    ],
+    "generated_answer": "Service Finch encrypts writes.",
+    "gold_claims": [
+      {
+        "claim_text": "Service Finch encrypts writes.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "Finch uses Ember. The source guarantees encrypted writes when secure mode is enabled, but does not establish that this condition holds for Finch or otherwise establish encryption. It also does not refute encryption, so the claim is unsupported.",
+        "citations": [],
+        "id": "g1",
+        "annotation_reason": "An unspecified secure-mode setting proves neither encryption nor its absence; do not turn this missing condition into a contradiction."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "Service Finch encrypts writes.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "Passage 0 says Finch uses engine Ember, and passage 1 says Ember encrypts writes only when secure mode is enabled. Neither passage says secure mode is enabled for Finch, so the unqualified claim that Finch encrypts writes cannot be established from the context.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "Service Finch encrypts writes.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "5327d556c0b25e50",
+    "case_id": "test-11",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "4275668817d1077998720e5653cab821df526cebc952820f02ee1ea367e9739b",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "FlintIndex indexes document titles. Body text is not indexed."
+    ],
+    "generated_answer": "FlintIndex indexes document titles and uses a B-tree internally.",
+    "gold_claims": [
+      {
+        "claim_text": "FlintIndex indexes document titles.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source explicitly states that FlintIndex indexes document titles.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "FlintIndex indexes document titles. Body text is not indexed."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "The answer asserts title indexing; do not add an extra answer claim just because the source also discusses body text."
+      },
+      {
+        "claim_text": "FlintIndex uses a B-tree internally.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "The source identifies which document fields are indexed but does not describe the internal data structure.",
+        "citations": [],
+        "id": "g2",
+        "annotation_reason": "Title indexing does not entail a B-tree implementation, and no alternative structure is specified to refute it."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "FlintIndex indexes document titles.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 states directly that FlintIndex indexes document titles.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "FlintIndex indexes document titles."
+            }
+          ]
+        },
+        {
+          "claim_text": "FlintIndex uses a B-tree internally.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context passage says nothing about FlintIndex's internal data structures or the use of a B-tree.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "FlintIndex indexes document titles.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "FlintIndex uses a B-tree internally.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "55bf686865bfd650",
+    "case_id": "test-03",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "10baed2bc2cdc83b252f0281c9db81e8a6637d795c79c75fe5aad812b56a44ec",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "When compact mode is enabled, IrisStore compresses newly written segments. Existing segments are unchanged."
+    ],
+    "generated_answer": "With compact mode enabled, IrisStore compresses newly written segments but leaves existing segments unchanged.",
+    "gold_claims": [
+      {
+        "claim_text": "When compact mode is enabled, IrisStore compresses newly written segments.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The specification compresses newly written IrisStore segments when compact mode is enabled, exactly matching the qualified claim.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "When compact mode is enabled, IrisStore compresses newly written segments. Existing segments are unchanged."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Retain both the enabled-mode condition and the restriction to newly written segments."
+      },
+      {
+        "claim_text": "With compact mode enabled, IrisStore leaves existing segments unchanged.",
+        "verdict": "SUPPORTED",
+        "reasoning": "In the compact-mode operation described by the source, existing IrisStore segments remain unchanged.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "When compact mode is enabled, IrisStore compresses newly written segments. Existing segments are unchanged."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "Do not extend the compression rule from newly written to existing segments; keep the compact-mode scope."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "With compact mode enabled, IrisStore compresses newly written segments.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 states that when compact mode is enabled, IrisStore compresses newly written segments. The condition is preserved.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "When compact mode is enabled, IrisStore compresses newly written segments."
+            }
+          ]
+        },
+        {
+          "claim_text": "With compact mode enabled, IrisStore leaves existing segments unchanged.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 says existing segments are unchanged. The passage does not explicitly tie this to compact mode, but the answer's condition is attached to the same sentence context, and the passage's second sentence directly states the unchanged behavior alongside the compact-mode rule.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Existing segments are unchanged."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "With compact mode enabled, IrisStore compresses newly written segments.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "With compact mode enabled, IrisStore leaves existing segments unchanged.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "8918ebf2fb16ebc9",
+    "case_id": "test-16",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "ba378c9a4e93251ccb09e2c66e3426d881bdda79936642ed801a6f0abf66359b",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "The Acorn project uses the bronze retention policy.",
+      "Under the bronze policy, archived objects are retained for 90 days."
+    ],
+    "generated_answer": "Archived objects in the Acorn project are retained for 90 days.",
+    "gold_claims": [
+      {
+        "claim_text": "Archived objects in the Acorn project are retained for 90 days.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Passage 0 assigns Acorn the bronze policy; passage 1 retains archived objects under bronze for 90 days. The duration therefore applies to Acorn's archived objects.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "The Acorn project uses the bronze retention policy."
+          },
+          {
+            "index": 1,
+            "quote": "Under the bronze policy, archived objects are retained for 90 days."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Join the same bronze policy across both passages and preserve the archived-object scope and 90-day duration."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "Archived objects in the Acorn project are retained for 90 days.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 states the Acorn project uses the bronze retention policy, and passage 1 states that under the bronze policy archived objects are retained for 90 days. Combining these gives the claim.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "The Acorn project uses the bronze retention policy."
+            },
+            {
+              "index": 1,
+              "quote": "Under the bronze policy, archived objects are retained for 90 days."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "Archived objects in the Acorn project are retained for 90 days.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "8a9acac6233f31e4",
+    "case_id": "test-01",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "e61808fbeb8457f654ddff8edc19bbf4e8252fa7f8647c53c299225269c5f453",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "UploadPort accepts files up to and including 8 MiB. Larger files are rejected."
+    ],
+    "generated_answer": "UploadPort accepts an 8 MiB file and rejects larger files.",
+    "gold_claims": [
+      {
+        "claim_text": "UploadPort accepts an 8 MiB file.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The specification accepts files up to and including 8 MiB, so a file exactly 8 MiB is accepted.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "UploadPort accepts files up to and including 8 MiB. Larger files are rejected."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Preserve the inclusive boundary; up to and including differs from strictly less than 8 MiB."
+      },
+      {
+        "claim_text": "UploadPort rejects files larger than 8 MiB.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source rejects larger files, referring to files above its stated 8 MiB acceptance limit.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "UploadPort accepts files up to and including 8 MiB. Larger files are rejected."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "The quotation retains the preceding threshold so Larger files has an explicit comparison value."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "UploadPort accepts an 8 MiB file.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The passage states that UploadPort accepts files up to and including 8 MiB, which includes a file of exactly 8 MiB.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "UploadPort accepts files up to and including 8 MiB."
+            }
+          ]
+        },
+        {
+          "claim_text": "UploadPort rejects larger files.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The passage explicitly states that files larger than the 8 MiB limit are rejected.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Larger files are rejected."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "UploadPort accepts an 8 MiB file.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "UploadPort rejects larger files.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "982db716ca6e49ce",
+    "case_id": "test-19",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "5313b1b3ccabdefe7d8b4ed006e910fc82950a4739c9e1315c7f1da15761fbd8",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "The shared request pool has exactly 12 slots.",
+      "Exactly seven slots are occupied. Every slot is in exactly one state: occupied or available."
+    ],
+    "generated_answer": "The shared request pool has five available slots.",
+    "gold_claims": [
+      {
+        "claim_text": "The shared request pool has five available slots.",
+        "verdict": "SUPPORTED",
+        "reasoning": "There are exactly 12 slots and exactly seven are occupied. Every slot is in exactly one of the two states, so 12 minus 7 equals five available slots.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "The shared request pool has exactly 12 slots."
+          },
+          {
+            "index": 1,
+            "quote": "Exactly seven slots are occupied. Every slot is in exactly one state: occupied or available."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "The total, the exact occupied count and the exclusive two-state partition are all needed for the arithmetic; keep both passages as evidence."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "The shared request pool has five available slots.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 states the pool has exactly 12 slots. Passage 1 states exactly seven slots are occupied and that every slot is either occupied or available, so the remaining 12 - 7 = 5 slots are available.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "The shared request pool has exactly 12 slots."
+            },
+            {
+              "index": 1,
+              "quote": "Exactly seven slots are occupied."
+            },
+            {
+              "index": 1,
+              "quote": "Every slot is in exactly one state: occupied or available."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "The shared request pool has five available slots.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "a6918093c56d1ef8",
+    "case_id": "test-09",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "1e138e66a20a43361bf86aef220a8e8eb9eb70a8da861ee1ccf44690faaebf8c",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "SableRep acknowledges a write only after both replicas confirm receipt. A single replica's confirmation is insufficient."
+    ],
+    "generated_answer": "SableRep acknowledges a write as soon as one replica confirms receipt.",
+    "gold_claims": [
+      {
+        "claim_text": "SableRep acknowledges a write as soon as one replica confirms receipt.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "The specification waits for both replicas and explicitly says one confirmation is insufficient; acknowledging after just one contradicts it.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "SableRep acknowledges a write only after both replicas confirm receipt. A single replica's confirmation is insufficient."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Both confirmations are necessary, so a single confirmation cannot satisfy the acknowledgment condition."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "SableRep acknowledges a write as soon as one replica confirms receipt.",
+          "verdict": "CONTRADICTED",
+          "reasoning": "The passage says SableRep acknowledges a write only after both replicas confirm receipt, and that a single replica's confirmation is insufficient.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "SableRep acknowledges a write only after both replicas confirm receipt."
+            },
+            {
+              "index": 0,
+              "quote": "A single replica's confirmation is insufficient."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "SableRep acknowledges a write as soon as one replica confirms receipt.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "ae349989ffda3d9e",
+    "case_id": "test-15",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "b8b57f3871e53ecdbec6ad320a0f52a8b1d8dcd96d48f1d4adf89f54848abc84",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "QuartzCLI includes export and import commands."
+    ],
+    "generated_answer": "QuartzCLI includes export commands and is distributed under the Apache 2.0 license.",
+    "gold_claims": [
+      {
+        "claim_text": "QuartzCLI includes export commands.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The specification includes both export and import commands, which entails the answer's export-command claim.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "QuartzCLI includes export and import commands."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "A claim about export does not need to repeat every source capability; do not manufacture an omitted import claim."
+      },
+      {
+        "claim_text": "QuartzCLI is distributed under the Apache 2.0 license.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "The source describes commands but provides no distribution license.",
+        "citations": [],
+        "id": "g2",
+        "annotation_reason": "Command availability does not establish Apache 2.0 licensing; no alternative license is stated to contradict it."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "QuartzCLI includes export commands.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 states that QuartzCLI includes export and import commands, which entails that it includes export commands.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "QuartzCLI includes export and import commands."
+            }
+          ]
+        },
+        {
+          "claim_text": "QuartzCLI is distributed under the Apache 2.0 license.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The context passages say nothing about QuartzCLI's license or distribution terms.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "QuartzCLI includes export commands.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "QuartzCLI is distributed under the Apache 2.0 license.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "b0c6daabeee4522c",
+    "case_id": "test-12",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "22dc726730f03b58efe7992dc9f1418191a337f4fd5a3b4ca3d7a484f2ff970e",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "MetricHarbor exposes a counter of completed jobs."
+    ],
+    "generated_answer": "MetricHarbor uses port 9090 for its metrics endpoint.",
+    "gold_claims": [
+      {
+        "claim_text": "MetricHarbor uses port 9090 for its metrics endpoint.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "The source describes a completed-jobs counter but gives no port number or metrics endpoint address.",
+        "citations": [],
+        "id": "g1",
+        "annotation_reason": "Do not supply port 9090 from conventions or external knowledge; no direct refutation is given either."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "MetricHarbor uses port 9090 for its metrics endpoint.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "The only context passage states that MetricHarbor exposes a counter of completed jobs; it says nothing about a port or a metrics endpoint port of 9090.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "MetricHarbor uses port 9090 for its metrics endpoint.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "c10ae37767f7c048",
+    "case_id": "test-10",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "aa8e6dd1444d7b3ec3f8a154665e3b5062476354927b8a52842646cdd831cdeb",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "Automatic backups are disabled by default in MossVault. Operators can enable them."
+    ],
+    "generated_answer": "MossVault enables automatic backups by default, and operators can enable them.",
+    "gold_claims": [
+      {
+        "claim_text": "MossVault enables automatic backups by default.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "Automatic backups are disabled by default in the source, directly opposing enabled by default.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "Automatic backups are disabled by default in MossVault. Operators can enable them."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Compare the default state independently of an operator's ability to change that state."
+      },
+      {
+        "claim_text": "Operators can enable automatic backups in MossVault.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The specification explicitly allows operators to enable automatic MossVault backups.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "Automatic backups are disabled by default in MossVault. Operators can enable them."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "Manual enablement is supported even though the answer's separate assertion about the default state is contradicted."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "MossVault enables automatic backups by default.",
+          "verdict": "CONTRADICTED",
+          "reasoning": "The passage states that automatic backups are disabled by default in MossVault, which directly contradicts the claim that they are enabled by default.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Automatic backups are disabled by default in MossVault."
+            }
+          ]
+        },
+        {
+          "claim_text": "Operators can enable automatic backups in MossVault.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The passage says operators can enable automatic backups.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Operators can enable them."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "MossVault enables automatic backups by default.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "Operators can enable automatic backups in MossVault.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "c1a625e10b80f200",
+    "case_id": "test-02",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "55baa058c4777dec7f88652c338f1c7b0478f608f1662e2cb44e2bcb9c9ae197",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "A session expires after 15 minutes without activity. Activity resets the inactivity timer."
+    ],
+    "generated_answer": "Sessions expire after 15 inactive minutes. Activity resets the inactivity timer.",
+    "gold_claims": [
+      {
+        "claim_text": "Sessions expire after 15 minutes without activity.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source expires a session after 15 minutes without activity, matching 15 inactive minutes.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "A session expires after 15 minutes without activity. Activity resets the inactivity timer."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Inactivity is a necessary qualifier; the source does not say every session expires 15 minutes after creation."
+      },
+      {
+        "claim_text": "Activity resets the inactivity timer.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source explicitly states that activity resets the inactivity timer.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "A session expires after 15 minutes without activity. Activity resets the inactivity timer."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "Timer reset is independently testable from the expiration interval and should remain a separate fact."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "Sessions expire after 15 inactive minutes.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 states a session expires after 15 minutes without activity, which matches the inactive-minutes claim.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "A session expires after 15 minutes without activity."
+            }
+          ]
+        },
+        {
+          "claim_text": "Activity resets the inactivity timer.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 explicitly states that activity resets the inactivity timer.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Activity resets the inactivity timer."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "Sessions expire after 15 inactive minutes.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "Activity resets the inactivity timer.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "c7352c6a0031c077",
+    "case_id": "test-04",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "25751ca5d9532d5b995b43571ac040977fb11b6507fb207e5eb94b42c21d863c",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "BirchQueue processes high-priority messages before normal-priority messages. Messages within one priority are processed in arrival order."
+    ],
+    "generated_answer": "BirchQueue processes high-priority messages before normal-priority messages and uses arrival order within a priority.",
+    "gold_claims": [
+      {
+        "claim_text": "BirchQueue processes high-priority messages before normal-priority messages.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The specification processes high-priority messages before normal-priority messages, exactly matching the claim.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "BirchQueue processes high-priority messages before normal-priority messages. Messages within one priority are processed in arrival order."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Keep the comparison relative to normal-priority messages, as the source states, without adding a priority class not mentioned there."
+      },
+      {
+        "claim_text": "BirchQueue processes messages within a priority in arrival order.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Within a single priority, the specification processes messages in arrival order.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "BirchQueue processes high-priority messages before normal-priority messages. Messages within one priority are processed in arrival order."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "The ordering guarantee applies within one priority; it does not override the separate cross-priority rule."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "BirchQueue processes high-priority messages before normal-priority messages.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The passage states directly that BirchQueue processes high-priority messages before normal-priority messages.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "BirchQueue processes high-priority messages before normal-priority messages."
+            }
+          ]
+        },
+        {
+          "claim_text": "BirchQueue uses arrival order within a priority.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The passage says messages within one priority are processed in arrival order, which matches the claim that arrival order applies within a priority level.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Messages within one priority are processed in arrival order."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "BirchQueue processes high-priority messages before normal-priority messages.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "BirchQueue uses arrival order within a priority.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "d58736d21500737c",
+    "case_id": "test-05",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "f0f235083b65cbb83dbf0c71419983220f04d42896e200e62a1b1d0d742adc4c",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "GET /status returns HTTP 200 with a JSON body. This endpoint requires no authentication."
+    ],
+    "generated_answer": "GET /status returns HTTP 200 and a JSON body without requiring authentication.",
+    "gold_claims": [
+      {
+        "claim_text": "GET /status returns HTTP 200.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The first source sentence explicitly states that GET /status returns HTTP 200.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "GET /status returns HTTP 200 with a JSON body."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Status code and response-body format are independently testable; this fact covers only the status code."
+      },
+      {
+        "claim_text": "GET /status returns a JSON body.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The first source sentence explicitly states that GET /status returns a JSON body.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "GET /status returns HTTP 200 with a JSON body."
+          }
+        ],
+        "id": "g3",
+        "annotation_reason": "Separate body format from status code so a correct fine-grained prediction is not penalized as a duplicate."
+      },
+      {
+        "claim_text": "GET /status requires no authentication.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source states that this endpoint requires no authentication; the endpoint is GET /status in the preceding sentence.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "GET /status returns HTTP 200 with a JSON body. This endpoint requires no authentication."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "Preserve the existing authentication claim ID and retain enough quotation to resolve This endpoint."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "GET /status returns HTTP 200.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The passage states that GET /status returns HTTP 200 with a JSON body.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "GET /status returns HTTP 200 with a JSON body."
+            }
+          ]
+        },
+        {
+          "claim_text": "GET /status returns a JSON body.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The same passage states that the response includes a JSON body.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "GET /status returns HTTP 200 with a JSON body."
+            }
+          ]
+        },
+        {
+          "claim_text": "GET /status does not require authentication.",
+          "verdict": "SUPPORTED",
+          "reasoning": "The passage states that the endpoint requires no authentication.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "This endpoint requires no authentication."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "GET /status returns HTTP 200.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "GET /status returns a JSON body.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 2,
+        "text": "GET /status does not require authentication.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "dd5b6439be304a1c",
+    "case_id": "test-08",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "9623184f8a543453c51373cdf6145723c2fc4e1d9afa5e25406d895f49242991",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "Deleting a RiverLink project does not delete its exported files."
+    ],
+    "generated_answer": "Deleting a RiverLink project deletes its exported files.",
+    "gold_claims": [
+      {
+        "claim_text": "Deleting a RiverLink project deletes its exported files.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "The specification says deleting a RiverLink project does not delete its exported files, the opposite of the claim.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "Deleting a RiverLink project does not delete its exported files."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "The same deletion operation and exported files appear in both statements; this is an explicit negation reversal."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "Deleting a RiverLink project deletes its exported files.",
+          "verdict": "CONTRADICTED",
+          "reasoning": "The context states that deleting a RiverLink project does not delete its exported files, directly contradicting the answer's claim.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Deleting a RiverLink project does not delete its exported files."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "Deleting a RiverLink project deletes its exported files.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "e84ca489c01b8401",
+    "case_id": "test-17",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "a1432e428bb4feeb25aaa19071c28283fb18d434fa8bdd7a10fee2cede36707d",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "User Lina's only role is auditor. Lina has no user-specific permissions.",
+      "Auditors can view logs but cannot delete logs."
+    ],
+    "generated_answer": "Lina can view logs. Lina can delete logs.",
+    "gold_claims": [
+      {
+        "claim_text": "Lina can view logs.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Lina's role is auditor, and the role rule permits auditors to view logs, so Lina can view logs.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "User Lina's only role is auditor."
+          },
+          {
+            "index": 1,
+            "quote": "Auditors can view logs but cannot delete logs."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Both the role assignment and the permission rule are required; viewing needs only the auditor assignment, not its exclusivity."
+      },
+      {
+        "claim_text": "Lina can delete logs.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "Auditor is Lina's only role and Lina has no user-specific permissions. Auditors cannot delete logs, so the stated prohibition applies to Lina and refutes the claim.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "User Lina's only role is auditor. Lina has no user-specific permissions."
+          },
+          {
+            "index": 1,
+            "quote": "Auditors can view logs but cannot delete logs."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "The contradiction needs both passages, including the exclusivity premises that rule out another role or a user-level override granting deletion."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "Lina can view logs.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Passage 0 states Lina's only role is auditor, and passage 1 states auditors can view logs. Combining these gives the conclusion that Lina can view logs.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "User Lina's only role is auditor."
+            },
+            {
+              "index": 1,
+              "quote": "Auditors can view logs"
+            }
+          ]
+        },
+        {
+          "claim_text": "Lina can delete logs.",
+          "verdict": "CONTRADICTED",
+          "reasoning": "Passage 1 states auditors cannot delete logs. Passage 0 establishes Lina's only role is auditor, so the passage directly contradicts the claim that Lina can delete logs.",
+          "citations": [
+            {
+              "index": 1,
+              "quote": "cannot delete logs"
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "Lina can view logs.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      },
+      {
+        "prediction_index": 1,
+        "text": "Lina can delete logs.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "review_id": "e96a15f2ec9c8c02",
+    "case_id": "test-06",
+    "dataset_hash": "cbeb222ac9160b048f90d9a12f42286a9ef0b6e514bfc1b67bfd0e1dc806712a",
+    "output_hash": "1c4c79b74df828493a29d99f9ff9a0ec5a2ec293aedb37f1bf52485220f93a66",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "MeadowLog retains audit records for exactly 30 days and then deletes them."
+    ],
+    "generated_answer": "MeadowLog retains audit records for exactly 31 days.",
+    "gold_claims": [
+      {
+        "claim_text": "MeadowLog retains audit records for exactly 31 days.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "The source retains audit records for exactly 30 days and then deletes them; exactly 31 days is incompatible with that duration.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "MeadowLog retains audit records for exactly 30 days and then deletes them."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Exactly fixes the duration, and deletion rules out treating 30 days as merely a minimum retention period."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "MeadowLog retains audit records for exactly 31 days.",
+          "verdict": "CONTRADICTED",
+          "reasoning": "The passage states audit records are retained for exactly 30 days, not 31 days.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "MeadowLog retains audit records for exactly 30 days and then deletes them."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "MeadowLog retains audit records for exactly 31 days.",
+        "gold_id": null,
+        "evidence_sufficient": null,
+        "note": ""
+      }
+    ]
+  }
+]

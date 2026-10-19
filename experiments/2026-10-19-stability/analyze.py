@@ -18,7 +18,7 @@ DATA = {
     "dev": Path("data/dev.jsonl"),
     "challenges": Path("data/development-challenges-v2/dev.jsonl"),
 }
-CANDIDATES = ("refined-v1", "refined-v2", "lean")
+CANDIDATES = ("minimal", "refined-v1", "refined-v2", "lean")
 REPEATS = (1, 2, 3)
 
 # Premises (passage index, required source text) a matched S/C unit's own original

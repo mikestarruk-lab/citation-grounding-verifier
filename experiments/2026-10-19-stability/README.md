@@ -11,6 +11,7 @@ read or run. All scores below are **AI-proposed and pending owner review**.
 
 | Candidate | Dev mean F1 (worst) | Challenge mean F1 (worst) | Label errors over 3 repeats | Evidence, original citations | Failed requests | p50 / p95 s | Cost USD |
 |---|---|---|---|---|---:|---|---:|
+| minimal (comparator, added after selection) | 1.000 (1.000) | 0.878 (0.800) | challenge-03 U→C once | 45/54 | 0 | 2.162 / 5.890 | 0.0118826 |
 | refined-v1 | **1.000** (1.000) | 0.880 (0.800) | challenge-01/g2 S→U once | 44/54 | 0 | 2.361 / 4.693 | 0.0124080 |
 | refined-v2 | 0.972 (0.917) | 0.920 (0.800) | dev-08 S→U once | 49/53 | 1 | 2.114 / 4.678 | 0.0151070 |
 | lean | **1.000** (1.000) | **0.906** (0.800) | challenge-01/g2 S→U once; challenge-03 U→C once | **50/55** | 0 | 2.364 / 5.361 | 0.0121497 |
@@ -18,6 +19,17 @@ read or run. All scores below are **AI-proposed and pending owner review**.
 Per-run scores, every error and the alignment decisions are in
 `stability-summary.json` and `alignment-decisions.json`. `analyze.py` recomputes
 them from the saved runs.
+
+## Minimal comparator repeats (addendum)
+
+Run after the selection under [PLAN-minimal.md](PLAN-minimal.md) (`4cc58a9`),
+39 calls, for report comparison only. Minimal is also perfect on approved dev in
+all three repeats. On challenges it averages 0.878, below lean's 0.906: it never
+matches the full challenge-05 same-committed-transaction fact (g3), and once adds
+an unsupported contradiction on challenge-03. Its original-citation evidence
+(45/54, 83%; challenges alone 15/24) is below lean's (50/55, 91%; challenges 20/25). No false support recurred.
+Lean's measurable advantages over minimal are therefore evidence completeness and
+a small challenge-F1 gain, plus the repair path; not dev accuracy.
 
 ## What the repeats show
 

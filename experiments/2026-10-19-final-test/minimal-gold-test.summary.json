@@ -1,0 +1,53 @@
+{
+  "mode": "gold",
+  "method": "minimal",
+  "cases": 20,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.004499,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 20,
+  "p50_seconds": 1.7099110500130337,
+  "p95_seconds": 2.8789973000064495,
+  "first_client_call_seconds": [
+    1.6256798999966122
+  ],
+  "warm_call_p50_seconds": 1.7383903000154532,
+  "pending_reviews": [],
+  "counts": {
+    "cases": 20,
+    "gold_facts": 32,
+    "calls": 20,
+    "repaired_requests": 0,
+    "input_tokens": 18485,
+    "output_tokens": 5301,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 31,
+    "first_quotes": 31,
+    "final_valid_quotes": 31,
+    "final_quotes": 31,
+    "successes": 20
+  },
+  "semantic_status": "automatic_fixed_claim_diagnostic",
+  "per_label_f1": {
+    "SUPPORTED": 1.0,
+    "CONTRADICTED": 1.0,
+    "UNSUPPORTED": 1.0
+  },
+  "macro_f1": 1.0,
+  "confusion": {
+    "SUPPORTED": {
+      "SUPPORTED": 19
+    },
+    "CONTRADICTED": {
+      "CONTRADICTED": 7
+    },
+    "UNSUPPORTED": {
+      "UNSUPPORTED": 6
+    }
+  },
+  "gold_review_status": "approved"
+}

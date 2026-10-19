@@ -78,5 +78,37 @@
       null
     ],
     "note": "rev2 rule: 'that transaction' cannot import the two actions from the other prediction, so this does not match g3."
+  },
+  "challenge-05 | the status write and the pending receipt record deletion occurred in the same committed transaction": {
+    "units": [
+      null
+    ],
+    "note": "Drops the reported-success scope that g3 requires (a pre-commit crash has no committed transaction); same treatment as the unscoped refined-v1 prediction. Extra unit."
+  },
+  "challenge-05 | for a delivery reported as successful parcelmoth has written status delivered and deleted the pending receipt record": {
+    "units": [
+      "g1",
+      "g2"
+    ],
+    "note": "Qualified compound of the two action facts, with no transaction relation; split into g1 and g2."
+  },
+  "challenge-05 | these changes occur in the same committed transaction": {
+    "units": [
+      null
+    ],
+    "note": "rev2 rule: 'These changes' cannot import the actions from the other prediction, and the reported-success scope is missing. Extra unit."
+  },
+  "challenge-03 | patchferry automatically retries the request": {
+    "units": [
+      null
+    ],
+    "note": "Same as the rev2 decision: dropping 'after its timeout' leaves a broader retry claim; the condition is not imported from the next prediction. Extra unit."
+  },
+  "challenge-05 | for a delivery reported as successful parcelmoth has deleted the pending receipt record in the same committed transaction": {
+    "units": [
+      "g2",
+      null
+    ],
+    "note": "Matches g2 (deletion with the reported-success scope). Its committed-transaction relation names only the deletion, not both actions, so it is a partial relation unit, extra under the rev2 rule."
   }
 }

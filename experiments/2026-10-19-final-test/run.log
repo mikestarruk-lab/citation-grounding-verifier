@@ -1,0 +1,440 @@
+test-01: ok
+test-02: ok
+test-03: ok
+test-04: ok
+test-05: ok
+test-06: ok
+test-07: ok
+test-08: ok
+test-09: ok
+test-10: ok
+test-11: ok
+test-12: ok
+test-13: ok
+test-14: ok
+test-15: ok
+test-16: ok
+test-17: ok
+test-18: ok
+test-19: ok
+test-20: ok
+{
+  "mode": "e2e",
+  "method": "lexical",
+  "cases": 20,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 20,
+  "p50_seconds": 7.840001489967108e-05,
+  "p95_seconds": 0.0003270650253398344,
+  "first_client_call_seconds": [],
+  "warm_call_p50_seconds": null,
+  "pending_reviews": [
+    "test-01",
+    "test-02",
+    "test-03",
+    "test-04",
+    "test-05",
+    "test-06",
+    "test-07",
+    "test-08",
+    "test-09",
+    "test-10",
+    "test-11",
+    "test-12",
+    "test-13",
+    "test-14",
+    "test-15",
+    "test-16",
+    "test-17",
+    "test-18",
+    "test-19",
+    "test-20"
+  ],
+  "counts": {
+    "cases": 20,
+    "gold_facts": 32,
+    "calls": 0,
+    "repaired_requests": 0,
+    "first_valid_quotes": 7,
+    "first_quotes": 7,
+    "final_valid_quotes": 7,
+    "final_quotes": 7,
+    "successes": 20
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "approved"
+}
+test-01: ok
+test-02: ok
+test-03: ok
+test-04: ok
+test-05: ok
+test-06: ok
+test-07: ok
+test-08: ok
+test-09: ok
+test-10: ok
+test-11: ok
+test-12: ok
+test-13: ok
+test-14: ok
+test-15: ok
+test-16: ok
+test-17: ok
+test-18: ok
+test-19: ok
+test-20: ok
+{
+  "mode": "e2e",
+  "method": "minimal",
+  "cases": 20,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0039965,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 20,
+  "p50_seconds": 1.747772150003584,
+  "p95_seconds": 2.2922541100037055,
+  "first_client_call_seconds": [
+    1.8663167000049725
+  ],
+  "warm_call_p50_seconds": 1.739623700035736,
+  "pending_reviews": [
+    "test-01",
+    "test-02",
+    "test-03",
+    "test-04",
+    "test-05",
+    "test-06",
+    "test-07",
+    "test-08",
+    "test-09",
+    "test-10",
+    "test-11",
+    "test-12",
+    "test-13",
+    "test-14",
+    "test-15",
+    "test-16",
+    "test-17",
+    "test-18",
+    "test-19",
+    "test-20"
+  ],
+  "counts": {
+    "cases": 20,
+    "gold_facts": 32,
+    "calls": 20,
+    "repaired_requests": 0,
+    "input_tokens": 16945,
+    "output_tokens": 4604,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 30,
+    "first_quotes": 30,
+    "final_valid_quotes": 30,
+    "final_quotes": 30,
+    "successes": 20
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "approved"
+}
+test-01: ok
+test-02: ok
+test-03: ok
+test-04: ok
+test-05: ok
+test-06: ok
+test-07: ok
+test-08: ok
+test-09: ok
+test-10: ok
+test-11: ok
+test-12: ok
+test-13: ok
+test-14: ok
+test-15: ok
+test-16: ok
+test-17: ok
+test-18: ok
+test-19: ok
+test-20: ok
+{
+  "mode": "e2e",
+  "method": "optimized",
+  "cases": 20,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.005105500000000001,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 20,
+  "p50_seconds": 2.5002499500405975,
+  "p95_seconds": 3.5455722049839102,
+  "first_client_call_seconds": [
+    2.038040400017053
+  ],
+  "warm_call_p50_seconds": 2.611845200008247,
+  "pending_reviews": [
+    "test-01",
+    "test-02",
+    "test-03",
+    "test-04",
+    "test-05",
+    "test-06",
+    "test-07",
+    "test-08",
+    "test-09",
+    "test-10",
+    "test-11",
+    "test-12",
+    "test-13",
+    "test-14",
+    "test-15",
+    "test-16",
+    "test-17",
+    "test-18",
+    "test-19",
+    "test-20"
+  ],
+  "counts": {
+    "cases": 20,
+    "gold_facts": 32,
+    "calls": 20,
+    "repaired_requests": 0,
+    "input_tokens": 19425,
+    "output_tokens": 6326,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 33,
+    "first_quotes": 33,
+    "final_valid_quotes": 33,
+    "final_quotes": 33,
+    "successes": 20
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "approved"
+}
+test-01: ok
+test-02: ok
+test-03: ok
+test-04: ok
+test-05: ok
+test-06: ok
+test-07: ok
+test-08: ok
+test-09: ok
+test-10: ok
+test-11: ok
+test-12: ok
+test-13: ok
+test-14: ok
+test-15: ok
+test-16: ok
+test-17: ok
+test-18: ok
+test-19: ok
+test-20: ok
+{
+  "mode": "gold",
+  "method": "lexical",
+  "cases": 20,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 20,
+  "p50_seconds": 8.465000428259373e-05,
+  "p95_seconds": 0.00014087000745348648,
+  "first_client_call_seconds": [],
+  "warm_call_p50_seconds": null,
+  "pending_reviews": [],
+  "counts": {
+    "cases": 20,
+    "gold_facts": 32,
+    "calls": 0,
+    "repaired_requests": 0,
+    "first_valid_quotes": 13,
+    "first_quotes": 13,
+    "final_valid_quotes": 13,
+    "final_quotes": 13,
+    "successes": 20
+  },
+  "semantic_status": "automatic_fixed_claim_diagnostic",
+  "per_label_f1": {
+    "SUPPORTED": 0.625,
+    "CONTRADICTED": 0.0,
+    "UNSUPPORTED": 0.48
+  },
+  "macro_f1": 0.36833333333333335,
+  "confusion": {
+    "SUPPORTED": {
+      "UNSUPPORTED": 9,
+      "SUPPORTED": 10
+    },
+    "CONTRADICTED": {
+      "UNSUPPORTED": 4,
+      "SUPPORTED": 3
+    },
+    "UNSUPPORTED": {
+      "UNSUPPORTED": 6
+    }
+  },
+  "gold_review_status": "approved"
+}
+test-01: ok
+test-02: ok
+test-03: ok
+test-04: ok
+test-05: ok
+test-06: ok
+test-07: ok
+test-08: ok
+test-09: ok
+test-10: ok
+test-11: ok
+test-12: ok
+test-13: ok
+test-14: ok
+test-15: ok
+test-16: ok
+test-17: ok
+test-18: ok
+test-19: ok
+test-20: ok
+{
+  "mode": "gold",
+  "method": "minimal",
+  "cases": 20,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.004499,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 20,
+  "p50_seconds": 1.7099110500130337,
+  "p95_seconds": 2.8789973000064495,
+  "first_client_call_seconds": [
+    1.6256798999966122
+  ],
+  "warm_call_p50_seconds": 1.7383903000154532,
+  "pending_reviews": [],
+  "counts": {
+    "cases": 20,
+    "gold_facts": 32,
+    "calls": 20,
+    "repaired_requests": 0,
+    "input_tokens": 18485,
+    "output_tokens": 5301,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 31,
+    "first_quotes": 31,
+    "final_valid_quotes": 31,
+    "final_quotes": 31,
+    "successes": 20
+  },
+  "semantic_status": "automatic_fixed_claim_diagnostic",
+  "per_label_f1": {
+    "SUPPORTED": 1.0,
+    "CONTRADICTED": 1.0,
+    "UNSUPPORTED": 1.0
+  },
+  "macro_f1": 1.0,
+  "confusion": {
+    "SUPPORTED": {
+      "SUPPORTED": 19
+    },
+    "CONTRADICTED": {
+      "CONTRADICTED": 7
+    },
+    "UNSUPPORTED": {
+      "UNSUPPORTED": 6
+    }
+  },
+  "gold_review_status": "approved"
+}
+test-01: ok
+test-02: ok
+test-03: ok
+test-04: ok
+test-05: ok
+test-06: ok
+test-07: ok
+test-08: ok
+test-09: ok
+test-10: ok
+test-11: ok
+test-12: ok
+test-13: ok
+test-14: ok
+test-15: ok
+test-16: ok
+test-17: ok
+test-18: ok
+test-19: ok
+test-20: ok
+{
+  "mode": "gold",
+  "method": "optimized",
+  "cases": 20,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0054125,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 20,
+  "p50_seconds": 2.2922385499987286,
+  "p95_seconds": 4.0845360450504815,
+  "first_client_call_seconds": [
+    2.357624800002668
+  ],
+  "warm_call_p50_seconds": 2.2613520000013523,
+  "pending_reviews": [],
+  "counts": {
+    "cases": 20,
+    "gold_facts": 32,
+    "calls": 20,
+    "repaired_requests": 0,
+    "input_tokens": 20965,
+    "output_tokens": 6632,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0,
+    "first_valid_quotes": 32,
+    "first_quotes": 32,
+    "final_valid_quotes": 32,
+    "final_quotes": 32,
+    "successes": 20
+  },
+  "semantic_status": "automatic_fixed_claim_diagnostic",
+  "per_label_f1": {
+    "SUPPORTED": 1.0,
+    "CONTRADICTED": 1.0,
+    "UNSUPPORTED": 1.0
+  },
+  "macro_f1": 1.0,
+  "confusion": {
+    "SUPPORTED": {
+      "SUPPORTED": 19
+    },
+    "CONTRADICTED": {
+      "CONTRADICTED": 7
+    },
+    "UNSUPPORTED": {
+      "UNSUPPORTED": 6
+    }
+  },
+  "gold_review_status": "approved"
+}
