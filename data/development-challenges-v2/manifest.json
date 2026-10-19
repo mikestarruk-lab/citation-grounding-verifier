@@ -1,12 +1,14 @@
 {
   "version": 2,
   "dev": {
-    "review_status": "draft",
-    "reviewed_by": null,
-    "dataset_hash": "c0a11c4a6c7eb11c5f8f18229cbb323d00e61d8c8f5e97c12772bca4979ad504"
+    "review_status": "approved",
+    "reviewed_by": "Michael (mikestarruk-lab)",
+    "dataset_hash": "c0a11c4a6c7eb11c5f8f18229cbb323d00e61d8c8f5e97c12772bca4979ad504",
+    "reviewed_on": "2026-10-19",
+    "approval_record": "reviews/development-challenges-v1/challenge-gold-v2-approval-2026-10-19.md"
   },
   "clarification_status": "owner_accepted_approach_materialized",
   "decision_record": "reviews/development-challenges-v1/clarification-decision.json",
   "parent_dataset_hash": "999dc8f013fe3da0477f4c81dbe7045959b93538d8ec9cc7deb57d29bda5f83c",
-  "note": "New exact wording and the remaining gold require final owner approval. This is a development extension; no final test approval is implied."
+  "note": "Owner-approved development extension (2026-10-19), including the rev2 alignment rule. Not part of the final test score."
 }
