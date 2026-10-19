@@ -76,6 +76,12 @@ Paid runs share the local $20 budget ledger; retain it across experiments.
 
 ## Project records
 
+- [Baseline decision, 2026-10-18](experiments/baseline-freeze-2026-10-18.json):
+  retain the owner-reviewed lexical starting threshold 0.65 and fixed minimal
+  LLM comparator. The 22-threshold study is sensitivity analysis; neither
+  unadopted candidate requires additional review. This is a scope decision,
+  not a claim that 0.65 is optimal. Optimization work targets the third approach.
+
 - [Development v2 reviewed results](experiments/2026-10-16-dev-v2/reviewed-results-2026-10-17.md):
   owner-reviewed end-to-end F1 is 0.5833 for lexical and 1.0 for minimal LLM on
   these eight development cases. Evidence sufficiency is 3/5 and 10/10.

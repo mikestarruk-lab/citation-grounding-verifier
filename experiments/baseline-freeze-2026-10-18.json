@@ -1,0 +1,33 @@
+{
+  "decision_date": "2026-10-18",
+  "status": "owner_accepted",
+  "authorization": "Owner replied agree after the recommendation to retain the reviewed 0.65 lexical baseline, stop baseline tuning, and keep minimal LLM fixed.",
+  "reason": "The assignment requests a simple non-LLM baseline and minimally tuned LLM comparator. Optimization effort belongs to the optimized verifier. Retaining the starting threshold is a disclosed scope decision, not a claim that 0.65 maximizes development F1 or safety.",
+  "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+  "lexical": {
+    "threshold": 0.65,
+    "selection": "retained_untuned_starting_configuration",
+    "run": "experiments/2026-10-16-dev-v2/lexical-dev-v2.json",
+    "run_digest": "88fd6e0a351d753372f00d815c5734b5e7bc9a7c60bcaf1b3f4606cd7c4706a7",
+    "reviews": "reviews/dev-v2/dev-v2-A-approved.json",
+    "review_digest": "1d8647b823452365ad4a999a554839fb85ac33e12d9a409dc62cd083121be947"
+  },
+  "minimal": {
+    "selection": "fixed_minimal_prompt_comparator",
+    "model": "claude-haiku-5-5",
+    "effort": "medium",
+    "prompt_digest": "cfedee55daec92b111506accbc65053e162643047b118594ca2e0131b0a179df",
+    "run": "experiments/2026-10-16-dev-v2/minimal-dev-v2.json",
+    "run_digest": "e8a391f18d86e7db17a347a5a951add1559f05b856c447d85e3c9296efddf8b1",
+    "reviews": "reviews/dev-v2/dev-v2-B-approved.json",
+    "review_digest": "c90fbe655d5cd61ae07bf11ca59bcb291d280209bc356a66579440d98dbcc418"
+  },
+  "threshold_study": {
+    "path": "experiments/2026-10-17-lexical-thresholds/study.json",
+    "disposition": "sensitivity_analysis_only_not_adopted",
+    "additional_candidate_review_required": false,
+    "existing_pending_reviews": "Preserved as unreviewed historical records, never approved by this decision."
+  },
+  "next_focus": "Failure-driven optimized LLM development and reliability validation. The F1-first selection rule remains applicable to optimized candidates; no final test tuning is permitted.",
+  "scope_limit": "This freezes the two comparator configurations only. It does not approve or freeze the final test dataset, validate an optimized method, or close separate audit fixes."
+}
