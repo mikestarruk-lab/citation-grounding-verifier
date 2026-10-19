@@ -1,0 +1,321 @@
+{
+  "format_version": 1,
+  "created_at": "2026-10-17T15:13:00.232794+00:00",
+  "method": "lexical",
+  "mode": "e2e",
+  "split": "dev",
+  "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+  "gold_status": {
+    "version": 1,
+    "dev": {
+      "review_status": "approved",
+      "reviewed_by": "Michael (mikestarruk-lab)",
+      "reviewed_on": "2026-10-16",
+      "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+      "approval_record": "reviews/dev-gold-approval-2026-10-16.md"
+    },
+    "test": {
+      "review_status": "draft",
+      "reviewed_by": null,
+      "frozen": false,
+      "dataset_hash": null
+    },
+    "note": "Dev gold and v2 development outputs are owner-reviewed; see reviews/dev-v2/dev-v2-human-review-import-2026-10-17.json. Test gold remains pending. Owner review followed AI feedback and is not independent external validation."
+  },
+  "model": null,
+  "effort": null,
+  "threshold": 0.9009780479686338,
+  "prompt": null,
+  "experiment_note": "Dev-only lexical threshold sensitivity; unchanged extraction.",
+  "git_commit": "894666f126378fe347690b29657327ae7756e790",
+  "working_tree_dirty": true,
+  "source_hash": "cca494f39d1b298046df612f54c723efaf6fd413b29111794c47c2045dac68be",
+  "dependencies": {
+    "anthropic": "0.125.0",
+    "fastapi": "0.143.1",
+    "pydantic": "2.14.1"
+  },
+  "lock_hash": "6b6750597c303b6d84ab57208794fde38b86ccc4a97948661b5071b945e7761e",
+  "records": [
+    {
+      "case_id": "dev-01",
+      "trace": {
+        "first_output": {
+          "claims": [
+            {
+              "claim_text": "ArchiveBox creates hourly snapshots.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+              "citations": []
+            },
+            {
+              "claim_text": "It retains snapshots for seven days.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+              "citations": []
+            }
+          ]
+        },
+        "latency_seconds": 0.00014409999130293727
+      },
+      "status": "ok",
+      "output": {
+        "claims": [
+          {
+            "claim_text": "ArchiveBox creates hourly snapshots.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+            "citations": []
+          },
+          {
+            "claim_text": "It retains snapshots for seven days.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+            "citations": []
+          }
+        ]
+      },
+      "output_hash": "b1416fb783e67787b8c42c0d14e2e003e5a2c63a9094afcfa2f24639c35a0fb7"
+    },
+    {
+      "case_id": "dev-02",
+      "trace": {
+        "first_output": {
+          "claims": [
+            {
+              "claim_text": "RelayGate retries GET requests after a connection reset, but never retries POST requests.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+              "citations": []
+            }
+          ]
+        },
+        "latency_seconds": 0.00016399999731220305
+      },
+      "status": "ok",
+      "output": {
+        "claims": [
+          {
+            "claim_text": "RelayGate retries GET requests after a connection reset, but never retries POST requests.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+            "citations": []
+          }
+        ]
+      },
+      "output_hash": "6121a95298a360dd6b310a6c198817f946794d41607ae3d1664991c2d51793b7"
+    },
+    {
+      "case_id": "dev-03",
+      "trace": {
+        "first_output": {
+          "claims": [
+            {
+              "claim_text": "TaskDock permits five active workers.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+              "citations": []
+            },
+            {
+              "claim_text": "Additional workers remain queued.",
+              "verdict": "SUPPORTED",
+              "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+              "citations": [
+                {
+                  "index": 0,
+                  "quote": "Additional workers remain queued."
+                }
+              ]
+            }
+          ]
+        },
+        "latency_seconds": 0.0001441999920643866
+      },
+      "status": "ok",
+      "output": {
+        "claims": [
+          {
+            "claim_text": "TaskDock permits five active workers.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+            "citations": []
+          },
+          {
+            "claim_text": "Additional workers remain queued.",
+            "verdict": "SUPPORTED",
+            "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+            "citations": [
+              {
+                "index": 0,
+                "quote": "Additional workers remain queued."
+              }
+            ]
+          }
+        ]
+      },
+      "output_hash": "1d8534e71662179852272be10dffef9c5396a6f084ac7d429bf800cd5446901d"
+    },
+    {
+      "case_id": "dev-04",
+      "trace": {
+        "first_output": {
+          "claims": [
+            {
+              "claim_text": "CedarCache persists entries across restarts.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+              "citations": []
+            }
+          ]
+        },
+        "latency_seconds": 8.890000754036009e-05
+      },
+      "status": "ok",
+      "output": {
+        "claims": [
+          {
+            "claim_text": "CedarCache persists entries across restarts.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+            "citations": []
+          }
+        ]
+      },
+      "output_hash": "04fb314023354f58bf14f818f84f88d2895121fa5fe2b77f99023c162b89e130"
+    },
+    {
+      "case_id": "dev-05",
+      "trace": {
+        "first_output": {
+          "claims": [
+            {
+              "claim_text": "CachePebble writes entries to a local file after each update.",
+              "verdict": "SUPPORTED",
+              "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+              "citations": [
+                {
+                  "index": 0,
+                  "quote": "CachePebble writes entries to a local file after each update."
+                }
+              ]
+            },
+            {
+              "claim_text": "Its files are encrypted with AES-256.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+              "citations": []
+            }
+          ]
+        },
+        "latency_seconds": 0.00014180000289343297
+      },
+      "status": "ok",
+      "output": {
+        "claims": [
+          {
+            "claim_text": "CachePebble writes entries to a local file after each update.",
+            "verdict": "SUPPORTED",
+            "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+            "citations": [
+              {
+                "index": 0,
+                "quote": "CachePebble writes entries to a local file after each update."
+              }
+            ]
+          },
+          {
+            "claim_text": "Its files are encrypted with AES-256.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+            "citations": []
+          }
+        ]
+      },
+      "output_hash": "f450e1cfb84d6661812da01cdbe9724c6a3fd12aaa9ea9f1e3d49e929baf8d80"
+    },
+    {
+      "case_id": "dev-06",
+      "trace": {
+        "first_output": {
+          "claims": [
+            {
+              "claim_text": "WireFin uses Brotli compression for request payloads.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+              "citations": []
+            }
+          ]
+        },
+        "latency_seconds": 7.830001413822174e-05
+      },
+      "status": "ok",
+      "output": {
+        "claims": [
+          {
+            "claim_text": "WireFin uses Brotli compression for request payloads.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+            "citations": []
+          }
+        ]
+      },
+      "output_hash": "43b012ce8475d6432465a94866f7a387a036fa9f98a98694981a86e836c5241f"
+    },
+    {
+      "case_id": "dev-07",
+      "trace": {
+        "first_output": {
+          "claims": [
+            {
+              "claim_text": "Service Juniper encrypts its stored payloads.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+              "citations": []
+            }
+          ]
+        },
+        "latency_seconds": 0.00013860000763088465
+      },
+      "status": "ok",
+      "output": {
+        "claims": [
+          {
+            "claim_text": "Service Juniper encrypts its stored payloads.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+            "citations": []
+          }
+        ]
+      },
+      "output_hash": "e2b09219407c3b5266d09b37df94014d6ae3d69fddad8e1c0fc83e0510b6c9ff"
+    },
+    {
+      "case_id": "dev-08",
+      "trace": {
+        "first_output": {
+          "claims": [
+            {
+              "claim_text": "The recovery worker runs in region West.",
+              "verdict": "UNSUPPORTED",
+              "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+              "citations": []
+            }
+          ]
+        },
+        "latency_seconds": 0.00011670001549646258
+      },
+      "status": "ok",
+      "output": {
+        "claims": [
+          {
+            "claim_text": "The recovery worker runs in region West.",
+            "verdict": "UNSUPPORTED",
+            "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+            "citations": []
+          }
+        ]
+      },
+      "output_hash": "7658d41b97de788a8231bc7a7e999c3a97800de91abdad98a0f8df66694bb776"
+    }
+  ]
+}

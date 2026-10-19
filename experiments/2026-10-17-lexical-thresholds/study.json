@@ -1,0 +1,581 @@
+{
+  "format_version": 1,
+  "split": "dev",
+  "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+  "source_run": "experiments\\2026-10-16-dev-v2\\lexical-dev-v2.json",
+  "source_run_digest": "88fd6e0a351d753372f00d815c5734b5e7bc9a7c60bcaf1b3f4606cd7c4706a7",
+  "source_reviews": "reviews\\dev-v2\\dev-v2-A-approved.json",
+  "source_reviews_digest": "1d8647b823452365ad4a999a554839fb85ac33e12d9a409dc62cd083121be947",
+  "script_digest": "373a5c004b1b6106006f192b47def4d015528d1376b6d9863c271d252146b979",
+  "baseline_threshold": 0.65,
+  "candidate": {
+    "threshold": 0.26600227007264704,
+    "interior_point": true,
+    "run": "threshold-03.json",
+    "run_digest": "1f6034886a46dc1bb1379bc39069ad6d8873873c6f8fafbeab7f4ee597a1b451",
+    "projection": {
+      "status": "projected_from_owner_alignment_not_new_output_approval",
+      "tp": 10,
+      "fp": 2,
+      "fn": 2,
+      "f1": 0.8333333333333334,
+      "coverage": 1.0,
+      "false_support": 2,
+      "false_support_denominator": 4,
+      "false_support_rate": 0.5,
+      "false_rejection": 0,
+      "false_rejection_denominator": 8,
+      "evidence_sufficiency": null
+    }
+  },
+  "selection_status": "candidate_pending_owner_review_no_default_change",
+  "rows": [
+    {
+      "threshold": 0.0,
+      "interior_point": false,
+      "run": "threshold-00.json",
+      "run_digest": "b08b108cb1355c77881c165c4aa66d6600bb7038aa9feae10131149849da48d9",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 8,
+        "fp": 4,
+        "fn": 4,
+        "f1": 0.6666666666666666,
+        "coverage": 1.0,
+        "false_support": 4,
+        "false_support_denominator": 4,
+        "false_support_rate": 1.0,
+        "false_rejection": 0,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.0874806958574271,
+      "interior_point": true,
+      "run": "threshold-01.json",
+      "run_digest": "0759de52b1f986872665907ebdf33c5470a89434d86b7c7c5c161004450693a5",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 9,
+        "fp": 3,
+        "fn": 3,
+        "f1": 0.75,
+        "coverage": 1.0,
+        "false_support": 3,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.75,
+        "false_rejection": 0,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.1749613917148542,
+      "interior_point": false,
+      "run": "threshold-02.json",
+      "run_digest": "511e748d89976e037633af1702e5dccb021451b7ac818d800826efbcb36dec65",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 9,
+        "fp": 3,
+        "fn": 3,
+        "f1": 0.75,
+        "coverage": 1.0,
+        "false_support": 3,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.75,
+        "false_rejection": 0,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.26600227007264704,
+      "interior_point": true,
+      "run": "threshold-03.json",
+      "run_digest": "1f6034886a46dc1bb1379bc39069ad6d8873873c6f8fafbeab7f4ee597a1b451",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 10,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.8333333333333334,
+        "coverage": 1.0,
+        "false_support": 2,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.5,
+        "false_rejection": 0,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.3570431484304399,
+      "interior_point": false,
+      "run": "threshold-04.json",
+      "run_digest": "ac602b682e7ccb14a3369e0e4730fec8dfe22571a5bab820086396b972299243",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 10,
+        "fp": 2,
+        "fn": 2,
+        "f1": 0.8333333333333334,
+        "coverage": 1.0,
+        "false_support": 2,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.5,
+        "false_rejection": 0,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.45925260962523895,
+      "interior_point": true,
+      "run": "threshold-05.json",
+      "run_digest": "c612dec41f064e4b8f946272f028dbcb7a1c3ad2ddef680cc023774f85d608bf",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 9,
+        "fp": 3,
+        "fn": 3,
+        "f1": 0.75,
+        "coverage": 1.0,
+        "false_support": 2,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.5,
+        "false_rejection": 1,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.561462070820038,
+      "interior_point": false,
+      "run": "threshold-06.json",
+      "run_digest": "d82ecd47c6db4afac570073fb41979d4bb982f0be29d4b6d44b07d0e3ea7ff71",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 9,
+        "fp": 3,
+        "fn": 3,
+        "f1": 0.75,
+        "coverage": 1.0,
+        "false_support": 2,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.5,
+        "false_rejection": 1,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.5677091765669063,
+      "interior_point": true,
+      "run": "threshold-07.json",
+      "run_digest": "072406a3792679c5215782d84fd70aeb351c4fd9515cd26511669acc1bfabe5a",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 8,
+        "fp": 4,
+        "fn": 4,
+        "f1": 0.6666666666666666,
+        "coverage": 1.0,
+        "false_support": 2,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.5,
+        "false_rejection": 2,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.5739562823137747,
+      "interior_point": false,
+      "run": "threshold-08.json",
+      "run_digest": "0f10b63551f14d85439583afaac78b8e2f724de10149faa6d139bf98bdc8297b",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 8,
+        "fp": 4,
+        "fn": 4,
+        "f1": 0.6666666666666666,
+        "coverage": 1.0,
+        "false_support": 2,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.5,
+        "false_rejection": 2,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.5754513201876664,
+      "interior_point": true,
+      "run": "threshold-09.json",
+      "run_digest": "96dbcf21d85cd8e0f3d953c382ee9f66fde3f36aa717e06b1e121ed766fa0fa8",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 8,
+        "fp": 4,
+        "fn": 4,
+        "f1": 0.6666666666666666,
+        "coverage": 1.0,
+        "false_support": 1,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.25,
+        "false_rejection": 2,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.5769463580615581,
+      "interior_point": false,
+      "run": "threshold-10.json",
+      "run_digest": "d4e2131ed18fe59314a2b0f43e85522b4e38d0bf6b3b7d87029f0c6516b7d9ad",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 8,
+        "fp": 4,
+        "fn": 4,
+        "f1": 0.6666666666666666,
+        "coverage": 1.0,
+        "false_support": 1,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.25,
+        "false_rejection": 2,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.5967592242416415,
+      "interior_point": true,
+      "run": "threshold-11.json",
+      "run_digest": "71f4a5ea125620e3efc76f110bd2fa656b24a0a3e1630c518666b437025d7bad",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 8,
+        "fp": 4,
+        "fn": 4,
+        "f1": 0.6666666666666666,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 2,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.616572090421725,
+      "interior_point": false,
+      "run": "threshold-12.json",
+      "run_digest": "767c632833e5c732158159de9a530bdfa5102b9e82940b801eab20d5913b1f31",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 8,
+        "fp": 4,
+        "fn": 4,
+        "f1": 0.6666666666666666,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 2,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.65,
+      "interior_point": false,
+      "run": "threshold-13.json",
+      "run_digest": "2ce490451b9620f03bc8129eb183017e64aa33516df11010f267a91a3a2e6a2f",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 7,
+        "fp": 5,
+        "fn": 5,
+        "f1": 0.5833333333333334,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 3,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.6705578723174919,
+      "interior_point": true,
+      "run": "threshold-14.json",
+      "run_digest": "03fa1d65253f3612957d20e4879163e9ae4d8b32fbac9be22f881499ae7171d9",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 7,
+        "fp": 5,
+        "fn": 5,
+        "f1": 0.5833333333333334,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 3,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.7245436542132586,
+      "interior_point": false,
+      "run": "threshold-15.json",
+      "run_digest": "f46e00c9332dccc1a4e7b8c25ee451176dce380ac4e615432da803e4e717a188",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 7,
+        "fp": 5,
+        "fn": 5,
+        "f1": 0.5833333333333334,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 3,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.7632498750752632,
+      "interior_point": true,
+      "run": "threshold-16.json",
+      "run_digest": "9b1b2e67f4085fecd90f6a6def3e471f17869d1b7d74d85921337ccb3b7c55dd",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 6,
+        "fp": 6,
+        "fn": 6,
+        "f1": 0.5,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 4,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.8019560959372677,
+      "interior_point": false,
+      "run": "threshold-17.json",
+      "run_digest": "3b8aeecc5f3147a1c76effec8e83b0316c3c03215245d137e16f789140cf1a68",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 6,
+        "fp": 6,
+        "fn": 6,
+        "f1": 0.5,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 4,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.9009780479686338,
+      "interior_point": true,
+      "run": "threshold-18.json",
+      "run_digest": "b67bbbb395c7d19848e701c4cc8bd6e93c6f4e8ed4972b75981ac8c025f21822",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 4,
+        "fp": 8,
+        "fn": 8,
+        "f1": 0.3333333333333333,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 6,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.9999999999999998,
+      "interior_point": true,
+      "run": "threshold-19.json",
+      "run_digest": "48e9d0f6685de6d18cae77baea877f96ffdfb56380e02ebb9c2362b3541a1af9",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 4,
+        "fp": 8,
+        "fn": 8,
+        "f1": 0.3333333333333333,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 6,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 0.9999999999999999,
+      "interior_point": false,
+      "run": "threshold-20.json",
+      "run_digest": "a16e7fda8f39fecbd4ba11b64fe3103632c8f27c28ff9075138fb4eac5c99676",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 3,
+        "fp": 9,
+        "fn": 9,
+        "f1": 0.25,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 7,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    },
+    {
+      "threshold": 1.0,
+      "interior_point": true,
+      "run": "threshold-21.json",
+      "run_digest": "d45ce7c5315ac0c54f23d82c0847505c0c6141e67892bb36fdb3e98085040351",
+      "projection": {
+        "status": "projected_from_owner_alignment_not_new_output_approval",
+        "tp": 2,
+        "fp": 10,
+        "fn": 10,
+        "f1": 0.16666666666666666,
+        "coverage": 1.0,
+        "false_support": 0,
+        "false_support_denominator": 4,
+        "false_support_rate": 0.0,
+        "false_rejection": 8,
+        "false_rejection_denominator": 8,
+        "evidence_sufficiency": null
+      }
+    }
+  ],
+  "changed_predictions": [
+    {
+      "case_id": "dev-04",
+      "prediction_index": 0,
+      "before": {
+        "claim_text": "CedarCache persists entries across restarts.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+        "citations": []
+      },
+      "after": {
+        "claim_text": "CedarCache persists entries across restarts.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "CedarCache does not persist entries across restarts."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "dev-08",
+      "prediction_index": 0,
+      "before": {
+        "claim_text": "The recovery worker runs in region West.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+        "citations": []
+      },
+      "after": {
+        "claim_text": "The recovery worker runs in region West.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "The recovery worker runs on host Maple."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "dev-03",
+      "prediction_index": 0,
+      "before": {
+        "claim_text": "TaskDock permits five active workers.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+        "citations": []
+      },
+      "after": {
+        "claim_text": "TaskDock permits five active workers.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "TaskDock permits at most four active workers."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "dev-01",
+      "prediction_index": 0,
+      "before": {
+        "claim_text": "ArchiveBox creates hourly snapshots.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+        "citations": []
+      },
+      "after": {
+        "claim_text": "ArchiveBox creates hourly snapshots.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "ArchiveBox creates a snapshot every hour."
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "dev-01",
+      "prediction_index": 1,
+      "before": {
+        "claim_text": "It retains snapshots for seven days.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+        "citations": []
+      },
+      "after": {
+        "claim_text": "It retains snapshots for seven days.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "Snapshots are retained for seven days."
+          }
+        ]
+      }
+    }
+  ]
+}

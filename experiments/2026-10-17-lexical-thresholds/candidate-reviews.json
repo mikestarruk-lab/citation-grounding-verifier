@@ -1,0 +1,568 @@
+[
+  {
+    "review_id": "05ec364d3666c813",
+    "case_id": "dev-04",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "3a481cbeaf30d49819708559345f56e69271c59abe22b2a762e529ffcef4bc53",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "CedarCache does not persist entries across restarts."
+    ],
+    "generated_answer": "CedarCache persists entries across restarts.",
+    "gold_claims": [
+      {
+        "claim_text": "CedarCache persists entries across restarts.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "The source says CedarCache does not persist entries across restarts, directly opposing the answer's persistence claim.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "CedarCache does not persist entries across restarts."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Compare the same cache, entries, and restart condition; the answer reverses an explicit negation."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "CedarCache persists entries across restarts.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "CedarCache does not persist entries across restarts."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "CedarCache persists entries across restarts.",
+        "gold_id": "g1",
+        "evidence_sufficient": null,
+        "note": "New output needs owner evidence review."
+      }
+    ],
+    "alignment_source": {
+      "review_id": "b91c622410a45190",
+      "output_hash": "04fb314023354f58bf14f818f84f88d2895121fa5fe2b77f99023c162b89e130",
+      "note": "Semantic alignment copied for unchanged text; new output remains pending."
+    }
+  },
+  {
+    "review_id": "177a38333d9cd6ab",
+    "case_id": "dev-02",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "f33a0644d46cbea8e7cb0bf5828a6ca286bc00e857aa22ae63a30effc65f6588",
+    "status": "approved",
+    "reviewer": "Michael (mikestarruk-lab)",
+    "context_passages": [
+      "RelayGate retries GET requests after a connection reset. It never retries POST requests."
+    ],
+    "generated_answer": "RelayGate retries GET requests after a connection reset, but never retries POST requests.",
+    "gold_claims": [
+      {
+        "claim_text": "RelayGate retries GET requests after a connection reset.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source explicitly retries GET requests after a connection reset, matching the answer's request type and condition.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "RelayGate retries GET requests after a connection reset. It never retries POST requests."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "The connection-reset condition is part of the fact; this does not establish retries after every kind of failure."
+      },
+      {
+        "claim_text": "RelayGate never retries POST requests.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source states that RelayGate never retries POST requests.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "RelayGate retries GET requests after a connection reset. It never retries POST requests."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "Resolve It to RelayGate and preserve never; the exception for POST is independent of the supported GET behavior."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "RelayGate retries GET requests after a connection reset, but never retries POST requests.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "RelayGate retries GET requests after a connection reset."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "RelayGate retries GET requests after a connection reset.",
+        "gold_id": "g1",
+        "evidence_sufficient": true,
+        "note": "如果只引用了GET 的话不充分，应该都引用 拆成 g1、g2；GET 证据充分，POST 证据不充分，评分时分别记录。",
+        "source_cell": "配对!L6"
+      },
+      {
+        "prediction_index": 0,
+        "text": "RelayGate never retries POST requests.",
+        "gold_id": "g2",
+        "evidence_sufficient": false,
+        "note": "如果只引用了GET 的话不充分，应该都引用 拆成 g1、g2；GET 证据充分，POST 证据不充分，评分时分别记录。",
+        "source_cell": "配对!L6"
+      }
+    ],
+    "reviewed_on": "2026-10-17",
+    "review_source": "reviews/dev-v2/dev-v2-alignment.xlsx",
+    "review_source_sha256": "fb637ff6013726e6ec5c1f11cd7c3dc7c6a893889336739a8843987e44745289",
+    "review_source_rows": [
+      6
+    ],
+    "review_process": "Owner review after Codex AI feedback; not an independent blind review."
+  },
+  {
+    "review_id": "4463e1ea6ed4ba34",
+    "case_id": "dev-08",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "af4719a7c3ee5d9bda3c1e7d08b87498e2afe01280bddd5f9c88bb141e987453",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "The recovery worker runs on host Maple.",
+      "Host Maple is located in region West."
+    ],
+    "generated_answer": "The recovery worker runs in region West.",
+    "gold_claims": [
+      {
+        "claim_text": "The recovery worker runs in region West.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The worker runs on Maple according to passage 0, and Maple is in West according to passage 1, placing the worker in West.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "The recovery worker runs on host Maple."
+          },
+          {
+            "index": 1,
+            "quote": "Host Maple is located in region West."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "The conclusion follows by joining the same host Maple across the two passages; both location premises are required."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "The recovery worker runs in region West.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "The recovery worker runs on host Maple."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "The recovery worker runs in region West.",
+        "gold_id": "g1",
+        "evidence_sufficient": null,
+        "note": "New output needs owner evidence review."
+      }
+    ],
+    "alignment_source": {
+      "review_id": "bef10536635f486e",
+      "output_hash": "7658d41b97de788a8231bc7a7e999c3a97800de91abdad98a0f8df66694bb776",
+      "note": "Semantic alignment copied for unchanged text; new output remains pending."
+    }
+  },
+  {
+    "review_id": "68f651aaae7a5955",
+    "case_id": "dev-05",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "f450e1cfb84d6661812da01cdbe9724c6a3fd12aaa9ea9f1e3d49e929baf8d80",
+    "status": "approved",
+    "reviewer": "Michael (mikestarruk-lab)",
+    "context_passages": [
+      "CachePebble writes entries to a local file after each update."
+    ],
+    "generated_answer": "CachePebble writes entries to a local file after each update. Its files are encrypted with AES-256.",
+    "gold_claims": [
+      {
+        "claim_text": "CachePebble writes entries to a local file after each update.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source explicitly writes CachePebble entries to a local file after each update.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "CachePebble writes entries to a local file after each update."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Preserve the after-each-update condition; the separate encryption assertion has a different evidential status."
+      },
+      {
+        "claim_text": "CachePebble files are encrypted with AES-256.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "The source describes local file writes but gives no encryption algorithm or encryption guarantee.",
+        "citations": [],
+        "id": "g2",
+        "annotation_reason": "Local storage neither establishes nor rules out AES-256; absence of evidence is not a contradiction."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "CachePebble writes entries to a local file after each update.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "CachePebble writes entries to a local file after each update."
+            }
+          ]
+        },
+        {
+          "claim_text": "Its files are encrypted with AES-256.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "CachePebble writes entries to a local file after each update.",
+        "gold_id": "g1",
+        "evidence_sufficient": true,
+        "note": "",
+        "source_cell": "配对!J15:L15"
+      },
+      {
+        "prediction_index": 1,
+        "text": "Its files are encrypted with AES-256.",
+        "gold_id": "g2",
+        "evidence_sufficient": null,
+        "note": "",
+        "source_cell": "配对!J16:L16"
+      }
+    ],
+    "reviewed_on": "2026-10-17",
+    "review_source": "reviews/dev-v2/dev-v2-alignment.xlsx",
+    "review_source_sha256": "fb637ff6013726e6ec5c1f11cd7c3dc7c6a893889336739a8843987e44745289",
+    "review_source_rows": [
+      15,
+      16
+    ],
+    "review_process": "Owner review after Codex AI feedback; not an independent blind review."
+  },
+  {
+    "review_id": "6a378da1c1b4a246",
+    "case_id": "dev-07",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "d611784c2bd4c653e506bf283b0d93c11fc6f540aca2bcbfe9d5079a1e2dcc8d",
+    "status": "approved",
+    "reviewer": "Michael (mikestarruk-lab)",
+    "context_passages": [
+      "Service Juniper runs in mode Q.",
+      "Every service in mode Q encrypts its stored payloads."
+    ],
+    "generated_answer": "Service Juniper encrypts its stored payloads.",
+    "gold_claims": [
+      {
+        "claim_text": "Service Juniper encrypts its stored payloads.",
+        "verdict": "SUPPORTED",
+        "reasoning": "Passage 0 places Juniper in mode Q; passage 1 says every service in Q encrypts stored payloads. Together they entail the claim.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "Service Juniper runs in mode Q."
+          },
+          {
+            "index": 1,
+            "quote": "Every service in mode Q encrypts its stored payloads."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Both the service's membership and the universal encryption rule are necessary; citing either passage alone omits a premise."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "Service Juniper encrypts its stored payloads.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+          "citations": [
+            {
+              "index": 1,
+              "quote": "Every service in mode Q encrypts its stored payloads."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "Service Juniper encrypts its stored payloads.",
+        "gold_id": "g1",
+        "evidence_sufficient": false,
+        "note": "应该有两条引用",
+        "source_cell": "配对!J21:L21"
+      }
+    ],
+    "reviewed_on": "2026-10-17",
+    "review_source": "reviews/dev-v2/dev-v2-alignment.xlsx",
+    "review_source_sha256": "fb637ff6013726e6ec5c1f11cd7c3dc7c6a893889336739a8843987e44745289",
+    "review_source_rows": [
+      21
+    ],
+    "review_process": "Owner review after Codex AI feedback; not an independent blind review."
+  },
+  {
+    "review_id": "7392a545f2d0f4c7",
+    "case_id": "dev-03",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "2069146ca5d7939801d3acf1976cc198a9569a21b9debbea3956ee67ededa5da",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "TaskDock permits at most four active workers. Additional workers remain queued."
+    ],
+    "generated_answer": "TaskDock permits five active workers. Additional workers remain queued.",
+    "gold_claims": [
+      {
+        "claim_text": "TaskDock permits five active workers.",
+        "verdict": "CONTRADICTED",
+        "reasoning": "The specification permits at most four active TaskDock workers, so permitting five active workers exceeds the stated maximum.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "TaskDock permits at most four active workers. Additional workers remain queued."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Four is an inclusive upper bound on active workers, not a lower bound or a limit on queued workers."
+      },
+      {
+        "claim_text": "Additional TaskDock workers remain queued.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The specification explicitly states that additional workers remain queued.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "TaskDock permits at most four active workers. Additional workers remain queued."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "Additional workers refers to workers beyond TaskDock's active-worker limit; this remains supported despite the answer's incorrect number."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "TaskDock permits five active workers.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "TaskDock permits at most four active workers."
+            }
+          ]
+        },
+        {
+          "claim_text": "Additional workers remain queued.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Additional workers remain queued."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "TaskDock permits five active workers.",
+        "gold_id": "g1",
+        "evidence_sufficient": null,
+        "note": "New output needs owner evidence review."
+      },
+      {
+        "prediction_index": 1,
+        "text": "Additional workers remain queued.",
+        "gold_id": "g2",
+        "evidence_sufficient": null,
+        "note": "New output needs owner evidence review."
+      }
+    ],
+    "alignment_source": {
+      "review_id": "7937014053aa8714",
+      "output_hash": "1d8534e71662179852272be10dffef9c5396a6f084ac7d429bf800cd5446901d",
+      "note": "Semantic alignment copied for unchanged text; new output remains pending."
+    }
+  },
+  {
+    "review_id": "8be92893f678f858",
+    "case_id": "dev-06",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "43b012ce8475d6432465a94866f7a387a036fa9f98a98694981a86e836c5241f",
+    "status": "approved",
+    "reviewer": "Michael (mikestarruk-lab)",
+    "context_passages": [
+      "WireFin reuses an established connection for subsequent requests."
+    ],
+    "generated_answer": "WireFin uses Brotli compression for request payloads.",
+    "gold_claims": [
+      {
+        "claim_text": "WireFin uses Brotli compression for request payloads.",
+        "verdict": "UNSUPPORTED",
+        "reasoning": "The only supplied behavior is connection reuse; the source does not specify request compression or Brotli.",
+        "citations": [],
+        "id": "g1",
+        "annotation_reason": "Connection reuse and payload compression are independent properties, so neither support nor direct refutation is available."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "WireFin uses Brotli compression for request payloads.",
+          "verdict": "UNSUPPORTED",
+          "reasoning": "No sufficiently similar source sentence was found by the lexical heuristic.",
+          "citations": []
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "WireFin uses Brotli compression for request payloads.",
+        "gold_id": "g1",
+        "evidence_sufficient": null,
+        "note": "",
+        "source_cell": "配对!J19:L19"
+      }
+    ],
+    "reviewed_on": "2026-10-17",
+    "review_source": "reviews/dev-v2/dev-v2-alignment.xlsx",
+    "review_source_sha256": "fb637ff6013726e6ec5c1f11cd7c3dc7c6a893889336739a8843987e44745289",
+    "review_source_rows": [
+      19
+    ],
+    "review_process": "Owner review after Codex AI feedback; not an independent blind review."
+  },
+  {
+    "review_id": "c79c302ce6db3b77",
+    "case_id": "dev-01",
+    "dataset_hash": "e39de6a74af6717c5d1ae0621195b730b01e2d969d40581cb2e7ea340962bd6c",
+    "output_hash": "73cf15b266d7a4fb4f342adb6e77c773d0b571040d603ea25c00ebe8c5f1d62e",
+    "status": "pending",
+    "reviewer": null,
+    "context_passages": [
+      "ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days."
+    ],
+    "generated_answer": "ArchiveBox creates hourly snapshots. It retains snapshots for seven days.",
+    "gold_claims": [
+      {
+        "claim_text": "ArchiveBox creates a snapshot every hour.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source says ArchiveBox creates a snapshot every hour, which is equivalent to hourly snapshots.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days."
+          }
+        ],
+        "id": "g1",
+        "annotation_reason": "Keep snapshot frequency separate from retention duration; hourly is a valid paraphrase of every hour."
+      },
+      {
+        "claim_text": "ArchiveBox retains snapshots for seven days.",
+        "verdict": "SUPPORTED",
+        "reasoning": "The source explicitly retains ArchiveBox snapshots for seven days.",
+        "citations": [
+          {
+            "index": 0,
+            "quote": "ArchiveBox creates a snapshot every hour. Snapshots are retained for seven days."
+          }
+        ],
+        "id": "g2",
+        "annotation_reason": "The second answer sentence refers to ArchiveBox snapshots; retain the object and seven-day duration."
+      }
+    ],
+    "prediction": {
+      "claims": [
+        {
+          "claim_text": "ArchiveBox creates hourly snapshots.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "ArchiveBox creates a snapshot every hour."
+            }
+          ]
+        },
+        {
+          "claim_text": "It retains snapshots for seven days.",
+          "verdict": "SUPPORTED",
+          "reasoning": "Lexical similarity exceeds the configured threshold; this heuristic does not establish semantic entailment.",
+          "citations": [
+            {
+              "index": 0,
+              "quote": "Snapshots are retained for seven days."
+            }
+          ]
+        }
+      ]
+    },
+    "units": [
+      {
+        "prediction_index": 0,
+        "text": "ArchiveBox creates hourly snapshots.",
+        "gold_id": "g1",
+        "evidence_sufficient": null,
+        "note": "New output needs owner evidence review."
+      },
+      {
+        "prediction_index": 1,
+        "text": "It retains snapshots for seven days.",
+        "gold_id": "g2",
+        "evidence_sufficient": null,
+        "note": "New output needs owner evidence review."
+      }
+    ],
+    "alignment_source": {
+      "review_id": "54375d9ba5082f3a",
+      "output_hash": "b1416fb783e67787b8c42c0d14e2e003e5a2c63a9094afcfa2f24639c35a0fb7",
+      "note": "Semantic alignment copied for unchanged text; new output remains pending."
+    }
+  }
+]

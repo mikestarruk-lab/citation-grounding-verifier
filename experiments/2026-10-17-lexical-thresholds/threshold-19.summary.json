@@ -1,0 +1,39 @@
+{
+  "mode": "e2e",
+  "method": "lexical",
+  "cases": 8,
+  "success_rate": 1.0,
+  "repair_rate": 0.0,
+  "confirmed_cost_usd": 0.0,
+  "unsettled_reserved_usd": 0.0,
+  "first_quote_validity": 1.0,
+  "final_quote_validity": 1.0,
+  "latency_sample_size": 8,
+  "p50_seconds": 0.00013410000246949494,
+  "p95_seconds": 0.00016388999210903418,
+  "first_client_call_seconds": [],
+  "warm_call_p50_seconds": null,
+  "pending_reviews": [
+    "dev-01",
+    "dev-02",
+    "dev-03",
+    "dev-04",
+    "dev-05",
+    "dev-06",
+    "dev-07",
+    "dev-08"
+  ],
+  "counts": {
+    "cases": 8,
+    "gold_facts": 12,
+    "calls": 0,
+    "repaired_requests": 0,
+    "first_valid_quotes": 2,
+    "first_quotes": 2,
+    "final_valid_quotes": 2,
+    "final_quotes": 2,
+    "successes": 8
+  },
+  "semantic_status": "pending_human_review",
+  "gold_review_status": "approved"
+}
