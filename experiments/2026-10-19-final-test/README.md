@@ -21,12 +21,31 @@ Both LLM methods hit the ceiling: the short test cases cannot separate them on
 verification alone. The lexical baseline never recognizes a contradiction and
 calls 3 contradicted facts supported.
 
-## End-to-end runs (pending owner review)
+## End-to-end results (owner-reviewed, final)
+
+The owner confirmed the AI-proposed rev2 alignment as written on 2026-10-19
+(`reviews/test-final/*-test-approved.json`). Scores below come from the
+standard scorer (`*-test.reviewed.summary.json`).
+
+| Method | Fact + label F1 | Precision / recall | False support | False rejection | Evidence sufficiency | Atomicity |
+|---|---:|---|---:|---:|---:|---:|
+| lexical (0.65) | 0.400 | 0.394 / 0.406 | 3 | 12 | 3/10 (30%) | 61% |
+| minimal | 0.970 | 0.941 / 1.000 | 0 | 0 | 22/28 (79%) | 100% |
+| optimized (lean-v1) | **1.000** | 1.000 / 1.000 | 0 | 0 | **24/26 (92%)** | 100% |
+
+Minimal's two false positives are source premises it restated as claims the
+answer never made (test-16, test-20). Its evidence gaps are in multi-passage
+cases where it quotes only one passage. Lean misses two premises (test-01
+threshold, test-17 role). Evidence for five extra or mislabelled S/C units
+was filled mechanically after the owner's confirmation because the scorer
+requires it; see `approve.py`. Review followed AI feedback and is not
+independent blind annotation.
+
+## End-to-end run details
 
 Extraction, labels and citations from the generated answers. Citation legality
-is 100% for every method, enforced in code. The semantic F1 needs owner
-alignment and evidence review; the packets are in `reviews/test-final/`
-(`*-test-pending.json`, cases in shuffled order).
+is 100% for every method, enforced in code. The semantic F1 was reviewed as above; the original pending packets are kept in
+`reviews/test-final/` (`*-test-pending.json`, cases in shuffled order).
 
 | Method | Predictions (gold: 32) | p50 / p95 s | Cost USD |
 |---|---:|---|---:|
