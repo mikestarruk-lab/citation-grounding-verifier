@@ -4,13 +4,9 @@ An interview project implementing `POST /verify`: extract factual claims from an
 answer and classify them using only the supplied passages. The contract is in
 [assignment.md](assignment.md).
 
-**Work in progress.** The service, lexical baseline, LLM paths and evaluation tools
-are implemented. Development gold is owner-approved. Test gold was owner-approved
-and frozen on 2026-10-19. The two development baselines have owner-reviewed
-semantic results. The optimized method (lean-v1 prompt, span citations, one
-validated repair) was selected on 2026-10-19 from preregistered stability repeats;
-it is the most stable candidate, not a demonstrated improvement over minimal.
-Final test runs, their reviews and the evaluation report are pending.
+Three approaches are implemented and evaluated on a frozen, owner-approved test
+split: a lexical baseline, a minimally prompted LLM and an optimized LLM verifier.
+See the [evaluation report](#evaluation-report) below.
 
 ## Run locally
 
@@ -76,6 +72,143 @@ cannot be replayed against the revised gold. Test runs require a human-approved,
 hash-bound frozen manifest. Final test execution also waits for method freeze.
 Paid runs share the local $20 budget ledger; retain it across experiments.
 
+## Evaluation report
+
+**Result.** On the frozen 20-case test split, the optimized verifier (lean-v1)
+reached end-to-end fact + label F1 1.000 with 92% evidence sufficiency, minimal
+0.970 with 79%, and the lexical baseline 0.400 with three false supports. Both LLM
+methods scored 1.000 when given the gold facts directly, so the short test cases
+mainly separate them on claim extraction and evidence, not on verdicts.
+
+### Benchmark and metrics
+
+- **Data.** 28 synthetic technical-specification cases in four balanced
+  categories (supported, subtle distortion, extrinsic hallucination,
+  multi-passage synthesis): 8 dev cases (12 facts) for development and 20 test
+  cases (32 facts: 19 SUPPORTED, 7 CONTRADICTED, 6 UNSUPPORTED). Test gold was
+  audited twice, edited only before freezing, approved by the project owner and
+  hash-bound ([approval](reviews/test-gold-approval-2026-10-19.md)). Five extra
+  development challenges (12 draft-gold facts) target failure modes found on dev.
+- **End-to-end fact + label F1** (primary). Each predicted claim is aligned to at
+  most one gold fact by meaning, keeping qualifiers. A matched claim with the
+  right verdict is a true positive; a wrong verdict counts as both a false
+  positive and a false negative; extra or duplicate claims are false positives.
+  Alignment rule: references may resolve to entities, but content needed to
+  match a gold fact must appear in the prediction's own text.
+- **Evidence sufficiency.** Every SUPPORTED/CONTRADICTED unit's own quotes must
+  contain every independently necessary premise (for example both links of a
+  multi-hop chain). Citation legality (index in range, verbatim substring) is
+  enforced in code and is 100% for every method, so it is reported separately.
+- **Fixed-gold diagnostic.** Each method classifies the gold facts directly
+  (`--mode gold`); macro-F1 needs no alignment and isolates verification.
+- **Process.** Every method, prompt and selection rule was frozen before the
+  test runs, which ran once each with no reruns
+  ([plan](experiments/2026-10-19-final-test/PLAN.md)). Alignments were
+  AI-proposed and then confirmed by the owner; this is not independent blind
+  annotation.
+
+### Results on the frozen test split
+
+| Method | E2E F1 | Precision / recall | False support | False rejection | Evidence sufficiency | Fixed-gold macro-F1 |
+|---|---:|---|---:|---:|---:|---:|
+| Lexical (TF-IDF, threshold 0.65) | 0.400 | 0.394 / 0.406 | 3 | 12 | 3/10 (30%) | 0.368 |
+| Minimal LLM | 0.970 | 0.941 / 1.000 | 0 | 0 | 22/28 (79%) | 1.000 |
+| **Optimized LLM (lean-v1)** | **1.000** | 1.000 / 1.000 | 0 | 0 | **24/26 (92%)** | 1.000 |
+
+| Method | p50 / p95 latency (s) | Cost per case (USD) | Tokens per case (in / out) | Request failures |
+|---|---|---:|---|---:|
+| Lexical | < 0.001 | 0 | none | 0/20 |
+| Minimal LLM | 1.75 / 2.29 | 0.00020 | 847 / 230 | 0/20 |
+| Optimized LLM | 2.50 / 3.55 | 0.00026 | 971 / 316 | 0/20 |
+
+Both LLM methods use `claude-haiku-5-5` with medium effort. Cost is a
+configured-rate estimate from recorded token usage, not an invoice; latency
+is one run per method on the same day. The optimized prompt is longer, so it
+costs about 28% more and is about 0.75 s slower at the median. Full records:
+[test runs](experiments/2026-10-19-final-test/README.md) and the approved
+reviews in `reviews/test-final/`.
+
+### From minimal to optimized
+
+1. **Baselines first.** On the approved dev split the reviewed minimal LLM
+   already scored F1 1.000 (lexical 0.583). Prompting harder against eight
+   solved cases would only overfit, so both comparators were frozen
+   ([decision](experiments/baseline-freeze-2026-10-18.json)) and five
+   development challenges were written around gaps seen in dev outputs:
+   scoped quantities, a refutation that needs exclusivity premises, a sufficient
+   (not necessary) condition, an embedded prompt injection, and a compound
+   transactional claim.
+2. **refined-v1** (the existing refined prompt plus one validated repair) and
+   minimal both dropped conditions and cited incomplete premise chains on the
+   challenges.
+3. **refined-v2** added explicit rules for conditions, rule strength and
+   refutation premises. It cited more premises but began over-refusing: on dev-08
+   it demanded an unstated rule that a worker runs in its host's region.
+4. **Full-passage citations** (a deterministic post-processing ablation) made
+   evidence look complete by inclusion rather than selection, so evidence is
+   always judged on the model's original quotes and the policy was not adopted.
+5. **lean-v1** keeps the minimal prompt and adds four lines: keep conditions
+   attached, preserve rule strength, flag irreconcilable conflicts, and allow
+   valid multi-passage inference.
+6. **Selection by preregistered repeats.** Three candidates ran three times on
+   dev and challenges ([plan](experiments/2026-10-19-stability/PLAN.md),
+   [results](experiments/2026-10-19-stability/README.md)). refined-v2 was excluded
+   for repeating the dev-08 false rejection (2 of 5 runs) and one unrecovered
+   contract violation; refined-v1 and lean tied on dev, and lean led on challenge
+   F1 (0.906 vs 0.880) and evidence (91% vs 81%). Minimal, repeated afterwards
+   for comparison only, scored 1.000 on dev and 0.878 on challenges.
+7. **Repair path.** One validated retry is the optimized method's engineering
+   gain. On six scripted invalid-then-valid responses, minimal fails all six and
+   the repair path recovers all six; two consecutive invalid responses still
+   fail ([controlled faults](experiments/2026-10-18-optimized-v1/controlled-faults.json)).
+   No live test request needed it.
+
+### Key failure cases
+
+- **Lexical misses contradictions.** test-06 (31 vs 30 days) and test-09 become
+  UNSUPPORTED, and test-07, test-08 and the V1 half of test-20 become SUPPORTED
+  because the refuting sentence overlaps heavily with the claim. Sentence
+  splitting also scores compound answers all-or-nothing, and it broke
+  "Apache 2.0" at the period in test-15.
+- **Minimal restates premises as claims.** In test-16 and test-20 it outputs
+  source premises the answer never asserted ("The Acorn project uses the bronze
+  retention policy."), costing precision. In multi-hop cases it quotes one
+  passage only: test-17 omits Lina's role, test-19 the one-state-per-slot
+  premise, and test-20 the exclusive routing rule.
+- **Optimized still misses premises.** test-17's contradiction quotes only
+  "cannot delete logs" without Lina's sole role, and test-01 quotes "Larger files
+  are rejected." without the 8 MiB threshold that defines "larger".
+- **Development failures that the test split does not show.** refined-v2's
+  over-refusal on dev-08; lean once turned the challenge-03 missing-condition
+  case into a contradiction (as did minimal once); refined-v1 and lean each judged
+  "three additional queued jobs" UNSUPPORTED once against a source that says
+  "up to three", a gold boundary worth stating.
+
+### Limitations
+
+- The cases are short (5–22 words of context) and mostly single-sentence
+  evidence, so both LLMs hit the verdict ceiling; differences are small and
+  rest on 20 test cases and one run per method.
+- Gold and alignments were owner-approved after AI review, not independently
+  annotated; challenge gold remains draft and is used only for development.
+- The comparison is one model at one effort setting; latency and cost come from
+  single runs.
+
+### Reproducing the test results
+
+Scoring needs no API key; it replays saved runs against the approved reviews:
+
+```sh
+uv run python -m grounding_verifier.cli score --run experiments/2026-10-19-final-test/optimized-test.json --reviews reviews/test-final/optimized-test-approved.json
+```
+
+New paid runs write to new paths (existing files are never overwritten); the
+CLI refuses test data whose hash does not match the frozen manifest:
+
+```sh
+uv run python -m grounding_verifier.cli run --method optimized --split test --experiment-note experiments/method-freeze-2026-10-19.json --out runs/optimized-test-new.json
+```
+
 ## Project records
 
 - [First optimized-method development cycle](experiments/2026-10-18-optimized-v1/README.md):
@@ -110,8 +243,3 @@ Paid runs share the local $20 budget ledger; retain it across experiments.
   [remediation plan](reviews/gold/gold-audit-remediation-plan-2026-10-15.md).
 - [Design rationale, Chinese](docs/design-rationale.zh-CN.md).
 - [Implementation decisions and change history, Chinese](docs/change-history.zh-CN.md).
-
-The current change addresses gold granularity, specific explanations and complete
-review fields. No new model-quality claim follows from those repairs. A final
-English report with reviewed comparisons, failure cases and clean reproduction
-evidence remains a delivery task.
