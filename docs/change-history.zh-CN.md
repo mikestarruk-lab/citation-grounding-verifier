@@ -240,3 +240,41 @@ manifest 的 dev 改为 approved，test 仍为 draft / frozen=false。重新生�
 自动汇总、故障控制与可复现脚本。MIC-108 转 In Review，候选比较和冻结仍待真实审核；
 MIC-104/105 的独立整改、MIC-107 的实际审查时长缺口不由本轮自动关闭。
 本轮新代码和产物保存在本地，尚未提交或推送 GitHub。
+
+### 新挑战 gold 的 AI 再审与人工二次审阅文档
+
+按你要求，对新增 5 案例、12 条 gold 逐条复核，另生成
+[完整二次审阅文档](../reviews/development-challenges-v1/gold-ai-review.zh-CN.md)。
+包含全部 13 段英文原文、待核验答案、原 gold 每个字段和完整引文，以及中文 AI 判断、
+边界、具体确认问题和空白人工意见栏。结构化 JSON 保存同版本来源、AI 意见及 pending
+人工决定；生成脚本拒绝覆盖已有文档，防止二次生成冲掉你的填写。
+
+未发现必须翻转标签的充分依据。8 条建议保留；challenge-02/g1 建议补全排除 West
+的理由；challenge-05 三条需明确正常成功路径与提交前崩溃的关系，并固定事务关系
+的独立计分口径。保留 C 的 challenge-01/g3 依据是原文明示 not per tenant，
+并非凭每任务额度推算租户最大连接数；challenge-03 不把充分条件偷换成必要条件。
+所有问题和原文并列呈现，不为让模型成绩更好而偷偷修改 gold。
+
+13/13 引用对象通过严格索引、非空和逐字检查；S/C/U 分布为 7/2/3。
+原数据与 manifest 保持不变，新审阅不生成审批或质量分数，没有 API 调用。
+此前已见实验输出，本次如实标记为 AI 再审，不能称独立盲审。若你选择修改输入，
+需另存版本并重跑受影响配置；只修改 gold 也须重绑版本并重新审查评分记录。
+
+### 所有者同意四项澄清，落实为挑战 v2
+
+你回复“我同意你的明确内容”，本次记录为 challenge-02/g1 与 challenge-05 三条
+的澄清方案获认可。新建 data/development-challenges-v2，保留 5 案例、12 事实及
+全部标签；v1 和旧实验不覆盖。challenge-02 只补全排除 West 的理由。
+challenge-05 明确先在同一事务写状态、删记录，再于提交后报告成功；答案和 gold
+改为报告成功时已完成这些动作，避免把动作错误安排在提交之后。三条评分分别考察
+两个动作及共同事务关系，不重复匹配，也不把相关事实当作统计独立样本。
+
+新数据哈希为 `c0a11c4a6c7eb11c5f8f18229cbb323d00e61d8c8f5e97c12772bca4979ad504`。
+只有 challenge-05 的模型输入变化；其余四例输入逐项相同。模型结构与引文检查通过，
+实施脚本 Ruff lint/format 通过。原始确认语句、认可范围和新旧哈希另存于
+reviews/development-challenges-v1/clarification-decision.json；完整新版原文和标注见
+[澄清落地版](../reviews/development-challenges-v1/clarified-gold-v2.zh-CN.md)。
+
+本次确认不扩大为其余八条或新英文措辞的整体批准，manifest 保持 draft；
+模型输出审核也没有自动完成。本轮无 API 调用，后续使用新版评测时需重跑
+challenge-05，并对其他四例的输出复用显式核对来源，不能直接改旧运行哈希。
