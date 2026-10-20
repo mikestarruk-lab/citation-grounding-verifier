@@ -29,7 +29,8 @@ These are AI observations, not complete human-reviewed quality scores.
   citations) and adds evidence judged on the model's original citations before
   passage expansion. Counts: 59 matched, 5 unmatched, 1 missing gold. With original
   citations, refined-v2-passage is 8/9 and lean-v1-passage 5/9 sufficient, versus
-  9/9 for both after expansion. Still AI-proposed and owner-pending.
+  9/9 for both after expansion. Owner-approved as written on 2026-10-19
+  ([approval](../../reviews/development-challenges-v1/challenge-gold-v2-approval-2026-10-19.md)).
 - [Revision 1 alignment draft](ai-alignment-2026-10-19.zh-CN.md) and matching JSON
   (historical, superseded by rev2):
   all 25 records, 56 predictions and 64 proposed scoring units. Qualifiers,
@@ -48,7 +49,7 @@ These are AI observations, not complete human-reviewed quality scores.
 - [Revised gold](../../reviews/development-challenges-v1/clarified-gold-v2.zh-CN.md)
   and [decision provenance](../../reviews/development-challenges-v1/clarification-decision.json).
   The accepted scope is the clarification approach. Exact v2 wording and remaining
-  gold have not been assigned blanket approval; the manifest remains draft.
+  gold were later approved in full on 2026-10-19 and the manifest is approved.
 - `PLAN.md`: stored before the new calls. Original v1 evidence is preserved.
 
 No old human approvals were copied onto new gold/output bindings. No complete

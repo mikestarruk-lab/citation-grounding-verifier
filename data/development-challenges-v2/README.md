@@ -17,7 +17,9 @@ The exact owner message and its bounded scope are recorded in
 [clarification-decision.json](../../reviews/development-challenges-v1/clarification-decision.json).
 Acceptance of the clarification approach is not blanket approval of untouched
 units or review of the assistant's newly materialized exact English wording.
-The manifest therefore remains draft pending final gold acceptance.
+The owner later approved the full v2 gold on 2026-10-19
+([approval](../../reviews/development-challenges-v1/challenge-gold-v2-approval-2026-10-19.md));
+the manifest is approved.
 
 The [complete revised review](../../reviews/development-challenges-v1/clarified-gold-v2.zh-CN.md)
 contains every passage, answer, gold field, and citation. v1 and its original runs

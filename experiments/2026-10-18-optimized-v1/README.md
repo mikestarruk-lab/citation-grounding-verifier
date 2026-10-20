@@ -1,5 +1,10 @@
 # First optimized-verifier development cycle
 
+> **Superseded for selection (2026-10-19).** The method was chosen from the
+> [stability repeats](../2026-10-19-stability/README.md) and frozen as lean-v1 with
+> span citations ([method freeze](../method-freeze-2026-10-19.json)); the HTTP
+> optimized default is now lean-v1. This page is the historical record of the cycle.
+
 2026-10-18. This is a completed experiment cycle, **not a selected final winner**.
 The original lexical 0.65 and minimal LLM comparators remain fixed. No final-test
 model run or canonical dev/test data change occurred. New complete quality

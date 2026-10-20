@@ -5,7 +5,9 @@ the approved dev split (8 cases, 12 facts) and development challenges v2
 (5 cases, 12 facts), run as preregistered in [PLAN.md](PLAN.md), committed before
 any call (`588911e`). 117 serial calls; configured-rate cost **$0.0396647**;
 local ledger total **$0.0770948** of the $20 cap. The frozen test split was not
-read or run. All scores below are **AI-proposed and pending owner review**.
+read or run. Scores below are AI-proposed per unit; the alignment rule and the
+challenge gold they rest on were owner-approved on 2026-10-19
+([approval](../../reviews/development-challenges-v1/challenge-gold-v2-approval-2026-10-19.md)).
 
 ## Results
 
@@ -42,7 +44,7 @@ a small challenge-F1 gain, plus the repair path; not dev accuracy.
   They differ on challenges. Refined-v1's challenge-05 output twice relies on a
   cross-sentence reference or drops the reported-success scope; lean once adds a
   contradiction for challenge-03 that the source does not establish.
-- **Both share one recurring disagreement with draft gold.** In one repeat each,
+- **Both share one recurring disagreement with challenge gold.** In one repeat each,
   "three additional queued jobs" is judged UNSUPPORTED because the source says
   "up to three". Gold treats this as SUPPORTED; this boundary should be stated
   in the report.

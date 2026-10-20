@@ -1,5 +1,8 @@
 # Development challenges v1 (draft gold)
 
+> Historical. Superseded by [development challenges v2](../development-challenges-v2/README.md),
+> whose gold was owner-approved on 2026-10-19.
+
 Five new synthetic cases / twelve proposed facts, authored before the first
 comparison calls. This is a development diagnostic extension, not the final test,
 an independent validation set, or a replacement for the approved eight dev cases.

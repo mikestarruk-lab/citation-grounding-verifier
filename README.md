@@ -190,7 +190,8 @@ reviews in `reviews/test-final/`.
   evidence, so both LLMs hit the verdict ceiling; differences are small and
   rest on 20 test cases and one run per method.
 - Gold and alignments were owner-approved after AI review, not independently
-  annotated; challenge gold remains draft and is used only for development.
+  annotated; the development challenges are development data only and never
+  enter the test score.
 - The comparison is one model at one effort setting; latency and cost come from
   single runs.
 
@@ -211,10 +212,18 @@ uv run python -m grounding_verifier.cli run --method optimized --split test --ex
 
 ## Project records
 
-- [First optimized-method development cycle](experiments/2026-10-18-optimized-v1/README.md):
-  actual variant/repeat runs, controlled repair faults and live boundary checks.
-  Added development challenges retain draft gold; no new complete semantic F1 or
-  final winner is claimed. [Gold-only review](experiments/2026-10-18-optimized-v1/challenge-gold-review.md).
+Newest first.
+
+- [Final test runs and reviewed scores, 2026-10-19](experiments/2026-10-19-final-test/README.md),
+  with the [approved test reviews](reviews/test-final/).
+- [Optimized method selection, 2026-10-19](experiments/method-freeze-2026-10-19.json),
+  from [stability repeats](experiments/2026-10-19-stability/README.md) of three
+  candidates (plus minimal for comparison) on approved dev and development challenges.
+- [Owner approval and freeze of test gold](reviews/test-gold-approval-2026-10-19.md).
+- [Owner approval of challenge gold v2 and the alignment rule](reviews/development-challenges-v1/challenge-gold-v2-approval-2026-10-19.md).
+- [First optimized-method development cycle, 2026-10-18](experiments/2026-10-18-optimized-v1/README.md):
+  variant runs, the passage-citation ablation, controlled repair faults and live
+  boundary checks; superseded for selection by the stability repeats.
 
 - [Baseline decision, 2026-10-18](experiments/baseline-freeze-2026-10-18.json):
   retain the owner-reviewed lexical starting threshold 0.65 and fixed minimal
@@ -222,10 +231,10 @@ uv run python -m grounding_verifier.cli run --method optimized --split test --ex
   unadopted candidate requires additional review. This is a scope decision,
   not a claim that 0.65 is optimal. Optimization work targets the third approach.
 
-- [Local error explorer](tools/error-explorer/USAGE.md): inspect reviewed baseline
-  errors, threshold tradeoffs, confusion matrices and complete evidence. On this
-  Windows workstation, run `./tools/error-explorer/start.ps1 -Refresh` from the
-  repository root. [Baseline adjustment rationale, Chinese](docs/baseline-adjustment.zh-CN.md).
+- [Local error explorer](tools/error-explorer/USAGE.md) (optional): inspect reviewed
+  baseline errors, threshold tradeoffs and confusion matrices. Its build depends on a
+  locally installed Data UI runtime, so it is not needed to reproduce any result.
+  [Baseline adjustment rationale, Chinese](docs/baseline-adjustment.zh-CN.md).
 
 - [Development v2 reviewed results](experiments/2026-10-16-dev-v2/reviewed-results-2026-10-17.md):
   owner-reviewed end-to-end F1 is 0.5833 for lexical and 1.0 for minimal LLM on
@@ -233,10 +242,6 @@ uv run python -m grounding_verifier.cli run --method optimized --split test --ex
   [The completed workbook](reviews/dev-v2/dev-v2-alignment.xlsx), approved JSON
   records and import receipt preserve the review decisions. This was review after
   AI feedback, not independent blind annotation or final test evaluation.
-- [Optimized method selection, 2026-10-19](experiments/method-freeze-2026-10-19.json),
-  from [stability repeats](experiments/2026-10-19-stability/README.md) of three
-  candidates on approved dev and development challenges.
-- [Owner approval and freeze of test gold](reviews/test-gold-approval-2026-10-19.md).
 - [Owner approval of development gold](reviews/dev-gold-approval-2026-10-16.md).
 
 - [Gold audit](reviews/gold/gold-dataset-audit-2026-10-15.md) and
