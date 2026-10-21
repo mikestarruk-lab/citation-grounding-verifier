@@ -1,5 +1,7 @@
 # Citation Grounding & Faithfulness Verifier
 
+[![offline-checks](https://github.com/mikestarruk-lab/citation-grounding-verifier/actions/workflows/ci.yml/badge.svg)](https://github.com/mikestarruk-lab/citation-grounding-verifier/actions/workflows/ci.yml)
+
 An interview project implementing `POST /verify`: extract factual claims from an
 answer and classify them using only the supplied passages. The contract is in
 [assignment.md](assignment.md).
@@ -7,6 +9,23 @@ answer and classify them using only the supplied passages. The contract is in
 Three approaches are implemented and evaluated on a frozen, owner-approved test
 split: a lexical baseline, a minimally prompted LLM and an optimized LLM verifier.
 See the [evaluation report](#evaluation-report) below.
+
+## Repository map
+
+| Path | What is there |
+|---|---|
+| [`src/grounding_verifier/`](src/grounding_verifier/) | The service and benchmark code: `api.py` (HTTP), `domain.py` (schema and citation invariants), `baseline.py` (lexical), `llm.py` and `prompts.py` (minimal and optimized LLM), `evaluation.py` (scoring), `cli.py` (runs, review templates, scoring) |
+| [`tests/`](tests/) | Offline tests for the contract, LLM error handling, scoring and data gates; no API key needed |
+| [`data/`](data/) | `dev.jsonl` (8 cases) and `test.jsonl` (20 cases, frozen), plus `manifest.json` with the approval hashes; `development-challenges-v2/` holds 5 extra development cases |
+| [`experiments/`](experiments/) | One folder per dated experiment, each with its plan, raw runs, summaries and a README; the final test runs are in [`2026-10-19-final-test/`](experiments/2026-10-19-final-test/) |
+| [`reviews/`](reviews/) | Gold review page, approval records and the owner-reviewed alignments; [`reviews/README.md`](reviews/README.md) indexes them |
+| [`docs/`](docs/) | Design rationale and full change history (Chinese) |
+| [`tools/error-explorer/`](tools/error-explorer/) | Optional local dashboard for browsing errors; not needed to reproduce results |
+
+Reading order for a reviewer: this README, then
+[`src/grounding_verifier/domain.py`](src/grounding_verifier/domain.py) and
+[`llm.py`](src/grounding_verifier/llm.py), then the
+[final test record](experiments/2026-10-19-final-test/README.md).
 
 ## Run locally
 

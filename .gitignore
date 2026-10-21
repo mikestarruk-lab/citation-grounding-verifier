@@ -17,3 +17,5 @@ dist/
 build/
 node_modules/
 .data-app-offline/
+*.partial.json
+*.partial.tmp
